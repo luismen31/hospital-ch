@@ -1,0 +1,37 @@
+
+<?php $__env->startSection('title'); ?>
+	Buscar Pacientes en el Mapa
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('scripts'); ?>
+  <?php echo HTML::script('https://maps.googleapis.com/maps/api/js?sensor=false'); ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection ('content'); ?>   
+     <h1>
+     <div style="position:relative;">
+        <div style="position:absolute;left:0px;">
+          <a href="/plagetri21/public" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span><span class="return"> Inicio</span></a>
+        </div>
+      </div>
+      <center>Reporte por Mapa</center>
+    </h1><hr>
+    <div class="form-group col-sm-4 col-md-4 col-lg-4">
+
+      <?php echo Form::label('id_prov', 'Provincia:'); ?>      
+      <?php echo Form::select('id_prov',  array('0, 8.51516, -79.986131' => 'SELECCIONE PROVINCIA') + Provincia::select('provincia', DB::raw('concat(id_provincia,",",latitud,",",longitud) AS datosprov'))->lists('provincia', 'datosprov'), null, array('class' => 'form-control'));; ?>    
+    </div>
+    <div class="form-group col-sm-4 col-md-4 col-lg-4">
+      <?php echo Form::label('id_dist', 'Distrito:'); ?>
+      <?php echo Form::select('id_dist',  array('0' => 'SELECCIONE DISTRITO'), null, array('class' => 'form-control'));; ?>
+    </div>
+     <div class="form-group col-sm-4 col-md-4 col-lg-4">
+      <?php echo Form::label('id_correg', 'Corregimiento:'); ?>
+      <?php echo Form::select('id_correg',  array('0' => 'SELECCIONE CORREGIMIENTO'), null, array('class' => 'form-control'));; ?>    
+    </div>
+  	<center>
+      <a href="marcadores" class="btn btn-primary">Actualizar Mapa</a>
+  	  <div id="map-canvas" style="margin-top:4px;"></div>
+  	</center>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make ('layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

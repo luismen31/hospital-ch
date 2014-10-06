@@ -1,0 +1,44 @@
+html,body{
+  height: 100%;
+}
+body{
+	background-color:#f1f1f1;
+}
+#wrap {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+#wrap:after {
+  content: "";
+  display: block;
+}
+#footer, #wrap:after {
+  height: 50px; 
+}
+footer{
+	border-top:1px solid #a3a3a3;
+	background-color:#e8e8e8;
+	margin-top: 15px;	
+	padding-top:15px;	
+}
+/*css de los paneles de novedades*/
+.destacados{
+    padding: 20px 0;
+	text-align: center;
+}
+.destacados > div > div{
+	padding: 10px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	transition: 0.2s;
+}
+.destacados > div:hover > div{
+	margin-top: -10px;
+	border: 1px solid rgb(200, 200, 200);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+	background: rgba(200, 200, 200, 0.1);
+	transition: 0.5s;
+}
+div div .thumbnail{
+	border:1px solid #d3d3d3;
+}
