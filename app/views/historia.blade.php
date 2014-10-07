@@ -7,7 +7,7 @@
 @section ('content')
 	<div class="row">
 		<hr>
-		<div class="col-md-7">
+		<div class="col-sm-7 col-md-7">
 			<h2>Historia</h2>
 			<p class="text-justify">
 				A principios de la d&eacute;cada de los 80 participaron un n&uacute;mero considerable de j&oacute;venes profesionales de la medicina, quienes tuvieron el privilegio de obtener capacitaciones en centros hospitalarios de diferentes partes del mundo. De all&iacute; en adelante es cuando se fund&oacute; en el mes de mayo de 1986 la Sociedad Hospital Chiriqu&iacute; con el apoyo de distinguidos empresarios del pa&iacute;s. Finalmente se inici&oacute; la construcci&oacute;n de este centro hospitalario con una amplia &aacute;rea aproximada de 12,500 mts2 bajo la direcci&oacute;n del Arquitecto Lettfalah Nader.
@@ -17,6 +17,6 @@
 				A trav&eacute;s de los a&ntilde;os, Hospital Chiriqu&iacute; ha ganado reconocimiento en el sector de salud privada por el crecimiento en el censo de los pacientes, la incorporaci&oacute;n de nuevas especialidades m&eacute;dicas, la inversi&oacute;n en la &uacute;ltima tecnolog&iacute;a en equipos m&eacute;dicos e infraestructura y un recurso humano capacitado en proporcionar un servicio m&eacute;dico eficiente para la comunidad paname&ntilde;a y extranjera.
 			</p>
 		</div>
-		<div class="col-md-5" align="center"> <img src="img/historia.jpg" width="80%" class="img-rounded"></div>
+		<div class="col-sm-5 col-md-5" align="center"> <img src="img/historia.jpg" width="80%" class="img-rounded"></div>
 	</div>
 @stop

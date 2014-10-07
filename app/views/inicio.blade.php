@@ -12,7 +12,7 @@
 				<div class="carousel-caption">
 					<h2 class="txt-black"><strong>Experiencia</strong></h2>
 					<p class="txt-black"><strong>25 Años Contigo</strong></p>
-					<a class="btn btn-primary" href="/hospital/public/historia">Conozca M&aacute;s</a>
+					<a class="btn btn-primary" href="/hospital-ch/public/historia">Conozca M&aacute;s</a>
 				</div>
 			</div>
 			<div class="item">
@@ -20,7 +20,7 @@
 				<div class="carousel-caption">
 					<h2 class="txt-white"><strong>Enfermeras</strong></h2>
 					<p class="txt-white"><strong>Siempre pensando en tu bienestar</strong></p>
-					<a class="btn btn-primary" href="/hospital/public/enfermeria">Conozca M&aacute;s</a>
+					<a class="btn btn-primary" href="/hospital-ch/public/enfermeria">Conozca M&aacute;s</a>
 				</div>
 			</div>
 			<div class="item">
@@ -28,7 +28,7 @@
 				<div class="carousel-caption">
 					<h2 class="txt-white"><strong>Quir&oacute;fano</strong></h2>
 					<p class="txt-white"><strong>Su salud est&aacute; en nuestras manos</strong></p>
-					<a class="btn btn-primary" href="/hospital/public/quirofano">Conozca M&aacute;s</a>
+					<a class="btn btn-primary" href="/hospital-ch/public/quirofano">Conozca M&aacute;s</a>
 				</div>
 			</div>
 			<div class="item">
@@ -36,7 +36,7 @@
 				<div class="carousel-caption">
 					<h2 class="txt-white"><strong>Sala de recuperación</strong></h2>
 					<p class="txt-white"><strong>Modernas Instalaciones</strong></p>
-					<a class="btn btn-primary" href="/hospital/public/hospitalizacion">Conozca M&aacute;s</a>
+					<a class="btn btn-primary" href="/hospital-ch/public/hospitalizacion">Conozca M&aacute;s</a>
 				</div>
 			</div>
 		</div> 
@@ -58,7 +58,7 @@
               <div class="caption">
                 <h4>Primeros Pasos Como Mam&aacute;</h4>
                 <p>Creciendo Juntos y Hospital Chiriqu&iacute;</p>
-                <p><a href="charlaembarazada.php" class="btn btn-primary btn-sm" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                <p><a href="/hospital-ch/public/charlaembarazada" class="btn btn-primary btn-sm" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@
               <div class="caption">
                 <h4>XXVI Congreso Médico - Hospital Chiriquí</h4>
                 <p>Avances en Medicina Integral, 10,11 y 12 de Julio</p>
-                <p><a href="congreso.php" class="btn btn-primary" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                <p><a href="/hospital-ch/public/congreso" class="btn btn-primary" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
             </div>
           </div>
         </div>
@@ -92,7 +92,7 @@
               <div class="caption">
                 <h4>Cinta Rosada y Azul</h4>
                 <p>Conscientes de la necesidad de apoyar  la detecci&oacute;n temprana del C&aacute;ncer de mama y de pr&oacute;stata, Hospital  Chiriqu&iacute;  se une  a la Campa&ntilde;a de la Cinta Rosada.</p>
-                <p><a class="btn btn-primary" href="cintarosada.php">Ver Detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                <p><a class="btn btn-primary" href="/hospital-ch/public/cintarosada">Ver Detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
             </div>
           </div>
         </div>
