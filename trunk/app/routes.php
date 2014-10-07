@@ -44,6 +44,9 @@ Route::get('/cintarosada', function(){ return View::make('cintarosada'); });
 Route::get('/congreso', function(){ return View::make('congreso'); });
 Route::get('/charlaembarazada', function(){ return View::make('charlaembarazada'); });
 
+
+Route::resource('sugerencia', 'SugerenciaController');
+
 //Rutas de Logueo y Registro de Usuarios
 Route::post('sigin', 'AuthController@postLogin');
 Route::get('logout', 'AuthController@getLogout');

@@ -118,7 +118,7 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contacto <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                  <li><a href="contactos.php">Buz&oacute;n de consultas y sugerencias</a></li>
+                  <li><a href="sugerencia">Buz&oacute;n de consultas y sugerencias</a></li>
                   <li><a href="system_resume.php">Hoja de Vida</a></li>                    
                   <li><a href="logincliente.php">Cliente Frecuente</a></li>
                   </ul>
