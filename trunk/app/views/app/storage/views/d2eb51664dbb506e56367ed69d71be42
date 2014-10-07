@@ -1,0 +1,10 @@
+
+<?php $__env->startSection ('title'); ?> Provincias <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection ('content'); ?>
+     <?php foreach (Provincia::all() as $provincia): ?>
+ 	<?php echo $provincia->provincia; ?>
+ 	<?php endforeach; ?>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make ('layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
