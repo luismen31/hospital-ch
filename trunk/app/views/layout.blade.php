@@ -102,7 +102,7 @@
                   <li><a href="/hospital-ch/public/rayosx">Radiolog&iacute;a</a></li> 
                   <li><a href="/hospital-ch/public/urgencias">Urgencias</a></li>
                   <li><a href="/hospital-ch/public/capilla">Capilla</a></li>
-                  <li><a href="/hospital-ch/public/farmacia">Farmacia</a></li> 
+                  <li><a href="farmacia">Farmacia</a></li> 
                   </ul>
                 </li>
                 
@@ -118,7 +118,7 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contacto <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                  <li><a href="sugerencia">Buz&oacute;n de consultas y sugerencias</a></li>
+                  <li><a href="/hospital-ch/public/sugerencia">Buz&oacute;n de consultas y sugerencias</a></li>
                   <li><a href="system_resume.php">Hoja de Vida</a></li>                    
                   <li><a href="logincliente.php">Cliente Frecuente</a></li>
                   </ul>
@@ -144,5 +144,9 @@
     {{-- Scripts para la usabilidad --}}
     {{ HTML::script('assets/js/perfect-scrollbar.min.js') }} 
     {{ HTML::script('assets/js/bootstrap.min.js') }}
+    {{ HTML::script('assets/js/overthrow/overthrow-detect.js') }}
+    {{ HTML::script('assets/js/overthrow/overthrow-init.js') }}
+    {{ HTML::script('assets/js/overthrow/overthrow-polyfill.js') }}
+    {{ HTML::script('assets/js/overthrow/overthrow-toss.js') }}
   </body>
  </html>
