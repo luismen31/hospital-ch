@@ -1,0 +1,29 @@
+
+<?php $__env->startSection('title'); ?>
+	Men&uacute; Principal
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection ('content'); ?>
+	
+		<center>
+			<h1><strong>Menú Principal</strong></h1><hr>
+		</center>
+		<?php /**/$n=1;/**/ ?>
+		<div class="row nav-row">
+			<?php foreach(ModuloUsuario::where('id_grupo_usuario', Auth::user()->id_grupo_usuario)->where('inactivo', '0')->get() as $modulos): ?>
+				<a href="<?php echo route(''.Modulo::where("id", $modulos->id_modulo)->first()->ruta.''); ?>">
+					<div class="col-sm-3 col-md-3 col-lg-3">
+						<img src="imgs/<?php echo Modulo::where('id', $modulos->id_modulo)->first()->imagen; ?>" style="width:50px;height:59px;padding-top:9px">
+						<p><?php echo Modulo::where('id', $modulos->id_modulo)->first()->modulo; ?></p>
+					</div>
+				</a>
+				<?php if($n == 4): ?>
+					</div>
+					<div class="row nav-row menu-margen">
+					<?php /**$n=1**/ ?>
+				<?php endif; ?>
+				<?php /**/$n++;/**/ ?>
+			<?php endforeach; ?>
+		</div>	
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make ('layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

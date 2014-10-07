@@ -1,0 +1,19 @@
+
+<?php $__env->startSection('title'); ?>
+	Hospital Chiriquí - Capilla
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection ('content'); ?>
+	<div class="row">
+		<hr>
+		<div class="col-md-6">
+			<h2>Capilla</h2>
+			<p class="text-justify">
+				Nuestras instalaciones tambi&eacute;n cuentan con un espacio de meditaci&oacute;n para los pacientes y familiares.<br/>
+				Se encuentra abierto al p&uacute;blico.
+			</p>
+		</div>
+		<div class="col-md-6" align="center"><img src="img/capilla.png" width="90%" class="img-rounded"></div>
+	</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make ('layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
