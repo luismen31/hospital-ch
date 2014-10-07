@@ -41,7 +41,8 @@ class SugerenciaController extends BaseController {
 		$sugerencia->ciudad = $data['ciudad'];
 		$sugerencia->mensaje = $data['mensaje'];
 		$sugerencia->save();
-		return View::make('sugerencia/form')->with('mensaje', '<center><div style="color:red;">Su mensaje ha sido enviado con éxito.</div></center>');
+		return View::make('sugerencia/form')
+		->with('mensaje', '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Su mensaje ha sido enviado con éxito.</strong></div>');
 	}
 
 
