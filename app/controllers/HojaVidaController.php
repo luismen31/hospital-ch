@@ -91,7 +91,7 @@ class HojaVidaController extends BaseController {
 		}
 		$usuario = new Usuario;
 		$usuario->usuario = $data['cedula'];
-		$usuario->pass = Hash::make($datos['pass'])
+		$usuario->pass = Hash::make($datos['pass']);
 		$usuario->save();
 		return View::make('colaborador/list-edit-form');
 
