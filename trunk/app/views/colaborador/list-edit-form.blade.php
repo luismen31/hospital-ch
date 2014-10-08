@@ -6,26 +6,22 @@
 <h1>
   <center>Hoja de Vida</center>
 </h1><hr>
-{{ Form::model(array('role' => 'form')) }}
+{{ Form::model($data['colaborador'],$data['form'],array('role' => 'form')) }}
 
 
   <h3>Información Personal</h3>
   <div class="row">
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
-      {{ Form::label('usuario', 'Usuario:') }}
-      {{ Form::text('usuario', null, array('placeholder' => 'Usuario', 'class' => 'form-control', 'required' => 'required')) }}
+      {{ Form::label('cedula', 'Número de Cédula:') }}
+      {{ Form::text('cedula', null, array('placeholder' => 'N&uacute;mero de C&eacute;dula', 'class' => 'form-control', 'required' => 'required')) }}
     </div>
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('pass', 'Contraseña:') }}
       {{ Form::text('pass', null, array('placeholder' => 'Contraseña', 'class' => 'form-control', 'required' => 'required')) }}
     </div>
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
-      {{ Form::label('cedula', 'Número de Cédula:') }}
-      {{ Form::text('cedula', null, array('placeholder' => 'N&uacute;mero de C&eacute;dula', 'class' => 'form-control', 'required' => 'required')) }}
-    </div>
-    <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('seguro', 'Número de Seguro Social:') }}
-      {{ Form::text('seguro', null, array('placeholder' => 'N&uacute;mero de Seguro Social', 'class' => 'form-control', 'required' => 'required')) }}
+      {{ Form::text('seguro', null, array('placeholder' => 'N&uacute;mero de Seguro Social', 'class' => 'form-control')) }}
     </div>
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('primer_nombre', 'Primer Nombre:') }}
@@ -36,12 +32,12 @@
       {{ Form::text('segundo_nombre', null, array('placeholder' => 'Segundo Nombre', 'class' => 'form-control')) }}
     </div>
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
-      {{ Form::label('apellido_paterno', 'Apellido Paterno:') }}
-      {{ Form::text('apellido_paterno', null, array('placeholder' => 'Apellido Paterno', 'class' => 'form-control', 'required' => 'required')) }}        
+      {{ Form::label('primer_apellido', 'Primer Apellido:') }}
+      {{ Form::text('primer_apellido', null, array('placeholder' => 'Primer Apellido', 'class' => 'form-control', 'required' => 'required')) }}        
     </div>
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
-      {{ Form::label('apellido_materno', 'Apellido Materno:') }}
-      {{ Form::text('apellido_materno', null, array('placeholder' => 'Apellido Materno', 'class' => 'form-control')) }}
+      {{ Form::label('segundo_apellido', 'Segundo Apellido:') }}
+      {{ Form::text('segundo_apellido', null, array('placeholder' => 'Segundo Apellido', 'class' => 'form-control')) }}
     </div>
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('fecha_nacimiento', 'Fecha de Nacimiento:') }}
@@ -76,22 +72,22 @@
       {{ Form::label('email', 'E-Mail:') }}
       {{ Form::text('email', null, array('placeholder' => 'E-Mail', 'class' => 'form-control')) }}        
     </div>
-   <div class="form-group col-sm-4 col-md-4 col-lg-4">
-      {{ Form::label('direccion', 'Dirección:') }}
-      {{ Form::text('direccion', null, array('placeholder' => 'Dirección', 'class' => 'form-control')) }}        
-    </div>
+      <div class="form-group col-sm-4 col-md-4 col-lg-4">
+        {{ Form::label('direccion', 'Dirección:') }}
+        {{ Form::textarea('direccion', null, array('placeholder' => 'Dirección', 'class' => 'form-control', 'size' => '1x1')) }}        
+      </div>
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('lugar_residencia', 'Lugar de Residencia:') }}
       {{ Form::text('lugar_residencia', null, array('placeholder' => 'Lugar de Residencia', 'class' => 'form-control')) }}        
     </div>
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
-      {{ Form::label('nacionalidad', 'Nacionalidad:') }}
-      {{ Form::text('nacionalidad', null, array('placeholder' => 'Nacionalidad', 'class' => 'form-control')) }}        
-    </div>
+      {{ Form::label('id_nacionalidad', 'Nacionalidad:') }}
+      {{ Form::select('id_nacionalidad',  array('0' => 'SELECCIONE LA NACIONALIDAD') + Nacionalidad::lists('nacionalidad', 'id_nacionalidad'), null, array('class' => 'form-control')); }}    
+    </div> 
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
-      {{ Form::label('estado', 'Estado Civil:') }}
-      {{ Form::text('estado', null, array('placeholder' => 'Estado Civil', 'class' => 'form-control')) }}        
-    </div>
+      {{ Form::label('id_estado', 'Estado Civil:') }}
+      {{ Form::select('id_estado',  array('0' => 'SELECCIONE EL ESTADO CIVIL') + EstadoCivil::lists('estado_civil', 'id_estado_civil'), null, array('class' => 'form-control')); }}    
+    </div> 
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('facebook', 'Facebook:') }}
       {{ Form::text('facebook', null, array('placeholder' => 'Facebook', 'class' => 'form-control')) }}        
@@ -107,11 +103,11 @@
     <h3>Información Laboral</h3><br> 
       <div class="form-group col-sm-4 col-md-4 col-lg-4">
         {{ Form::label('aplicacion', 'Área de Aplicación:') }}
-        {{ Form::select('aplicacion',  array('null' => 'ÁREA DE APLICACIÓN', '1' => 'CONTABILIDAD', '2' => 'ENFERMERIA', '3' => 'ADMINISTRACIÓN', '4' => 'RAYOS X', '5' => 'LABORATORIO', '6' => 'SEGURIDAD', '7' => 'INFORMÁTICA', '8' => 'URGENCIAS', '9' => 'MERCADEO', '10' => 'RECURSOS HUMANOS', '11' => 'SERVICIOS MÚLTIPLES'), null, array('class' => 'form-control')); }}    
+        {{ Form::select('aplicacion',  array('0' => 'ÁREA DE APLICACIÓN') + AreaAplicacion::lists('area_aplicacion', 'id'), null, array('class' => 'form-control')); }}    
       </div> 
       <div class="form-group col-sm-4 col-md-4 col-lg-4">
         {{ Form::label('estudios', 'Estudios:') }}
-        {{ Form::select('estudios',  array('null' => 'ESTUDIOS', '1' => 'PRIMARIA', '2' => 'SECUNDARIA', '3' => 'LICENCIATURA', '4' => 'POST-GRADO', '5' => 'MAESTRíA', '6' => 'DOCTORADO'), null, array('class' => 'form-control')); }}    
+        {{ Form::select('estudios',  array('0' => 'ESTUDIOS') + Estudio::lists('estudio', 'id'), null, array('class' => 'form-control')); }}    
       </div> 
       <div class="form-group col-sm-4 col-md-4 col-lg-4">
         {{ Form::label('estudio_1', 'Estudio 1:') }}
@@ -125,6 +121,10 @@
         {{ Form::label('estudio_3', 'Estudio 3:') }}
         {{ Form::textarea('estudio_3', null, array('placeholder' => 'Estudio 3', 'class' => 'form-control', 'size' => '1x1')) }}        
       </div>
+     <div class="form-group col-sm-4 col-md-4 col-lg-4">
+        {{ Form::label('estudio_4', 'Estudio 4:') }}
+        {{ Form::textarea('estudio_4', null, array('placeholder' => 'Estudio 4', 'class' => 'form-control', 'size' => '1x1')) }}        
+      </div>
       <div class="form-group col-sm-4 col-md-4 col-lg-4">
         {{ Form::label('experiencia_1', 'Experiencia 1:') }}
         {{ Form::textarea('experiencia_1', null, array('placeholder' => 'Experiencia 1', 'class' => 'form-control', 'size' => '1x1')) }}        
@@ -137,6 +137,10 @@
         {{ Form::label('experiencia_3', 'Experiencia 3:') }}
         {{ Form::textarea('experiencia_3', null, array('placeholder' => 'Experiencia 3', 'class' => 'form-control', 'size' => '1x1')) }}        
       </div>
+      <div class="form-group col-sm-4 col-md-4 col-lg-4">
+        {{ Form::label('experiencia_4', 'Experiencia 4:') }}
+        {{ Form::textarea('experiencia_4', null, array('placeholder' => 'Experiencia 4', 'class' => 'form-control', 'size' => '1x1')) }}        
+      </div>
    </div>
 
 
@@ -144,38 +148,38 @@
       <h3>Idiomas</h3><br> 
       <div class="form-group col-sm-4 col-md-4 col-lg-4">
         {{ Form::label('idioma_1', 'Idioma 1:') }}
-        {{ Form::select('idioma_1',  array('null' => 'IDIOMA 1', '1' => 'ESPAÑOL', '2' => 'INGLÉS', '3' => 'MANDARÍN', '4' => 'HOLANDÉS', '5' => 'FRANCÉS', '6' => 'ITALIANO', '7' => 'ÁRABE', '8' => 'PORTUGUÉS', '9' => 'HEBREO'), null, array('class' => 'form-control')); }}    
+        {{ Form::select('idioma_1',  array('0' => 'IDIOMA 1') + Idioma::lists('idioma', 'id'), null, array('class' => 'form-control')); }}    
       </div> 
       <div class="form-group col-sm-4 col-md-4 col-lg-4">
         {{ Form::label('nivel_1', 'Nivel 1:') }}
-        {{ Form::select('nivel_1',  array('null' => 'NIVEL 1', '1' => 'BÁSICO', '2' => 'INTERMEDIO', '3' => 'AVANZADO'), null, array('class' => 'form-control')); }}    
+        {{ Form::select('nivel_1',  array('0' => 'NIVEL 1') + Nivel::lists('nivel', 'id'), null, array('class' => 'form-control')); }}    
       </div> 
       <div class="form-group col-sm-4 col-md-4 col-lg-4">
         {{ Form::label('idioma_2', 'Idioma 2:') }}
-        {{ Form::select('idioma_2',  array('null' => 'IDIOMA 2', '1' => 'ESPAÑOL', '2' => 'INGLÉS', '3' => 'MANDARÍN', '4' => 'HOLANDÉS', '5' => 'FRANCÉS', '6' => 'ITALIANO', '7' => 'ÁRABE', '8' => 'PORTUGUÉS', '9' => 'HEBREO'), null, array('class' => 'form-control')); }}    
+        {{ Form::select('idioma_2',  array('0' => 'IDIOMA 1') + Idioma::lists('idioma', 'id'), null, array('class' => 'form-control')); }}    
       </div> 
       <div class="form-group col-sm-4 col-md-4 col-lg-4">
         {{ Form::label('nivel_2', 'Nivel 2:') }}
-        {{ Form::select('nivel_2',  array('null' => 'NIVEL 2', '1' => 'BÁSICO', '2' => 'INTERMEDIO', '3' => 'AVANZADO'), null, array('class' => 'form-control')); }}    
+        {{ Form::select('nivel_2',  array('0' => 'NIVEL 2') + Nivel::lists('nivel', 'id'), null, array('class' => 'form-control')); }}    
       </div> 
       <div class="form-group col-sm-4 col-md-4 col-lg-4">
         {{ Form::label('idioma_3', 'Idioma 3:') }}
-        {{ Form::select('idioma_3',  array('null' => 'IDIOMA 3', '1' => 'ESPAÑOL', '2' => 'INGLÉS', '3' => 'MANDARÍN', '4' => 'HOLANDÉS', '5' => 'FRANCÉS', '6' => 'ITALIANO', '7' => 'ÁRABE', '8' => 'PORTUGUÉS', '9' => 'HEBREO'), null, array('class' => 'form-control')); }}    
+        {{ Form::select('idioma_3',  array('0' => 'IDIOMA 1') + Idioma::lists('idioma', 'id'), null, array('class' => 'form-control')); }}    
       </div> 
       <div class="form-group col-sm-4 col-md-4 col-lg-4">
         {{ Form::label('nivel_3', 'Nivel 3:') }}
-        {{ Form::select('nivel_3',  array('null' => 'NIVEL 3', '1' => 'BÁSICO', '2' => 'INTERMEDIO', '3' => 'AVANZADO'), null, array('class' => 'form-control')); }}    
+        {{ Form::select('nivel_3',  array('0' => 'NIVEL 3') + Nivel::lists('nivel', 'id'), null, array('class' => 'form-control')); }}    
       </div> 
     </div>
 
     <div class="row" style="margin-top:0px;">
       <div class="form-group col-sm-4 col-md-4 col-lg-4">
         {{ Form::label('presion', 'Trabajo bajo Presión:') }}
-        {{ Form::select('presion',  array('null' => 'BAJO PRESÍON', '0' => 'SI', '1' => 'NO'), null, array('class' => 'form-control')); }}    
+        {{ Form::select('presion',  array('null' => 'BAJO PRESÍON', '0' => 'NO', '1' => 'SI'), null, array('class' => 'form-control')); }}    
       </div>
       <div class="form-group col-sm-4 col-md-4 col-lg-4">
         {{ Form::label('licencia', 'Licencia de Conducir:') }}
-        {{ Form::select('licencia',  array('null' => 'LICENCIA DE CONDUCIR', '0' => 'SI', '1' => 'NO'), null, array('class' => 'form-control')); }}    
+        {{ Form::select('licencia',  array('null' => 'LICENCIA DE CONDUCIR', '0' => 'NO', '1' => 'SI'), null, array('class' => 'form-control')); }}    
       </div> 
     </div>
   <div class="form-group col-sm-12 col-md-12 col-lg-12">
@@ -187,9 +191,6 @@
 
 {{ Form::close() }}
   
- 
-  {{ Form::open(array('route' => array('datos.pacientes.destroy', 'USER_ID'), 'method' => 'DELETE', 'role' => 'form', 'id' => 'form-delete')) }}
-  {{ Form::close() }}
   
   {{ HTML::script('assets/js/overthrow/overthrow-detect.js') }}
   {{ HTML::script('assets/js/overthrow/overthrow-init.js') }}
