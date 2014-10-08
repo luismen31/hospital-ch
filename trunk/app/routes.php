@@ -46,10 +46,11 @@ Route::get('/charlaembarazada', function(){ return View::make('charlaembarazada'
 
 //Vistas Dinamicas
 Route::resource('sugerencia', 'SugerenciaController');
+Route::get('/system_resume',function(){ return View::make('system_resume'); });
+Route::post('login', 'AuthController@postLogin');
+Route::get('logout', 'AuthController@getLogout');
 Route::resource('colaborador', 'HojaVidaController');
 
 //Rutas de Logueo y Registro de Usuarios
-Route::post('sigin', 'AuthController@postLogin');
-Route::get('logout', 'AuthController@getLogout');
 Route::get('registro', 'AuthController@getRegistro')->before('auth');
 Route::post('registrar', 'AuthController@register');

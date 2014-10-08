@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>@yield('title', 'Hospital Chiriqu&iacute;')</title>
-	  <link rel="shortcut icon" href='/hospital-ch/public/imgs/hospital.ico' type="image/x-icon">    
+    <link rel="shortcut icon" href='/hospital-ch/public/img/hospital.ico' type="image/x-icon">    
     {{-- Bootstrap --}}
     {{ HTML::style('assets/css/bootstrap.css', array('media' => 'screen')) }}
     {{ HTML::style('assets/css/estilos.css', array('media' => 'screen')) }}
@@ -16,6 +16,7 @@
         {{ HTML::script('assets/js/html5shiv.js') }}
         {{ HTML::script('assets/js/respond.min.js') }}
     <![endif]-->
+    {{ HTML::script('assets/js/jquery.js') }}
     @yield('scripts')  
   </head>
   <body>    
@@ -102,7 +103,7 @@
                   <li><a href="/hospital-ch/public/rayosx">Radiolog&iacute;a</a></li> 
                   <li><a href="/hospital-ch/public/urgencias">Urgencias</a></li>
                   <li><a href="/hospital-ch/public/capilla">Capilla</a></li>
-                  <li><a href="farmacia">Farmacia</a></li> 
+                  <li><a href="/hospital-ch/public/farmacia">Farmacia</a></li> 
                   </ul>
                 </li>
                 
@@ -119,8 +120,11 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contacto <b class="caret"></b></a>
                   <ul class="dropdown-menu">
                   <li><a href="/hospital-ch/public/sugerencia">Buz&oacute;n de consultas y sugerencias</a></li>
-                  <li><a href="colaborador">Hoja de Vida</a></li>                    
-                  <li><a href="logincliente.php">Cliente Frecuente</a></li>
+                  <li><a href="/hospital-ch/public/system_resume">Hoja de Vida</a></li>                    
+                  <li><a href="/hospital-ch-public/logincliente">Cliente Frecuente</a></li>
+                @if(Auth::check())
+                  <li><a href="/hospital-ch/public/logout">Cerrar Sesi&oacute;n</a></li> 
+                @endif
                   </ul>
                 </li>
               </ul>       
@@ -140,7 +144,6 @@
       </div>
     </footer>
     {{-- jQuery (necesario para Bootstrap's JavaScript) --}}
-    {{ HTML::script('assets/js/jquery.js') }}
     {{-- Scripts para la usabilidad --}}
     {{ HTML::script('assets/js/perfect-scrollbar.min.js') }} 
     {{ HTML::script('assets/js/bootstrap.min.js') }}

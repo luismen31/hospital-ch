@@ -191,9 +191,4 @@
 
 {{ Form::close() }}
   
-  
-  {{ HTML::script('assets/js/overthrow/overthrow-detect.js') }}
-  {{ HTML::script('assets/js/overthrow/overthrow-init.js') }}
-  {{ HTML::script('assets/js/overthrow/overthrow-polyfill.js') }}
-  {{ HTML::script('assets/js/overthrow/overthrow-toss.js') }}
 @stop
