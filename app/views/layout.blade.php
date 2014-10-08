@@ -119,7 +119,7 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contacto <b class="caret"></b></a>
                   <ul class="dropdown-menu">
                   <li><a href="/hospital-ch/public/sugerencia">Buz&oacute;n de consultas y sugerencias</a></li>
-                  <li><a href="system_resume.php">Hoja de Vida</a></li>                    
+                  <li><a href="colaborador">Hoja de Vida</a></li>                    
                   <li><a href="logincliente.php">Cliente Frecuente</a></li>
                   </ul>
                 </li>
