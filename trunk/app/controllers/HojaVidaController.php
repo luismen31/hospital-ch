@@ -89,11 +89,14 @@ class HojaVidaController extends BaseController {
 				$idioma->save();
 			}
 		}
+		
 		$usuario = new User;
 		$usuario->user = $data['cedula'];
 		$usuario->password = Hash::make($data['pass']);
+		$usuario->id_rol = 3;
 		$usuario->save();
-		return View::make('colaborador/list-edit-form');
+
+		return Redirect::route('colaborador.index');	
 
 	}
 
