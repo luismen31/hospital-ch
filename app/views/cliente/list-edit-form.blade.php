@@ -39,7 +39,7 @@
                 @foreach (Cliente::all() as $cliente)
                   <tr>
                       <td>{{ $x++ }}.</td>
-                      <td>{{ $cliente->primer_nombre.' '.$cliente->segundo_nombre.' '.$cliente->apellido_paterno.' '.$cliente->apellido_materno }}</td>
+                      <td>{{ $cliente->primer_nombre.' '.$cliente->segundo_nombre.' '.$cliente->primer_apellido.' '.$cliente->segundo_apellido }}</td>
                       <td>{{ $cliente->fecha_nacimiento }}</td>
                       <td>{{ $cliente->celular }}</td>
                       <td>{{ $cliente->telefono_residencia }}</td>
@@ -58,10 +58,15 @@
       </div>
     </div>   
 {{ Form::model($data['cliente'], $data['form'], array('role' => 'form')) }}
+<h3>Información Personal</h3><br>   
   <div class="row">
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('cedula', 'N&uacute;mero de C&eacute;dula') }}
       {{ Form::text('cedula', null, array('placeholder' => 'N&uacute;mero de C&eacute;dula', 'class' => 'form-control', 'required' => 'required')) }}
+    </div>
+    <div class="form-group col-sm-4 col-md-4 col-lg-4">
+      {{ Form::label('seguro_social', 'Seguro Social') }}
+      {{ Form::text('seguro_social', null, array('placeholder' => 'Seguro Social', 'class' => 'form-control')) }}        
     </div>
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('primer_nombre', 'Primer Nombre') }}
@@ -81,17 +86,17 @@
     </div>
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('fecha_nacimiento', 'Fecha de Nacimiento') }}
-      {{ Form::date('fecha_nacimiento', null, array('class' => 'form-control', 'min' => '1950-01-01', 'max' => '2050-12-31')) }}
+      {{ Form::date('fecha_nacimiento', $data['cliente']->fecha_nacimiento, array('class' => 'form-control', 'min' => '1950-01-01', 'max' => '2050-12-31')) }}
     </div>
     {{--Orden de Datos en los select: Name,arreglo con valores, value, arreglo con la clase de diseño--}}
  
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('sexo', 'Sexo:') }}
-      {{ Form::select('sexo',  array('0' => 'FEMENINO', '1' => 'MASCULINO'), null, array('class' => 'form-control')); }}    
+      {{ Form::select('sexo',  array('null' => 'SELECCIONE EL SEXO', '0' => 'FEMENINO', '1' => 'MASCULINO'), $data['cliente']->femenino, array('class' => 'form-control')); }}    
     </div>  
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('id_tipo_sanguineo', 'Tipo de Sangre:') }}
-      {{ Form::select('id_tipo_sanguineo',  array('0' => 'SELECCIONE EL TIPO DE SANGRE') + Tiposangre::lists('tipo_sangre', 'id_tipo_sanguineo'), null, array('class' => 'form-control')); }}    
+      {{ Form::select('id_tipo_sanguineo',  array('0' => 'SELECCIONE EL TIPO DE SANGRE') + TipoSangre::lists('tipo_sangre', 'id'), $data['cliente']->id_tipo_sangre, array('class' => 'form-control')); }}    
     </div>   
    </div>
    <div class="row" style="margin-top:0px;">
@@ -99,20 +104,24 @@
 	<h3>Datos de Contacto Dirección</h3><br>   
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('celular', 'Celular:') }}
-      {{ Form::text('celular', null, array('placeholder' => 'Celular', 'class' => 'form-control')) }}        
+      {{ Form::text('celular', $data['cliente']->celular, array('placeholder' => 'Celular', 'class' => 'form-control')) }}        
     </div>
 	<div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('telefono_residencia', 'Telefono Residencia:') }}
-      {{ Form::text('telefono_residencia', null, array('placeholder' => 'Telefono Residencia', 'class' => 'form-control')) }}        
+      {{ Form::text('telefono_residencia', $data['cliente']->telefono_residencia, array('placeholder' => 'Telefono Residencia', 'class' => 'form-control')) }}        
     </div>
 	<div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('telefono_oficina', 'Telefono Oficina:') }}
-      {{ Form::text('telefono_oficina', null, array('placeholder' => 'Telefono Oficina', 'class' => 'form-control')) }}        
+      {{ Form::text('telefono_oficina', $data['cliente']->telefono_oficina, array('placeholder' => 'Telefono Oficina', 'class' => 'form-control')) }}        
     </div>
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('email', 'E-Mail:') }}
-      {{ Form::text('email', null, array('placeholder' => 'E-Mail', 'class' => 'form-control')) }}        
+      {{ Form::text('email', $data['cliente']->email, array('placeholder' => 'E-Mail', 'class' => 'form-control')) }}        
     </div>
+    <div class="form-group col-sm-4 col-md-4 col-lg-4">
+	  {{ Form::label('direccion', 'Dirección:') }}
+      {{ Form::textarea('direccion', $data['cliente']->direccion, array('placeholder' => 'Dirección', 'class' => 'form-control', 'size' => '1x1')) }}        
+     </div>
   </div>
 
   <div class="form-group col-sm-12 col-md-12 col-lg-12">
@@ -125,11 +134,5 @@
 {{ Form::close() }}
   
  
-  {{ Form::open(array('route' => array('datos.pacientes.destroy', 'USER_ID'), 'method' => 'DELETE', 'role' => 'form', 'id' => 'form-delete')) }}
-  {{ Form::close() }}
-  
-  {{ HTML::script('assets/js/overthrow/overthrow-detect.js') }}
-  {{ HTML::script('assets/js/overthrow/overthrow-init.js') }}
-  {{ HTML::script('assets/js/overthrow/overthrow-polyfill.js') }}
-  {{ HTML::script('assets/js/overthrow/overthrow-toss.js') }}
+
 @stop

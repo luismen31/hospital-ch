@@ -7,8 +7,8 @@
   <center>Menú para Administradores</center>
 </h1><hr>
   <center>  
-    <a href="{{ route('colaborador.index') }}" class="btn btn-primary btn-sm" style="margin:3px 0px;" data-toggle="tooltip" title="Hojas de Vida">Hojas de Vida</a><br>
-    <a href="{{ route('colaborador.index') }}" class="btn btn-primary btn-sm" style="margin:3px 0px;" data-toggle="tooltip" title="Clientes Frecuentes">Clientes Frecuentes</a>
+    <a href="{{ route('colaborador.index') }}" class="btn btn-primary btn-sm" style="margin:3px 0px;" data-toggle="tooltip" title="Hojas de Vida"><h5>Hojas de Vida</h5></a><br>
+    <a href="{{ route('cliente.index') }}" class="btn btn-primary btn-sm" style="margin:3px 0px;" data-toggle="tooltip" title="Clientes Frecuentes"><h5>Clientes Frecuentes</h5></a>
   </center>
 
 @stop
