@@ -6,66 +6,67 @@
 <h1>
   <center>Hoja de Vida</center>
 </h1><hr>
-
-@if(Auth::user()->id_rol <> 3)
-    <div class="row">
-      <div class="col-md-12 col-sm-12 col-lg-12">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Lista de Pacientes</h3>
-            <div class="pull-right">
-              <span class="clickable filter" data-toggle="tooltip" title="Buscar Colaborador" data-container="body">
-                <i class="glyphicon glyphicon-filter"></i>
-              </span>
-            </div>
-          </div>
-          <div class="panel-body" style="display:block;">
-            <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filtrar Colaborador" /><br>
-             <div class="table-responsive overthrow" id="scrollbar" style=" position:relative; margin:0px auto; padding:0px;overflow:hidden;width:100%;height:100%;max-height:240px;">
-              <table class="table table-bordered table-hover" id="dev-table">
-                <thead>
-                  <tr class="info">
-                      <th>#</th>
-                      <th>Nombre Completo</th>
-                      <th>Celular</th>
-                      <th>Telefono Residencia</th>
-                      <th>E-Mail</th>
-                      <th>Área de Aplicación</th>
-                      <th>Estudios</th>
-                      <th></th>
-                  </tr>
-               </thead>
-               <tbody>
-                {{--*/ $x = 1; /*--}}
-                @foreach (Colaborador::all() as $colaborador)
-                  <tr>
-                      <td>{{ $x++ }}.</td>
-                      <td>{{ $colaborador->primer_nombre.' '.$colaborador->segundo_nombre.' '.$colaborador->primer_apellido.' '.$colaborador->segundo_apellido }}</td>
-                      <td>{{ $colaborador->celular }}</td>
-                      <td>{{ $colaborador->telefono_residencia }}</td>
-                      <td>{{ $colaborador->email }}</td>
-                      @if(!empty($colaborador->id_area_aplicacion))
-                        <td>{{ AreaAplicacion::where('id', $colaborador->id_area_aplicacion)->first()->area_aplicacion }}</td>
-                      @else
-                        <td>SIN DEFINIR</td>
-                      @endif
-                      @if(!empty($colaborador->id_estudio))
-                        <td>{{ Estudio::where('id', $colaborador->id_estudio)->get()->first()->estudio }}</td>
-                      @else
-                        <td>SIN DEFINIR</td>
-                      @endif
-                      <td align="center">                        
-                          <a href="{{ route('colaborador.edit', $colaborador->id) }}" class="btn btn-primary btn-sm" style="margin:3px 0px;" data-toggle="tooltip" title="Editar"><span class="glyphicon glyphicon-pencil"></span></a>
-                      </td>
-                  </tr>
-                @endforeach
-                </tbody> 
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+@if(!empty(Auth::user()->id_rol))
+	@if(Auth::user()->id_rol <> 3)
+		<div class="row">
+		  <div class="col-md-12 col-sm-12 col-lg-12">
+			<div class="panel panel-primary">
+			  <div class="panel-heading">
+				<h3 class="panel-title">Lista de Colaboradores</h3>
+				<div class="pull-right">
+				  <span class="clickable filter" data-toggle="tooltip" title="Buscar Colaborador" data-container="body">
+					<i class="glyphicon glyphicon-filter"></i>
+				  </span>
+				</div>
+			  </div>
+			  <div class="panel-body" style="display:block;">
+				<input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filtrar Colaborador" /><br>
+				 <div class="table-responsive overthrow" id="scrollbar" style=" position:relative; margin:0px auto; padding:0px;overflow:hidden;width:100%;height:100%;max-height:240px;">
+				  <table class="table table-bordered table-hover" id="dev-table">
+					<thead>
+					  <tr class="info">
+						  <th>#</th>
+						  <th>Nombre Completo</th>
+						  <th>Celular</th>
+						  <th>Telefono Residencia</th>
+						  <th>E-Mail</th>
+						  <th>Área de Aplicación</th>
+						  <th>Estudios</th>
+						  <th></th>
+					  </tr>
+				   </thead>
+				   <tbody>
+					{{--*/ $x = 1; /*--}}
+					@foreach (Colaborador::all() as $colaborador)
+					  <tr>
+						  <td>{{ $x++ }}.</td>
+						  <td>{{ $colaborador->primer_nombre.' '.$colaborador->segundo_nombre.' '.$colaborador->primer_apellido.' '.$colaborador->segundo_apellido }}</td>
+						  <td>{{ $colaborador->celular }}</td>
+						  <td>{{ $colaborador->telefono_residencia }}</td>
+						  <td>{{ $colaborador->email }}</td>
+						  @if(!empty($colaborador->id_area_aplicacion))
+							<td>{{ AreaAplicacion::where('id', $colaborador->id_area_aplicacion)->first()->area_aplicacion }}</td>
+						  @else
+							<td>SIN DEFINIR</td>
+						  @endif
+						  @if(!empty($colaborador->id_estudio))
+							<td>{{ Estudio::where('id', $colaborador->id_estudio)->get()->first()->estudio }}</td>
+						  @else
+							<td>SIN DEFINIR</td>
+						  @endif
+						  <td align="center">                        
+							  <a href="{{ route('colaborador.edit', $colaborador->id) }}" class="btn btn-primary btn-sm" style="margin:3px 0px;" data-toggle="tooltip" title="Editar"><span class="glyphicon glyphicon-pencil"></span></a>
+						  </td>
+					  </tr>
+					@endforeach
+					</tbody> 
+				  </table>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	@endif
 @endif
 
 {{ Form::model($data['colaborador'], $data['form'],array('role' => 'form')) }}
@@ -78,7 +79,7 @@
     </div>
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('pass', 'Contraseña:') }}
-      {{ Form::text('pass', null, array('placeholder' => 'Contraseña', 'class' => 'form-control')) }}
+      {{ Form::text('pass', $data['colaborador']->pass, array('placeholder' => 'Contraseña', 'class' => 'form-control', 'required' => 'required')) }}
     </div>
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('seguro', 'Número de Seguro Social:') }}
@@ -246,6 +247,7 @@
   <div class="form-group col-sm-12 col-md-12 col-lg-12">
     <center>
       {{ Form::button('Salvar', array('type' => 'submit', 'class' => 'btn btn-primary')) }}
+       <a href="{{ route('colaborador.index') }}" class="btn btn-info">Limpiar Campos</a>
     </center>
   </div>
 
