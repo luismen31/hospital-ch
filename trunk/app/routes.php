@@ -46,7 +46,20 @@ Route::get('/charlaembarazada', function(){ return View::make('charlaembarazada'
 
 //Vistas Dinamicas
 Route::resource('sugerencia', 'SugerenciaController');
-Route::get('/system_resume',function(){ return View::make('system_resume'); });
+Route::get('/system_resume',function(){ 
+	if(Auth::check()){
+		if(Auth::user()->id_rol == 3){
+			$id = Colaborador::where('cedula', Auth::user()->user)->first()->id;
+			return Redirect::route('colaborador.edit', $id);	
+		}else{
+			return View::make('menu');		
+		}
+		
+	}else{
+		return View::make('system_resume'); 
+	}
+
+});
 Route::post('login', 'AuthController@postLogin');
 Route::get('logout', 'AuthController@getLogout');
 Route::resource('colaborador', 'HojaVidaController');

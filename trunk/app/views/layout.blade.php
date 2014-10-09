@@ -120,8 +120,7 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contacto <b class="caret"></b></a>
                   <ul class="dropdown-menu">
                   <li><a href="/hospital-ch/public/sugerencia">Buz&oacute;n de consultas y sugerencias</a></li>
-                  <li><a href="/hospital-ch/public/system_resume">Hoja de Vida</a></li>                    
-                  <li><a href="/hospital-ch-public/logincliente">Cliente Frecuente</a></li>
+                  <li><a href="/hospital-ch/public/system_resume">Hoja de Vida / Cliente Frecuente</a></li>                    
                 @if(Auth::check())
                   <li><a href="/hospital-ch/public/logout">Cerrar Sesi&oacute;n</a></li> 
                 @endif
@@ -148,6 +147,7 @@
     {{ HTML::script('assets/js/perfect-scrollbar.min.js') }} 
     {{ HTML::script('assets/js/bootstrap.min.js') }}
     {{ HTML::script('assets/js/overthrow/overthrow-detect.js') }}
+    {{ HTML::script('assets/js/filtro.js') }}
     {{ HTML::script('assets/js/overthrow/overthrow-init.js') }}
     {{ HTML::script('assets/js/overthrow/overthrow-polyfill.js') }}
     {{ HTML::script('assets/js/overthrow/overthrow-toss.js') }}
