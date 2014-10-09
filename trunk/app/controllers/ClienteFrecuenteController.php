@@ -12,16 +12,9 @@ class HojaVidaController extends BaseController {
 	 */
 	public function index()
 	{
-		$data['colaborador'] = new Colaborador;
-		$data['form'] = array('route' => 'colaborador.store', 'method' => 'post');
-		$data['colaborador']->id_nacionalidad = 62;
-		for($x=1;$x<5;$x++){
-			$data['estudio_'.$x.''] = '';
-			$data['experiencia_'.$x.''] = '';
-			$data['nivel_'.$x.''] = 0;
-			$data['idioma_'.$x.''] = 0;
-		}
-		return View::make('colaborador/list-edit-form')->with('data', $data);
+		$data['cliente'] = new Cliente;
+		$data['form'] = array('route' => 'cliente.store', 'method' => 'post');
+		return View::make('cliente/list-edit-form')->with('data', $data);
 	}
 
 
@@ -180,23 +173,14 @@ class HojaVidaController extends BaseController {
 	public function update($id)
 	{
 		$data = Input::all();
-		
-		
-		if(empty(User::where('user', $data['cedula'])->first()->id)){
-			$usuario = new User;
-			$usuario->user = $data['cedula'];
-			$usuario->password = Hash::make($data['pass']);
-			$usuario->id_rol = 3;
-			$usuario->save();
-		}else{
-			$id_user = User::where('user', $data['cedula'])->first()->id;
-			$usuario = User::find($id_user);
-			$usuario->password = Hash::make($data['pass']);
-			$usuario->save();
-		}
-		
-		
+
 		$colaborador = Colaborador::find($id);
+		
+		$id_user = User::where('user', $data['cedula'])->first()->id;
+		$usuario = User::find($id_user);
+		$usuario->password = Hash::make($data['pass']);
+		$usuario->save();
+		
 		$colaborador->cedula = $data['cedula'];
 		$colaborador->seguro_social = $data['seguro'];
 		$colaborador->primer_nombre = $data['primer_nombre'];
