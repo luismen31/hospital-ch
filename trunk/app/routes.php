@@ -63,6 +63,7 @@ Route::get('/system_resume',function(){
 Route::post('login', 'AuthController@postLogin');
 Route::get('logout', 'AuthController@getLogout');
 Route::resource('colaborador', 'HojaVidaController');
+Route::resource('cliente', 'ClienteController');
 
 //Rutas de Logueo y Registro de Usuarios
 Route::get('registro', 'AuthController@getRegistro')->before('auth');

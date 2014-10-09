@@ -111,7 +111,7 @@
     </div> 
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('id_tipo_sanguineo', 'Tipo de Sangre:') }}
-      {{ Form::select('id_tipo_sanguineo',  array('0' => 'SELECCIONE EL TIPO DE SANGRE', '1' => 'O+', '2' => 'O-', '3' => 'A+', '4' => 'A-', '5' => 'AB+', '6' => 'AB-', '7' => 'B+', '8' => 'B-'), $data['colaborador']->id_tipo_sangre, array('class' => 'form-control')); }}    
+      {{ Form::select('id_tipo_sanguineo',  array('0' => 'SELECCIONE EL TIPO DE SANGRE') + TipoSangre::lists('tipo_sangre', 'id'), $data['colaborador']->id_tipo_sangre, array('class' => 'form-control')); }}    
     </div>   
    </div>
    
