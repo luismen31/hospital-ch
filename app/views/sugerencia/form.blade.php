@@ -7,6 +7,8 @@
 @section ('content')
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
+				<h2 style="text-align:center;font-weight:bold;">Buzón de Consultas y Sugerencias</h2>
+				<hr>
 				<center>
 					<strong>HOSPITAL CHIRIQU&Iacute; S.A.</strong><br>
 					<strong>Tel&eacute;fonos: 774-0128</strong> (Central Tel&eacute;fonica)<br>
@@ -47,6 +49,21 @@
 				      		{{ Form::text('ciudad', null, array('placeholder' => 'Ciudad', 'class' => 'form-control')) }}
 						</div>
 					</div>
+					{{--*/ $width = '170'; $background = '5cca78';/*--}}
+					{{--
+							Estructura para el captcha
+							Captcha::getImage($count, $width, $height, $backgroundColor, $quality)
+					--}}
+					<center><img src="{{Captcha::getImage(null, $width, null, $background, null)}}"></center><br>
+					<div class="form-group">
+						{{ Form::label('codigo', 'Código:', array('class' => 'col-sm-4 control-label')) }}
+						<div class="col-sm-6">
+							{{ Form::text('codigo', null, array('placeholder' => 'Código', 'class' => 'form-control')) }}
+						</div>		
+					</div>
+					@if($errors->has())
+                    <p style="color:#f00;text-align:center;"> {{ $errors->first('codigo') }}</p>                  
+                @endif 				
 					<div class="form-group">
 				    	{{ Form::label('mensaje', 'Mensaje:', array('class' => 'col-sm-4 control-label')) }}
 						<div class="col-sm-6">
