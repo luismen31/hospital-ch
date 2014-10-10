@@ -28,6 +28,7 @@ return array(
         "array"   => "El campo :attribute tiene que tener entre :min - :max ítems.",
     ),
     "boolean"          => "El campo :attribute debe tener un valor verdadero o falso.",
+    "captcha"			  => "El código no es válido",
     "confirmed"        => "La confirmación de :attribute no coincide.",
     "date"             => "El campo :attribute no es una fecha válida.",
     "date_format"      => "El campo :attribute no corresponde al formato :format.",
