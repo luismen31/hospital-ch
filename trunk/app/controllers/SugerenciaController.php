@@ -34,15 +34,25 @@ class SugerenciaController extends BaseController {
 	public function store()
 	{
 		$data = Input::all();
-		$sugerencia = new Sugerencia;
-		$sugerencia->nombre = $data['nombre'];
-		$sugerencia->email = $data['email'];
-		$sugerencia->telefono = $data['telefono'];
-		$sugerencia->ciudad = $data['ciudad'];
-		$sugerencia->mensaje = $data['mensaje'];
-		$sugerencia->save();
-		return View::make('sugerencia/form')
-		->with('mensaje', '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Su mensaje ha sido enviado con éxito.</strong></div>');
+		$rules = array(
+		  'codigo' => 'required|captcha|min:7|max:7'
+		);
+		
+		$validator = Validator::make($data, $rules);
+		
+		if($validator -> fails()) {
+		  return Redirect::to('sugerencia')-> withErrors($validator)->withInput();
+		}else{
+			$sugerencia = new Sugerencia;
+			$sugerencia->nombre = $data['nombre'];
+			$sugerencia->email = $data['email'];
+			$sugerencia->telefono = $data['telefono'];
+			$sugerencia->ciudad = $data['ciudad'];
+			$sugerencia->mensaje = $data['mensaje'];
+			$sugerencia->save();
+			return View::make('sugerencia/form')
+			->with('mensaje', '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Su mensaje ha sido enviado con éxito.</strong></div>');
+		}
 	}
 
 
