@@ -214,7 +214,7 @@
       </div> 
       <div class="form-group col-sm-4 col-md-4 col-lg-4">
         {{ Form::label('nivel_1', 'Nivel 1:') }}
-        {{ Form::select('nivel_1',  array('0' => 'NIVEL 1') + Nivel::lists('nivel', 'id'), $data['nivel_1'], array('class' => 'form-control')); }}    
+        {{ Form::select('nivel_1',  array('0' => 'NIVEL 1') + NivelIdioma::lists('nivel', 'id'), $data['nivel_1'], array('class' => 'form-control')); }}    
       </div> 
       <div class="form-group col-sm-4 col-md-4 col-lg-4">
         {{ Form::label('idioma_2', 'Idioma 2:') }}
@@ -222,7 +222,7 @@
       </div> 
       <div class="form-group col-sm-4 col-md-4 col-lg-4">
         {{ Form::label('nivel_2', 'Nivel 2:') }}
-        {{ Form::select('nivel_2',  array('0' => 'NIVEL 2') + Nivel::lists('nivel', 'id'), $data['nivel_2'], array('class' => 'form-control')); }}    
+        {{ Form::select('nivel_2',  array('0' => 'NIVEL 2') + NivelIdioma::lists('nivel', 'id'), $data['nivel_2'], array('class' => 'form-control')); }}    
       </div> 
       <div class="form-group col-sm-4 col-md-4 col-lg-4">
         {{ Form::label('idioma_3', 'Idioma 3:') }}
@@ -230,7 +230,7 @@
       </div> 
       <div class="form-group col-sm-4 col-md-4 col-lg-4">
         {{ Form::label('nivel_3', 'Nivel 3:') }}
-        {{ Form::select('nivel_3',  array('0' => 'NIVEL 3') + Nivel::lists('nivel', 'id'), $data['nivel_3'], array('class' => 'form-control')); }}    
+        {{ Form::select('nivel_3',  array('0' => 'NIVEL 3') + NivelIdioma::lists('nivel', 'id'), $data['nivel_3'], array('class' => 'form-control')); }}    
       </div> 
     </div>
 
