@@ -12,7 +12,9 @@ class SugerenciaController extends BaseController {
 	 */
 	public function index()
 	{
-		return View::make('sugerencia/form')->with('mensaje', '');
+		$mensaje['class'] = '';
+		$mensaje['mensaje'] = '';
+		return View::make('sugerencia/form')->with('mensaje', $mensaje);
 	}
 
 
@@ -41,7 +43,8 @@ class SugerenciaController extends BaseController {
 		$validator = Validator::make($data, $rules);
 		
 		if($validator -> fails()) {
-		  return Redirect::to('sugerencia')-> withErrors($validator)->withInput();
+
+		  return Redirect::to('sugerencia')->withErrors($validator)->withInput();
 		}else{
 			$sugerencia = new Sugerencia;
 			$sugerencia->nombre = $data['nombre'];
@@ -50,8 +53,27 @@ class SugerenciaController extends BaseController {
 			$sugerencia->ciudad = $data['ciudad'];
 			$sugerencia->mensaje = $data['mensaje'];
 			$sugerencia->save();
-			return View::make('sugerencia/form')
-			->with('mensaje', '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Su mensaje ha sido enviado con éxito.</strong></div>');
+
+			$datos_email = array(
+				'name' => $data['nombre'],
+				'email' => $data['email'],
+				'phone' => $data['telefono'],
+				'msg' => $data['mensaje']
+			);
+
+			$fromEmail = 'luisagustin_mendoza@hotmail.com';
+			$fromName = 'Luis';
+
+			Mail::send('emails.templatesugerencia', $datos_email, function($message) use($fromName, $fromEmail)
+			{
+				$message->to($fromEmail, $fromName);
+				$message->subject('Mensaje de Sugerencia');
+			});
+
+			$mensaje['class'] = 'success';
+			$mensaje['mensaje'] = 'Su mensaje ha sido enviado con éxito.';
+
+			return View::make('sugerencia/form')->with('mensaje', $mensaje);
 		}
 	}
 

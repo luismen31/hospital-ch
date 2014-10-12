@@ -21,24 +21,65 @@ footer{
 	margin-top: 15px;	
 	padding-top:15px;	
 }
-/*css de los paneles de novedades*/
-.destacados{
-    padding: 20px 0;
-	text-align: center;
+
+/*css de los paneles de novedades*/ 
+.thumbnail {
+    position: relative;
+    padding: 0px;
+    margin-bottom: 20px;    
 }
-.destacados > div > div{
-	padding: 10px;
-	border: 1px solid transparent;
-	border-radius: 4px;
-	transition: 0.2s;
-}
-.destacados > div:hover > div{
-	margin-top: -10px;
+.thumbnail:hover{
+    margin-top: -10px;
 	border: 1px solid rgb(200, 200, 200);
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
-	background: rgba(200, 200, 200, 0.1);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;	
 	transition: 0.5s;
 }
-div div .thumbnail{
-	border:1px solid #d3d3d3;
+.img-height{
+	height: 225px;	
+	overflow: hidden;
+	border-bottom:1px solid #c3c3c3; 
+}
+.thumbnail .img-height img {
+    width: 100%;
+}
+.thumbnail > .caption{	
+	height: 220px;
+	display: inline-block;
+} 
+.caption h4{
+	text-align: center;
+}
+.caption p{
+	text-align: justify;
+}
+.caption a{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+/*Css del filtro*/
+.clickable{
+    cursor: pointer;   
+}
+.panel-heading div {
+  margin-top: -18px;
+  font-size: 15px;
+}
+.panel-heading div span{
+  margin-left:5px;
+}
+
+/*Css del menu*/
+.menu{
+	width:100%;
+	padding: 5px 0px;
+	margin: 10px 0px;
+	color:#fff;
+	border-radius: 4px;
+}
+.fondo-menu{
+	min-width: 215px;
+}
+.fondo-menu:hover{
+	text-shadow:2px 1px 1px #3d3d3d;
 }

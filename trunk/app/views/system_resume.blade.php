@@ -12,7 +12,7 @@
 		<div class="col-md-5 col-md-offset-2 col-md-pull-4">
 			<div class="panel panel-primary" >
 			    <div class="panel-heading">
-			        <div class="panel-title"><h4>Iniciar Sesi&oacute;n</h4></div>
+			        <div class="panel-title"><h4 style="padding-top:18px;">Iniciar Sesi&oacute;n</h4></div>
 			    </div>     
 
 			 	<div style="padding-top:30px" class="panel-body" >   

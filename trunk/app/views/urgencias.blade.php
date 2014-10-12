@@ -5,6 +5,7 @@
 @stop
 
 @section ('content')
+	@include('slider')
 	<hr>
 	<h2>Urgencias</h2>
 	<p class="text-justify">El cuarto de Urgencias del Hospital Chiriqu&iacute; tiene la visi&oacute;n de brindar a nuestra comunidad la comunidad, atenci&oacute;n m&eacute;dica de la m&aacute;s alta calidad y excelencia; lo cual nos ha posicionado a nivel nacional e internacional como una entidad m&eacute;dica de prestigio y a la vanguardia de la tecnolog&iacute;a. Nuestro personal m&eacute;dico, param&eacute;dico y de enfermer&iacute;a est&aacute;n capacitados para brindar atenci&oacute;n inmediata y personalizada con asertividad y eficacia para cada paciente que lo requiere al ingresar a nuestra instituci&oacute;n las 24 horas, los 365 d&iacute;as del a&ntilde;o.</p><br />

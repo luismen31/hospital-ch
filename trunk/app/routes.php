@@ -65,7 +65,3 @@ Route::get('logout', 'AuthController@getLogout');
 Route::resource('colaborador', 'HojaVidaController');
 Route::resource('cliente', 'ClienteController');
 Route::resource('usuario', 'UserController');
-
-//Rutas de Logueo y Registro de Usuarios
-Route::get('registro', 'AuthController@getRegistro')->before('auth');
-Route::post('registrar', 'AuthController@register');

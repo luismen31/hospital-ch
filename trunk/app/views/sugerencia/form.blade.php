@@ -9,6 +9,12 @@
 			<div class="col-md-6 col-md-offset-3">
 				<h2 style="text-align:center;font-weight:bold;">Buzón de Consultas y Sugerencias</h2>
 				<hr>
+				@if(!empty($mensaje['mensaje']))
+					<div class="alert alert-{{$mensaje['class']}} alert-dismissible" id="alerta" role="alert">
+						<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>				
+						<strong>{{ $mensaje['mensaje'] }}</strong>
+					</div>
+				@endif
 				<center>
 					<strong>HOSPITAL CHIRIQU&Iacute; S.A.</strong><br>
 					<strong>Tel&eacute;fonos: 774-0128</strong> (Central Tel&eacute;fonica)<br>
@@ -22,9 +28,8 @@
 						</center>
 					</div>
 				</div>
-				{{ $mensaje }}
 				<p class="text-center">Utilice tab para avanzar los campos. Todos los campos son importantes.!</p> 
-				{{ Form::open(array('route' => 'sugerencia.store', 'method' => 'POST', 'class' => 'form-horizontal'), array('role' => 'form')) }}		
+				{{ Form::open(array('route' => 'sugerencia.store', 'method' => 'POST', 'class' => 'form-horizontal', 'id' => 'form_sugerencia'), array('role' => 'form')) }}		
 					<div class="form-group">
 				      {{ Form::label('nombre', 'Nombre:', array('class' => 'col-sm-4 control-label')) }}
 				      <div class="col-sm-6">
@@ -49,11 +54,11 @@
 				      		{{ Form::text('ciudad', null, array('placeholder' => 'Ciudad', 'class' => 'form-control')) }}
 						</div>
 					</div>
-					{{--*/ $width = '170'; $background = '5cca78';/*--}}
 					{{--
 							Estructura para el captcha
 							Captcha::getImage($count, $width, $height, $backgroundColor, $quality)
 					--}}
+					{{--*/ $width = '170'; $background = '5cca78';/*--}}
 					<center><img src="{{Captcha::getImage(null, $width, null, $background, null)}}"></center><br>
 					<div class="form-group">
 						{{ Form::label('codigo', 'Código:', array('class' => 'col-sm-4 control-label')) }}
@@ -62,8 +67,8 @@
 						</div>		
 					</div>
 					@if($errors->has())
-                    <p style="color:#f00;text-align:center;"> {{ $errors->first('codigo') }}</p>                  
-                @endif 				
+                    	<p style="color:#f00;text-align:center;"> {{ $errors->first('codigo') }}</p>                  
+                	@endif 				
 					<div class="form-group">
 				    	{{ Form::label('mensaje', 'Mensaje:', array('class' => 'col-sm-4 control-label')) }}
 						<div class="col-sm-6">
