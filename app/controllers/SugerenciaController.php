@@ -37,6 +37,9 @@ class SugerenciaController extends BaseController {
 	{
 		$data = Input::all();
 		$rules = array(
+		  'nombre' => 'required',
+		  'email' => 'required',
+		  'mensaje' => 'required', 
 		  'codigo' => 'required|captcha|min:7|max:7'
 		);
 		
@@ -67,11 +70,11 @@ class SugerenciaController extends BaseController {
 			Mail::send('emails.templatesugerencia', $datos_email, function($message) use($fromName, $fromEmail)
 			{
 				$message->to($fromEmail, $fromName);
-				$message->subject('Mensaje de Sugerencia');
+				$message->subject('SUGERENCIAS HOSPITAL CHIRIQUI - DAVID - PANAMA!');
 			});
 
 			$mensaje['class'] = 'success';
-			$mensaje['mensaje'] = 'Su mensaje ha sido enviado con éxito.';
+			$mensaje['mensaje'] = 'Su mensaje ha sido enviado con éxito. Será revizado y contestado por nuestro personal';
 
 			return View::make('sugerencia/form')->with('mensaje', $mensaje);
 		}
