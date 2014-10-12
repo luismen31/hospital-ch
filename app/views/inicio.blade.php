@@ -4,99 +4,64 @@
 	Hospital Chiriquí
 @stop
 @section ('content')
-	<!-- Slider -->
-	<div class="carousel slide" id="carousel" data-ride="carousel">				
-		<div class="carousel-inner" style="max-height:440px">
-			<div class="item active">
-				<img alt="" src="img/logobanner.jpg" />
-				<div class="carousel-caption">
-					<h2 class="txt-black"><strong>Experiencia</strong></h2>
-					<p class="txt-black"><strong>25 Años Contigo</strong></p>
-					<a class="btn btn-primary" href="/hospital-ch/public/historia">Conozca M&aacute;s</a>
-				</div>
-			</div>
-			<div class="item">
-				<img alt="" src="img/enfermeria_portada.jpg" />
-				<div class="carousel-caption">
-					<h2 class="txt-white"><strong>Enfermeras</strong></h2>
-					<p class="txt-white"><strong>Siempre pensando en tu bienestar</strong></p>
-					<a class="btn btn-primary" href="/hospital-ch/public/enfermeria">Conozca M&aacute;s</a>
-				</div>
-			</div>
-			<div class="item">
-				<img alt="" src="img/quirofanobanner.jpg" />
-				<div class="carousel-caption">
-					<h2 class="txt-white"><strong>Quir&oacute;fano</strong></h2>
-					<p class="txt-white"><strong>Su salud est&aacute; en nuestras manos</strong></p>
-					<a class="btn btn-primary" href="/hospital-ch/public/quirofano">Conozca M&aacute;s</a>
-				</div>
-			</div>
-			<div class="item">
-				<img alt="" src="img/UCI.jpg" />
-				<div class="carousel-caption">
-					<h2 class="txt-white"><strong>Sala de recuperación</strong></h2>
-					<p class="txt-white"><strong>Modernas Instalaciones</strong></p>
-					<a class="btn btn-primary" href="/hospital-ch/public/hospitalizacion">Conozca M&aacute;s</a>
-				</div>
-			</div>
-		</div> 
-		<a class="left carousel-control" href="#carousel" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
-		</a> 
-		<a class="right carousel-control" href="#carousel" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
-		</a>
-	</div>
-
-	<div class="row destacados">		
-		<div class="container">
-			<h2 class="featurette-heading text-left" style="padding-bottom:7px"><strong>Novedades</strong></h2>
-		</div>
-		<div class="col-xs-18 col-sm-6 col-md-3">
+	@include('slider')
+	<h2 class="featurette-heading text-left" style="padding-bottom:7px"><strong>Novedades</strong></h2>
+	<div class="row content">        
+        <div class="col-xs-18 col-sm-6 col-md-3">
           <div class="thumbnail">
-			<img src="img/Charla01.jpg" class="img-rounded img-thumbnail" style="height:290px">
-              <div class="caption">
+          	<div class="img-height">
+            	<img src="img/Charla01.jpg">
+          	</div>
+            <div class="caption">
                 <h4>Primeros Pasos Como Mam&aacute;</h4>
                 <p>Creciendo Juntos y Hospital Chiriqu&iacute;</p>
-                <p><a href="/hospital-ch/public/charlaembarazada" class="btn btn-primary btn-sm" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                <p><a href="/hospital-ch/public/charlaembarazada" class="btn btn-primary" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
             </div>
           </div>
         </div>
 
         <div class="col-xs-18 col-sm-6 col-md-3">
           <div class="thumbnail">
-			<img src="img/congreso2014/congreso3small.jpg" class="img-rounded img-thumbnail">
-              <div class="caption">
+          	<div class="img-height">
+            	<img src="img/congreso2014/congreso3small.jpg">
+            </div>
+            <div class="caption">
                 <h4>XXVI Congreso Médico - Hospital Chiriquí</h4>
                 <p>Avances en Medicina Integral, 10,11 y 12 de Julio</p>
-                <p><a href="/hospital-ch/public/congreso" class="btn btn-primary btn-sm" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
-            </div>
-          </div>
-        </div>
-
-
-		<div class="col-xs-18 col-sm-6 col-md-3">
-          <div class="thumbnail">
-			<img src="img/signosvitales.jpg" class="img-rounded img-thumbnail">
-              <div class="caption">
-                <h4>Signos Vitales</h4>
-                <p>Revista del Hospital Chiriqu&iacute;.</p>
-                <p><a href="/hospital-ch/public/#" class="btn btn-primary btn-sm" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                <p><a href="/hospital-ch/public/congreso" class="btn btn-primary" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
             </div>
           </div>
         </div>
 
         <div class="col-xs-18 col-sm-6 col-md-3">
           <div class="thumbnail">
-			<img src="img/cintarosadaazulsmall.png" class="img-rounded img-thumbnail">
-              <div class="caption">
-                <h4>Cinta Rosada y Azul</h4>
-                <p>Conscientes de la necesidad de apoyar  la detecci&oacute;n temprana del C&aacute;ncer de mama y de pr&oacute;stata, Hospital  Chiriqu&iacute;  se une  a la Campa&ntilde;a de la Cinta Rosada.</p>
-                <p><a class="btn btn-primary btn-sm" href="/hospital-ch/public/cintarosada">Ver Detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+          	<div class="img-height">
+            	<img src="img/signosvitales.jpg">
+            </div>
+            <div class="caption">
+                <h4>Signos Vitales</h4>
+                <p>Revista del Hospital Chiriqu&iacute;.</p>
+                <p><a href="/hospital-ch/public/#" class="btn btn-primary" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
             </div>
           </div>
         </div>
-	</div>
+
+        <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <div class="img-height">
+            	<img src="img/cintarosadaazulsmall.png">
+            </div>
+            <div class="caption" >
+				<h4>Cinta Rosada y Azul</h4>
+                <p>Conscientes de la necesidad de apoyar  la detecci&oacute;n temprana del C&aacute;ncer de mama y de pr&oacute;stata, Hospital  Chiriqu&iacute;  se une  a la Campa&ntilde;a de la Cinta Rosada.</p>
+                <p><a class="btn btn-primary" href="/hospital-ch/public/cintarosada">Ver Detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+            </div>
+          </div>
+        </div>
+        
+      </div><!-- End row -->
+
+
 
 	<hr>
 	<div class="row">

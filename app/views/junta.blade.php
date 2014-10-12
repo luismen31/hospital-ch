@@ -5,6 +5,7 @@
 @stop
 
 @section ('content')
+	@include('slider')
 	<div class="row">
 		<hr>
 		<div class="col-sm-6 col-md-6">

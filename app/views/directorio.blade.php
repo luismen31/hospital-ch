@@ -5,6 +5,7 @@
 @stop
 
 @section ('content')
+	@include('slider')
 	<div class="row">
 		<h2 class="text-center">Directorio m&eacute;dico</h2>
 			<div class="overthrow" style="overflow:auto">

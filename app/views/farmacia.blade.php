@@ -5,6 +5,7 @@
 @stop
 
 @section ('content')
+	@include('slider')
 	<hr>
 	<h2>Farmacia</h2>
 	<p class="text-justify">
