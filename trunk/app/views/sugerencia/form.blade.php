@@ -9,6 +9,12 @@
 			<div class="col-md-6 col-md-offset-3">
 				<h2 style="text-align:center;font-weight:bold;">Buzón de Consultas y Sugerencias</h2>
 				<hr>
+				@if($errors->has())
+                	<div class="alert alert-danger alert-dismissible" id="alerta" role="alert">
+						<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>				
+						<strong>Error al enviar el mensaje.</strong>
+					</div>
+            	@endif
 				@if(!empty($mensaje['mensaje']))
 					<div class="alert alert-{{$mensaje['class']}} alert-dismissible" id="alerta" role="alert">
 						<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>				
@@ -36,12 +42,18 @@
 				      	{{ Form::text('nombre', null, array('placeholder' => 'Nombre', 'class' => 'form-control', 'required' => 'required')) }}	     
 				      </div>
 					</div>
+					@if($errors->has())
+                    	<p style="color:#f00;text-align:center;"> {{ $errors->first('nombre') }}</p>                  
+                	@endif
 					<div class="form-group">
 				      	{{ Form::label('email', 'Email:', array('class' => 'col-sm-4 control-label')) }}
 						<div class="col-sm-6">
 				      		{{ Form::text('email', null, array('placeholder' => 'Email', 'class' => 'form-control', 'required' => 'required')) }}
 						</div>
 					</div>
+					@if($errors->has())
+                    	<p style="color:#f00;text-align:center;"> {{ $errors->first('email') }}</p>                  
+                	@endif
 					<div class="form-group">
 				      	{{ Form::label('telefono', 'Teléfono:', array('class' => 'col-sm-4 control-label')) }}
 						<div class="col-sm-6">
@@ -74,7 +86,10 @@
 						<div class="col-sm-6">
 				      		{{ Form::textarea('mensaje', null, array('placeholder' => 'Mensaje', 'class' => 'form-control', 'required' => 'required', 'size' => '3x3')) }}        
 						</div>
-					</div>						
+					</div>	
+					@if($errors->has())
+                    	<p style="color:#f00;text-align:center;"> {{ $errors->first('mensaje') }}</p>                  
+                	@endif					
 					
 					<div class="form-group col-sm-12 col-md-12 col-lg-12">
 					    <center>
