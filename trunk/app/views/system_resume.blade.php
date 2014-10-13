@@ -25,7 +25,7 @@
                     @endif
 		                <div style="margin-bottom: 25px" class="input-group">
 		                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-		                    {{ Form::text('user', null, array('class' => 'form-control', 'placeholder' => 'Usuario', 'required' => 'required')) }}                                       
+		                    {{ Form::text('user', null, array('class' => 'form-control', 'placeholder' => 'Cédula', 'required' => 'required')) }}                                       
 		                </div>
 		                
 		                @if($errors->has())
