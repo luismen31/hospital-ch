@@ -7,7 +7,7 @@
 	  <center>Menú para Administradores</center>
 	</h1><hr>
 	<div class="row">
-		@if(!Auth::user()->id_rol == 1)
+		@if(Auth::user()->id_rol <> 1)
 			{{--*/ $class = 'col-sm-6 col-md-6 col-lg-6'; /*--}}
 		@else
 			{{--*/ $class = 'col-sm-4 col-md-4 col-lg-4'; /*--}}
