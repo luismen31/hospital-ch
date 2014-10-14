@@ -39,7 +39,7 @@
 	         Auth::logout();
 	         Session::flush();
 	      }
-	      return Redirect::to('system_resume');
+			return Redirect::to('menu');
 	      
 	    }
 	    
