@@ -1,7 +1,9 @@
 @extends ('layout')
 
 @section ('title') Hoja de Vida @stop
+@section('scripts')
 
+@stop
 @section ('content')
 <h1>
   <center>Hoja de Vida</center>

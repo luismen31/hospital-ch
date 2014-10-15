@@ -61,16 +61,19 @@ class SugerenciaController extends BaseController {
 				'name' => $data['nombre'],
 				'email' => $data['email'],
 				'phone' => $data['telefono'],
-				'msg' => $data['mensaje']
+				'msg' => $data['mensaje'],
+				'country' => $data['ciudad']
 			);
 
-			$fromEmail = 'luisagustin_mendoza@hotmail.com';
-			$fromName = 'Luis';
+			$fromEmail = $data['email'];
+			$fromName = $data['nombre'];
 
 			Mail::send('emails.templatesugerencia', $datos_email, function($message) use($fromName, $fromEmail)
 			{
-				$message->to($fromEmail, $fromName);
-				$message->subject('SUGERENCIAS HOSPITAL CHIRIQUI - DAVID - PANAMA!');
+				$message->from($fromEmail, $fromName);
+				$message->to('luis2531@gmail.com', 'Luis');
+				$message->cc('jsaldana@hospitalchiriqui.com', 'Juan');
+				$message->subject('CONTACTO HOSPITAL CHIRIQUI - DAVID - PANAMA!');
 			});
 
 			$mensaje['class'] = 'success';
