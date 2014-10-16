@@ -12,7 +12,7 @@
 		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 		<meta http-equiv="pragma" content="no-cache" />
     <title>@yield('title', 'Hospital Chiriqu&iacute;')</title>
-    <link rel="shortcut icon" href='/hospital-ch/public/img/hospital.ico' type="image/x-icon">    
+    <link rel="shortcut icon" href='public/img/hospital.ico' type="image/x-icon">    
     {{-- Bootstrap --}}
     {{ HTML::style('assets/css/bootstrap.css', array('media' => 'screen')) }}
     {{ HTML::style('assets/css/estilos.css', array('media' => 'screen')) }}
@@ -37,24 +37,24 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="/hospital-ch/public/">Hospital Chiriqu&iacute; S.A.</a>
+              <a class="navbar-brand" href="{{URL::to('/')}}">Hospital Chiriqu&iacute; S.A.</a>
             </div>
             <div class="navbar-collapse collapse overthrow">
               <ul class="nav navbar-nav navbar-right">              
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Con&oacute;cenos <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                  <li><a href="/hospital-ch/public/historia">Historia</a></li>
-                  <li><a href="/hospital-ch/public/junta">Junta Directiva</a></li>
-                  <li><a href="/hospital-ch/public/fundadores">Nuestros Fundadores</a></li>
-                  <li><a href="/hospital-ch/public/mision">Misi&oacute;n y Visi&oacute;n</a></li>
+                  <li><a href="{{ URL::to('historia')}}">Historia</a></li>
+                  <li><a href="{{URL::to('junta')}}">Junta Directiva</a></li>
+                  <li><a href="{{URL::to('fundadores')}}">Nuestros Fundadores</a></li>
+                  <li><a href="{{URL::to('mision')}}">Misi&oacute;n y Visi&oacute;n</a></li>
                   </ul>
                 </li>
                 
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nuestros Doctores <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                  <li><a href="/hospital-ch/public/directorio">Directorio y Especialidades</a></li>
+                  <li><a href="{{URL::to('directorio')}}">Directorio y Especialidades</a></li>
                    <!--    <li><a href="#">Doctor en Línea</a></li>  -->
                   <!--  <li><a href="#">Nuestro doctor del Mes</a></li>-->
                   </ul>
@@ -63,12 +63,12 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Atenci&oacute;n Especializada <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                  <li><a href="/hospital-ch/public/enfermeria">Nuestras Enfermeras</a></li>           
+                  <li><a href="{{URL::to('enfermeria')}}">Nuestras Enfermeras</a></li>           
                   <!--   <li class="divider"></li> -->
                   <!--   <li class="nav-header">Maternidad</li>  -->
                   <!--    <li><a href="#">Obstetricia</a></li> -->
                   <!--     <li><a href="#">Labor y Parto</a></li> -->
-                  <li><a href="/hospital-ch/public/neonatologia">Neonatolog&iacute;a</a></li>
+                  <li><a href="{{URL::to('neonatologia')}}">Neonatolog&iacute;a</a></li>
                   <!--     <li><a href="#">Nutrici&oacute;n y Embarazo</a></li>   -->
                   <!--    <li><a href="#">Tamizaje</a></li> -->
                   </ul>
@@ -96,21 +96,21 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hospitalizaci&oacute;n <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                  <li><a href="/hospital-ch/public/hospitalizacion">Habitaciones</a></li>
-                  <li><a href="/hospital-ch/public/admision">Admisi&oacute;n</a></li>
-                  <li><a href="/hospital-ch/public/seguros">Seguros Nacionales e Internacionales</a></li>
-                  <li><a href="/hospital-ch/public/registrobb">Registro de Nacimiento</a></li>
+                  <li><a href="{{URL::to('hospitalizacion')}}">Habitaciones</a></li>
+                  <li><a href="{{URL::to('admision')}}">Admisi&oacute;n</a></li>
+                  <li><a href="{{URL::to('seguros')}}">Seguros Nacionales e Internacionales</a></li>
+                  <li><a href="{{URL::to('registrobb')}}">Registro de Nacimiento</a></li>
                   <!--   <li><a href="#">Turismo M&eacute;dico</a></li>  -->
                   <li class="divider"></li>
                   <li class="dropdown-header">Servicios Hospitalarios</li>
-                  <li><a href="/hospital-ch/public/hemodialisis">Hemodi&aacute;lisis</a></li> 
-                  <li><a href="/hospital-ch/public/cuidados">Cuidados Intensivos</a></li> 
-                  <li><a href="/hospital-ch/public/quirofano">Quir&oacute;fano</a></li>
-                  <li><a href="/hospital-ch/public/laboratorio">Laboratorio </a></li>
-                  <li><a href="/hospital-ch/public/rayosx">Radiolog&iacute;a</a></li> 
-                  <li><a href="/hospital-ch/public/urgencias">Urgencias</a></li>
-                  <li><a href="/hospital-ch/public/capilla">Capilla</a></li>
-                  <li><a href="/hospital-ch/public/farmacia">Farmacia</a></li> 
+                  <li><a href="{{URL::to('hemodialisis')}}">Hemodi&aacute;lisis</a></li> 
+                  <li><a href="{{URL::to('cuidados')}}">Cuidados Intensivos</a></li> 
+                  <li><a href="{{URL::to('quirofano')}}">Quir&oacute;fano</a></li>
+                  <li><a href="{{URL::to('laboratorio')}}">Laboratorio </a></li>
+                  <li><a href="{{URL::to('rayosx')}}">Radiolog&iacute;a</a></li> 
+                  <li><a href="{{URL::to('urgencias')}}">Urgencias</a></li>
+                  <li><a href="{{URL::to('capilla')}}">Capilla</a></li>
+                  <li><a href="{{URL::to('farmacia')}}">Farmacia</a></li> 
                   </ul>
                 </li>
                 
@@ -118,18 +118,18 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Media Press <b class="caret"></b></a>
                   <ul class="dropdown-menu">
                   <!--  <li><a href="#">Comunicado de Prensa</a></li> -->
-                  <li><a href="/hospital-ch/public/compromiso">Eventos</a></li>
-                  <li><a href="/hospital-ch/public/cintarosada">Campa&ntilde;as de Salud</a></li>
+                  <li><a href="{{URL::to('compromiso')}}">Eventos</a></li>
+                  <li><a href="{{URL::to('cintarosada')}}">Campa&ntilde;as de Salud</a></li>
                   </ul>
                 </li>
                 
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contacto <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                  <li><a href="/hospital-ch/public/sugerencia">Buz&oacute;n de consultas y sugerencias</a></li>
-                  <li><a href="/hospital-ch/public/system_resume">Hoja de Vida / Cliente Frecuente</a></li>                    
+                  <li><a href="{{URL::to('sugerencia')}}">Buz&oacute;n de consultas y sugerencias</a></li>
+                  <li><a href="{{URL::to('system_resume')}}">Hoja de Vida / Cliente Frecuente</a></li>                    
                 @if(Auth::check())
-                  <li><a href="/hospital-ch/public/logout">Cerrar Sesi&oacute;n</a></li> 
+                  <li><a href="{{URL::to('logout')}}">Cerrar Sesi&oacute;n</a></li> 
                 @endif
                   </ul>
                 </li>

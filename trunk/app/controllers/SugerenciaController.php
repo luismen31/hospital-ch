@@ -65,21 +65,25 @@ class SugerenciaController extends BaseController {
 				'country' => $data['ciudad']
 			);
 
-			$fromEmail = $data['email'];
+			$fromEmail = $data['email']; 
 			$fromName = $data['nombre'];
+			//$to = "jsaldana@hospitalchiriqui.com, cquintero@hospitalchiriqui.com, mtrianes@hospitalchiriqui.com,relacionespublicas@hospitalchiriqui.com,sugerencias@hospitalchiriqui.com,rmartinez@hospitalchiriqui.com,rpublicas_mercadeo@hospitalchiriqui.com";
 
-			Mail::send('emails.templatesugerencia', $datos_email, function($message) use($fromName, $fromEmail)
-			{
-				$message->from($fromEmail, $fromName);
-				$message->to('luis2531@gmail.com', 'Luis');
-				$message->cc('jsaldana@hospitalchiriqui.com', 'Juan');
-				$message->subject('CONTACTO HOSPITAL CHIRIQUI - DAVID - PANAMA!');
-			});
+			$to = array('luis2531@gmail.com', 'luisagustin_mendoza@hotmail.com',  'luis.mendoza1@utp.ac.pa');
+			foreach ($to as $para) {			
+				Mail::send('emails.templatesugerencia', $datos_email, function($message) use ($fromName, $fromEmail, $para)
+				{
+					$message->from($fromEmail, $fromName);
+					$message->to($para);
+					$message->subject('CONTACTO HOSPITAL CHIRIQUI - DAVID - PANAMA!');
+				});
+			}
 
 			$mensaje['class'] = 'success';
 			$mensaje['mensaje'] = 'Su mensaje ha sido enviado con éxito. Será revizado y contestado por nuestro personal';
 
 			return View::make('sugerencia/form')->with('mensaje', $mensaje);
+			//<img src="{{ $message->embed('img/becas.jpg')}}"/> para enviar una imagen en el correo (se coloca en el template del mensaje a enviar)
 		}
 	}
 

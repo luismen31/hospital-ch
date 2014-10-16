@@ -15,7 +15,7 @@
             <div class="caption">
                 <h4>Primeros Pasos Como Mam&aacute;</h4>
                 <p>Creciendo Juntos y Hospital Chiriqu&iacute;</p>
-                <p><a href="/hospital-ch/public/charlaembarazada" class="btn btn-primary" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                <p><a href="{{URL::to('charlaembarazada')}}" class="btn btn-primary" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
             </div>
           </div>
         </div>
@@ -28,7 +28,7 @@
             <div class="caption">
                 <h4>XXVI Congreso Médico - Hospital Chiriquí</h4>
                 <p>Avances en Medicina Integral, 10,11 y 12 de Julio</p>
-                <p><a href="/hospital-ch/public/congreso" class="btn btn-primary" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                <p><a href="{{URL::to('congreso')}}" class="btn btn-primary" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@
             <div class="caption">
                 <h4>Signos Vitales</h4>
                 <p>Revista del Hospital Chiriqu&iacute;.</p>
-                <p><a href="/hospital-ch/public/#" class="btn btn-primary" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                <p><a href="{{URL::to('#')}}" class="btn btn-primary" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
             </div>
           </div>
         </div>
@@ -54,7 +54,7 @@
             <div class="caption" >
 				<h4>Cinta Rosada y Azul</h4>
                 <p>Conscientes de la necesidad de apoyar  la detecci&oacute;n temprana del C&aacute;ncer de mama y de pr&oacute;stata, Hospital  Chiriqu&iacute;  se une  a la Campa&ntilde;a de la Cinta Rosada.</p>
-                <p><a class="btn btn-primary" href="/hospital-ch/public/cintarosada">Ver Detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                <p><a class="btn btn-primary" href="{{URL::to('cintarosada')}}">Ver Detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
             </div>
           </div>
         </div>
