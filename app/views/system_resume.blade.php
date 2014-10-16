@@ -44,7 +44,7 @@
                 			<center>
                 				<i class="fa fa-circle-o-notch fa-spin fa-3x" id="loading" style="color:#428bca;margin-bottom:10px;display:none;"></i>
 	                          <button type="submit" class="btn btn-success">Iniciar  </button>
-	                          <a href="/hospital-ch/public/colaborador" class="btn btn-primary">Registrese</a>
+	                          <a href="{{URL::to('colaborador')}}" class="btn btn-primary">Registrese</a>
                 			</center>
 	                    </div>
 

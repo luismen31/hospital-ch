@@ -1,16 +1,38 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Mensaje de Sugerencia</title>	
-	</head>
-	<body>
-		HORA:     06:40:36 am 
+<head>
+	<meta charset="UTF-8">
+	<title>Mensaje de Sugerencia</title>
+	<style type="text/css">
+		body{color: #000;}
+		label{font-size: 14px; font-weight: bold;}		
+	</style>	
+</head>
+<body>
+	<?php
+		date_default_timezone_set('America/Panama');
+		$hora = date('h:i:s a');		
+		$dia = date('D');
+		$num_dia = date('d');
+		$mes = date('M');
+		$year = date('Y');
+	?>
 
-		FECHA:    Wed, 15 Oct 2014
+	<label>HORA:</label>  {{ $hora }} <br/><br/>
 
-		Name: {{ $name }} - Country: {{ $country }}
+	<label>FECHA:</label> {{ $dia.', '.$num_dia.' '.$mes.' '.$year }} <br/><br/><br/>
+	<div>
+		<label>Name:</label>  {{ $name }} - <label>Country: </label> {{ $country }}
+	</div>
+	<br/>
+	<div>
+		<label>Address:</label> {{ $email }} - <label>Phone: </label> {{ $phone }}
+	</div>
+	<br/><br/>
+	
 
-		Address:  - Phone: {{$phone}}
+	{{ $msg }}
 
-		{{ $msg }}
-	</body>
+	
+</body>
 </html>

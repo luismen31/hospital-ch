@@ -6,7 +6,7 @@
 				<div class="carousel-caption">
 					<h2 class="txt-black"><strong>Experiencia</strong></h2>
 					<p class="txt-black"><strong>25 Años Contigo</strong></p>
-					<a class="btn btn-primary" href="/hospital-ch/public/historia">Conozca M&aacute;s</a>
+					<a class="btn btn-primary" href="{{URL::to('historia')}}">Conozca M&aacute;s</a>
 				</div>
 			</div>
 			<div class="item">
@@ -14,7 +14,7 @@
 				<div class="carousel-caption">
 					<h2 class="txt-white"><strong>Enfermeras</strong></h2>
 					<p class="txt-white"><strong>Siempre pensando en tu bienestar</strong></p>
-					<a class="btn btn-primary" href="/hospital-ch/public/enfermeria">Conozca M&aacute;s</a>
+					<a class="btn btn-primary" href="{{URL::to('enfermeria')}}">Conozca M&aacute;s</a>
 				</div>
 			</div>
 			<div class="item">
@@ -22,7 +22,7 @@
 				<div class="carousel-caption">
 					<h2 class="txt-white"><strong>Quir&oacute;fano</strong></h2>
 					<p class="txt-white"><strong>Su salud est&aacute; en nuestras manos</strong></p>
-					<a class="btn btn-primary" href="/hospital-ch/public/quirofano">Conozca M&aacute;s</a>
+					<a class="btn btn-primary" href="{{URL::to('quirofano')}}">Conozca M&aacute;s</a>
 				</div>
 			</div>
 			<div class="item">
@@ -30,7 +30,7 @@
 				<div class="carousel-caption">
 					<h2 class="txt-white"><strong>Sala de recuperación</strong></h2>
 					<p class="txt-white"><strong>Modernas Instalaciones</strong></p>
-					<a class="btn btn-primary" href="/hospital-ch/public/hospitalizacion">Conozca M&aacute;s</a>
+					<a class="btn btn-primary" href="{{URL::to('hospitalizacion')}}">Conozca M&aacute;s</a>
 				</div>
 			</div>
 		</div> 
