@@ -14,7 +14,8 @@
 						<tr class="info">
 							<th width="33%">Secci&oacute;n</th>
 							<th width="33%">Especialidad</th>
-							<th width="33%">Extensi&oacute;n</th>
+							<th width="33%">Extensión</th>
+							<th width="33%">Teléfono</th>
 						</tr>
 						<tr>
 							<th colspan="3">
@@ -30,9 +31,9 @@
 								{{--*/$sw=1;/*--}}
 								<tr class="info">
 									@if(empty($medico->id_ubicacion))
-										<td colspan="3"><strong>Otras</strong></td>
+										<td colspan="4"><strong>Otras</strong></td>
 									@else
-										<td colspan="3"><strong>{{ Ubicacion::where('id', $medico->id_ubicacion)->first()->ubicacion }}</strong></td>
+										<td colspan="4"><strong>{{ Ubicacion::where('id', $medico->id_ubicacion)->first()->ubicacion }}</strong></td>
 									@endif
 									
 								</tr>
@@ -50,7 +51,8 @@
 									<td>{{ EspecialidadMedica::where('id_especialidades_medicas', $medico->id_especialidades_medicas)->first()->descripcion }}</td>
 								@endif
 								
-								<td>{{ $medico->telefono.'	<b>'.$medico->extension.'</b>' }}</td>
+								<td>{{ $medico->extension }}</td>
+								<td>{{ $medico->telefono }}</td>
 							</tr>
 						@endforeach
 					</tbody>
