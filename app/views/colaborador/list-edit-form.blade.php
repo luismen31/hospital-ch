@@ -1,9 +1,7 @@
 @extends ('layout')
 
 @section ('title') Hoja de Vida @stop
-@section('scripts')
 
-@stop
 @section ('content')
 <h1>
   <center>Hoja de Vida</center>
@@ -119,8 +117,8 @@
    </div>
    
 
+  <h3>Datos de Contacto Dirección</h3><br>   
   <div class="row" style="margin-top:0px;">
-	<h3>Datos de Contacto Dirección</h3><br>   
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('celular', 'Celular:') }}
       {{ Form::text('celular', $data['colaborador']->celular, array('placeholder' => 'Celular', 'class' => 'form-control')) }}        
@@ -164,8 +162,8 @@
    </div>
 
 
+   <h3>Información Laboral</h3><br> 
    <div class="row" style="margin-top:0px;">
-    <h3>Información Laboral</h3><br> 
       <div class="form-group col-sm-4 col-md-4 col-lg-4">
         {{ Form::label('aplicacion', 'Área de Aplicación:') }}
         {{ Form::select('aplicacion',  array('0' => 'ÁREA DE APLICACIÓN') + AreaAplicacion::lists('area_aplicacion', 'id'), $data['colaborador']->id_area_aplicacion, array('class' => 'form-control')); }}    
@@ -209,8 +207,8 @@
    </div>
 
 
-  <div class="row" style="margin-top:0px;">
-      <h3>Idiomas</h3><br> 
+   <h3>Idiomas</h3><br> 
+   <div class="row" style="margin-top:0px;">
       <div class="form-group col-sm-4 col-md-4 col-lg-4">
         {{ Form::label('idioma_1', 'Idioma 1:') }}
         {{ Form::select('idioma_1',  array('0' => 'IDIOMA 1') + Idioma::lists('idioma', 'id'), $data['idioma_1'], array('class' => 'form-control')); }}    

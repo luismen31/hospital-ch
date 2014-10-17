@@ -44,8 +44,10 @@
       </div>
     </div>   
 {{ Form::open(array('route' => 'usuario.store', 'method' => 'post'), array('role' => 'form')) }}
-<h3>Información Personal</h3><br>   
-  <div class="row">
+	<div class="container">
+	<h3>Información Personal</h3><br>   
+	</div>
+  
     <div class="form-group col-sm-12 col-md-12 col-lg-12">
       {{ Form::label('usuario', 'Usuario') }}
       {{ Form::text('usuario', null, array('placeholder' => 'Usuario', 'class' => 'form-control', 'required' => 'required')) }}
@@ -54,7 +56,7 @@
       {{ Form::label('pass', 'Contraseña') }}
       {{ Form::text('pass', null, array('placeholder' => 'Contraseña', 'class' => 'form-control')) }}        
     </div>
-  </div>
+  
 
   <div class="form-group col-sm-12 col-md-12 col-lg-12">
     <center>

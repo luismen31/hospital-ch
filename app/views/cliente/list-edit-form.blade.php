@@ -20,8 +20,8 @@
           <div class="panel-body" style="display:block;">
             <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filtrar Cliente" /><br>
 	        	
-        	  <div class="overthrow" style="height:250px;">
-              <table class="table table-bordered table-hover table-fixed-header" cellpadding="0" cellspacing="0" id="dev-table">
+        	  <div class="table-responsive overthrow" id="scrollbar" style=" position:relative; margin:0px auto; padding:0px;overflow:hidden;width:100%;height:100%;max-height:240px;">
+				  <table class="table table-bordered table-hover" id="dev-table">
                 <thead>
 	                <tr class="info">
 	                    <th>#</th>
@@ -57,8 +57,9 @@
       </div>
     </div>   
 {{ Form::model($data['cliente'], $data['form'], array('role' => 'form')) }}
-<h3>Información Personal</h3><br>   
-  <div class="row">
+  <div class="container">
+	<h3>Información Personal</h3><br>   
+  </div>
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('cedula', 'N&uacute;mero de C&eacute;dula') }}
       {{ Form::text('cedula', null, array('placeholder' => 'N&uacute;mero de C&eacute;dula', 'class' => 'form-control', 'required' => 'required')) }}
@@ -96,11 +97,11 @@
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('id_tipo_sanguineo', 'Tipo de Sangre:') }}
       {{ Form::select('id_tipo_sanguineo',  array('0' => 'SELECCIONE EL TIPO DE SANGRE') + TipoSangre::lists('tipo_sangre', 'id'), $data['cliente']->id_tipo_sangre, array('class' => 'form-control')); }}    
-    </div>   
-   </div>
-   <div class="row" style="margin-top:0px;">
-	{{--Datos de Nacimiento--}}
-	<h3>Datos de Contacto Dirección</h3><br>   
+    </div>
+       
+   <div class="container" style="margin-top:0px;">	
+		<h3>Datos de Contacto Dirección</h3><br>   
+  </div>
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('celular', 'Celular:') }}
       {{ Form::text('celular', $data['cliente']->celular, array('placeholder' => 'Celular', 'class' => 'form-control')) }}        
@@ -121,7 +122,6 @@
 	  {{ Form::label('direccion', 'Dirección:') }}
       {{ Form::textarea('direccion', $data['cliente']->direccion, array('placeholder' => 'Dirección', 'class' => 'form-control', 'size' => '1x1')) }}        
      </div>
-  </div>
 
   <div class="form-group col-sm-12 col-md-12 col-lg-12">
     <center>
