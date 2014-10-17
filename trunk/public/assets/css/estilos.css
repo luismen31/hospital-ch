@@ -13,7 +13,7 @@ body{
   display: block;
 }
 #footer, #wrap:after {
-  height: 50px; 
+  height: 60px; 
 }
 footer{
 	border-top:1px solid #a3a3a3;
