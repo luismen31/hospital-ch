@@ -45,7 +45,7 @@
   						  <td>{{ $colaborador->celular }}</td>
   						  <td>{{ $colaborador->telefono_residencia }}</td>
   						  <td>{{ $colaborador->email }}</td>
-  						  @if(!empty($colaborador->id_area_aplicacion))
+  						  @if(!empty($colaborador->id_area_aplicacion) && $colaborador->id_area_aplicacion <> 0)
   							<td>{{ AreaAplicacion::where('id', $colaborador->id_area_aplicacion)->first()->area_aplicacion }}</td>
   						  @else
   							<td>SIN DEFINIR</td>
