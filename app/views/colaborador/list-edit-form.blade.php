@@ -4,6 +4,9 @@
 
 @section ('content')
 <h1>
+	@if(!empty(Auth::user()) and Auth::user()->id_rol <> 3)
+		<a href="{{{URL::to('menu')}}}" class="pull-left btn btn-primary" title="Retornar al Menú"><i class="fa fa-arrow-left fa-1x"></i></a> 
+	@endif
   <center>Hoja de Vida</center>
 </h1><hr>
 @if(!empty(Auth::user()->id_rol))
@@ -22,7 +25,7 @@
 			  <div class="panel-body" style="display:block;">
 				<input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filtrar Colaborador" /><br>
         
-				 <div class="table-responsive overthrow" id="scrollbar" style=" position:relative; margin:0px auto; padding:0px;overflow:hidden;width:100%;height:100%;max-height:240px;">
+				 <div class="table-responsive overthrow" style=" position:relative; margin:0px auto; padding:0px;overflow:auto;width:100%;height:100%;max-height:240px;">
 				  <table class="table table-bordered table-hover" id="dev-table">
   					<thead>
   					  <tr class="info">
@@ -39,27 +42,28 @@
   				   <tbody>
   					{{--*/ $x = 1; /*--}}
   					@foreach (Colaborador::all() as $colaborador)
-  					  <tr>
-  						  <td>{{ $x++ }}.</td>
-  						  <td>{{ $colaborador->primer_nombre.' '.$colaborador->segundo_nombre.' '.$colaborador->primer_apellido.' '.$colaborador->segundo_apellido }}</td>
-  						  <td>{{ $colaborador->celular }}</td>
-  						  <td>{{ $colaborador->telefono_residencia }}</td>
-  						  <td>{{ $colaborador->email }}</td>
-  						  @if(!empty($colaborador->id_area_aplicacion) && $colaborador->id_area_aplicacion <> 0)
-  							<td>{{ AreaAplicacion::where('id', $colaborador->id_area_aplicacion)->first()->area_aplicacion }}</td>
-  						  @else
-  							<td>SIN DEFINIR</td>
-  						  @endif
-  						  @if(!empty($colaborador->id_estudio))
-  							<td>{{ Estudio::where('id', $colaborador->id_estudio)->get()->first()->estudio }}</td>
-  						  @else
-  							<td>SIN DEFINIR</td>
-  						  @endif
-  						  <td align="center">                        
-  							  <a href="{{ route('colaborador.edit', $colaborador->id) }}" class="btn btn-primary btn-sm" style="margin:3px 0px;" data-toggle="tooltip" title="Editar"><span class="glyphicon glyphicon-pencil"></span></a>
-  						  </td>
-  					  </tr>
-  					@endforeach
+              <tr>
+                <td>{{ $x++ }}.</td>
+                <td>{{{ $colaborador->primer_nombre.' '.$colaborador->segundo_nombre.' '.$colaborador->primer_apellido.' '.$colaborador->segundo_apellido }}}</td>
+                <td>{{{ $colaborador->celular }}}</td>
+                <td>{{{ $colaborador->telefono_residencia }}}</td>
+                <td>{{{ $colaborador->email }}}</td>
+                @if(!empty($colaborador->id_area_aplicacion) && $colaborador->id_area_aplicacion <> 0)
+                <td>{{{ AreaAplicacion::where('id', $colaborador->id_area_aplicacion)->get()->first()->area_aplicacion }}}</td>
+                @else
+                <td>SIN DEFINIR</td>
+                @endif
+                @if(!empty($colaborador->id_estudio))
+                <td>{{{ Estudio::where('id', $colaborador->id_estudio)->get()->first()->estudio }}}</td>
+                @else
+                <td>SIN DEFINIR</td>
+                @endif
+                <td align="center">                        
+                  <a href="{{{ route('colaborador.edit', $colaborador->id) }}}" class="btn btn-primary btn-sm" style="margin:3px 0px;" data-toggle="tooltip" title="Editar"><span class="glyphicon glyphicon-pencil"></span></a>
+                </td>
+              </tr>
+              
+            @endforeach
   					</tbody> 
 				  </table>
 				</div>

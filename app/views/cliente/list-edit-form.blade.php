@@ -4,6 +4,7 @@
 
 @section ('content')
 <h1>
+	<a href="{{URL::to('menu')}}" class="pull-left btn btn-primary" title="Retornar al Menú"><i class="fa fa-arrow-left"></i></a> 	
   <center>Clientes Frecuentes</center>
 </h1><hr>
      <div class="row">
