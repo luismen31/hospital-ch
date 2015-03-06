@@ -7,36 +7,26 @@
 	  <center>Menú para Administradores</center>
 	</h1><hr>
 	<div class="row">
-		@if(Auth::user()->id_rol <> 1)
+		@if(Auth::user()->id_rol == 1)
+			{{--*/ $class = 'col-sm-4 col-md-4 col-lg-4'; /*--}}
+			
+		@elseif(Auth::user()->id_rol == 2)
 			{{--*/ $class = 'col-sm-6 col-md-6 col-lg-6'; /*--}}
 		@else
-			{{--*/ $class = 'col-sm-4 col-md-4 col-lg-4'; /*--}}
+			{{--*/ $class = 'col-sm-12 col-md-12 col-lg-12'; /*--}}
 		@endif
-		<div class="{{$class}}" style="text-align:center;">
-			<a href="{{ route('colaborador.index') }}" class="btn btn-primary" style="margin:3px 0px;" data-toggle="tooltip" title="Hojas de Vida">
-				<div class="menu fondo-menu">
-					<i class="fa fa-file-text-o fa-4x"></i>
-					<h5>Hojas de Vida</h5>
-				</div>
-			</a>
-		</div>
-		<div class="{{$class}}" style="text-align:center;">
-			<a href="{{ route('cliente.index') }}" class="btn btn-primary" style="margin:3px 0px;" data-toggle="tooltip" title="Clientes Frecuentes">
-				<div class="menu fondo-menu">
-					<i class="fa fa-credit-card fa-4x"></i>
-					<h5>Clientes Frecuentes</h5>
-				</div>
-			</a>
-		</div>
-		@if(Auth::user()->id_rol == 1)
-		<div class="col-sm-4 col-md-4 col-lg-4" style="text-align:center;">
-				<a href="{{ route('usuario.index') }}" class="btn btn-primary" style="margin:3px 0px;" data-toggle="tooltip" title="Usuarios">
+		
+		@foreach(ModuloUsuario::where('id_rol', Auth::user()->id_rol)->get() as $modulos)
+			{{--*/ $modulo = Modulo::find($modulos->id_modulo); /*--}}			
+			<div class="{{$class}}" style="text-align:center;">
+				<a href="{{ route(''.$modulo->ruta.'') }}" class="btn btn-primary" style="margin:3px 0px;" data-toggle="tooltip" title="{{{ $modulo->modulo }}}">
 					<div class="menu fondo-menu">
-						<i class="fa fa-users fa-4x"></i>
-						<h5>Usuarios</h5>
+						<i class="fa fa-{{{ $modulo->clase }}} fa-4x"></i>
+						<h5>{{{ $modulo->modulo }}}</h5>
 					</div>
 				</a>
-		</div>
-		@endif
+			</div>
+			
+		@endforeach
 	</div>  
 @stop

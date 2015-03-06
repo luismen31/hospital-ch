@@ -57,7 +57,6 @@ Route::get('/system_resume',function(){
 	}else{
 		return View::make('system_resume'); 
 	}
-
 });
 Route::post('login', 'AuthController@postLogin');
 Route::get('/logout', 'AuthController@getLogout')->before('auth');
@@ -72,3 +71,5 @@ Route::get('/menu', ['before' => 'auth', function(){
 Route::resource('colaborador', 'HojaVidaController');
 Route::resource('cliente', 'ClienteController');
 Route::resource('usuario', 'UserController');
+Route::resource('modulo', 'ModuloController');
+

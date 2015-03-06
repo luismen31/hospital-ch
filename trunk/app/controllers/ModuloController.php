@@ -1,8 +1,9 @@
 <?php
 
-class UserController extends BaseController {
+class ModuloController extends BaseController {
 
 	public function __construct(){
+		$this->beforeFilter('auth');
 	}
 
 	/**
@@ -12,9 +13,7 @@ class UserController extends BaseController {
 	 */
 	public function index()
 	{
-		$datos['form'] = array('route' => 'usuario.store', 'method' => 'post');
-		$datos['usuario'] = new Usuario;
-		return View::make('usuario/form')->with('datos', $datos);
+		return View::make('usuario/form');
 	}
 
 
@@ -35,15 +34,7 @@ class UserController extends BaseController {
 	 */
 	public function store()
 	{
-		$data = Input::all();
-		$usuario = new User;
-		$usuario->user = $data['user'];
-		$usuario->password = Hash::make($data['pass']);
-		$usuario->id_rol = $data['id_rol'];
-		$usuario->save();
-
-		return Redirect::route('usuario.index');	
-
+		return View::make('usuario/form');
 	}
 
 
@@ -69,10 +60,6 @@ class UserController extends BaseController {
 	 */
 	public function edit($id)
 	{
-		$datos['form'] = array('route' => array('usuario.update', $id), 'method' => 'PATCH');
-		$datos['usuario'] = Usuario::find($id);
-		return View::make('usuario/form')->with('datos', $datos);
-		
 	}
 
 
@@ -85,15 +72,8 @@ class UserController extends BaseController {
 	 */
 	public function update($id)
 	{
-		$data = Input::all();
-		$usuario = Usuario::find($id);
-		$usuario->user = $data['user'];
-		if(!empty($data['pass'])){
-			$usuario->password = Hash::make($data['pass']);
-		}
-		$usuario->id_rol = $data['id_rol'];
-		$usuario->save();
-		return Redirect::route('usuario.index');
+	
+
 	}
 
 
