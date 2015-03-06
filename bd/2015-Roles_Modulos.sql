@@ -32,7 +32,7 @@ CREATE TABLE `modulos_usuarios` (
   `created_at` varchar(45) DEFAULT NULL,
   `updated_at` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `modulos_usuarios` (
 
 LOCK TABLES `modulos_usuarios` WRITE;
 /*!40000 ALTER TABLE `modulos_usuarios` DISABLE KEYS */;
-INSERT INTO `modulos_usuarios` VALUES (1,'1','1',1,'',''),(2,'2','1',1,'',''),(3,'3','1',1,'',''),(4,'1','4',1,'',''),(5,'2','5',1,NULL,NULL);
+INSERT INTO `modulos_usuarios` VALUES (1,'1','1',1,'',''),(2,'2','1',1,'',''),(3,'3','1',1,'',''),(4,'1','4',1,'',''),(5,'2','5',1,NULL,NULL),(6,'1','2',1,'',''),(7,'2','2',1,NULL,NULL);
 /*!40000 ALTER TABLE `modulos_usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -104,4 +104,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-03-06 11:32:26
+-- Dump completed on 2015-03-06 11:43:48
