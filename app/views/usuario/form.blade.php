@@ -26,6 +26,8 @@
 	                <tr class="info">
 	                    <th>#</th>
 	                    <th>Usuario</th>
+	                    <th>Rol</th>
+	                    <th>Acciones</th>
 	                </tr>
 	             </thead>
 	             <tbody>
@@ -34,6 +36,8 @@
                   <tr>
                       <td>{{ $x++ }}.</td>
                       <td>{{ $usuario->user }}</td>
+                      <td>{{ Rol::find($usuario->id_rol)->rol }}</td>
+                      <td><a href="{{ route('usuario.edit', $usuario->id) }}" class="btn btn-primary btn-sm" data-toggle="tooltip"  title="Editar Datos"><span class="glyphicon glyphicon-pencil"></span></a></td>
                   </tr>
                 @endforeach
                 </tbody> 
@@ -43,25 +47,28 @@
         </div>
       </div>
     </div>   
-{{ Form::open(array('route' => 'usuario.store', 'method' => 'post'), array('role' => 'form')) }}
+{{ Form::model($datos['usuario'],$datos['form'], array('role' => 'form')) }}
 	<div class="container">
 	<h3>Información Personal</h3><br>   
 	</div>
   
     <div class="form-group col-sm-12 col-md-12 col-lg-12">
-      {{ Form::label('usuario', 'Usuario') }}
-      {{ Form::text('usuario', null, array('placeholder' => 'Usuario', 'class' => 'form-control', 'required' => 'required')) }}
+      {{ Form::label('user', 'Usuario') }}
+      {{ Form::text('user', null, array('placeholder' => 'Usuario', 'class' => 'form-control', 'required' => 'required')) }}
     </div>
     <div class="form-group col-sm-12 col-md-12 col-lg-12">
       {{ Form::label('pass', 'Contraseña') }}
       {{ Form::text('pass', null, array('placeholder' => 'Contraseña', 'class' => 'form-control')) }}        
     </div>
-  
+	<div class="form-group col-sm-12 col-md-12 col-lg-12">
+      {{ Form::label('id_rol', 'Rol') }}
+      {{ Form::select('id_rol', Rol::where('id', '<>', '3')->lists('rol', 'id')  , $datos['usuario']->id_rol, array('placeholder' => 'Usuario', 'class' => 'form-control', 'required' => 'required')) }}
+    </div>
 
   <div class="form-group col-sm-12 col-md-12 col-lg-12">
     <center>
       {{ Form::button('Salvar', array('type' => 'submit', 'class' => 'btn btn-primary')) }}
-      <a href="{{ route('cliente.index') }}" class="btn btn-info">Limpiar Campos</a>
+      <a href="{{ route('usuario.index') }}" class="btn btn-info">Limpiar Campos</a>
     </center>
   </div>
 
