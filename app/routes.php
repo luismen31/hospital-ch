@@ -42,7 +42,10 @@ Route::get('/compromiso', function(){ return View::make('compromiso'); });
 Route::get('/cintarosada', function(){ return View::make('cintarosada'); });
 
 Route::get('/congreso', function(){ return View::make('congreso'); });
-Route::get('/charlaembarazada', function(){ return View::make('charlaembarazada'); });
+//Route::get('/charlaembarazada', function(){ return View::make('charlaembarazada'); });
+Route::get('/entrega_medalla', function(){ return View::make('medalla'); });
+Route::get('/fiestas_patrias', function(){ return View::make('fiestas_patrias'); });
+Route::get('/relevo', function(){ return View::make('relevo'); });
 
 //Vistas Dinamicas
 Route::resource('sugerencia', 'SugerenciaController');

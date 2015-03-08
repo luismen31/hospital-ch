@@ -15,8 +15,8 @@
 							$this.text().toLowerCase().indexOf(search) === -1 ? $this.hide() : $this.show();
 						})
 						if($target.find('tbody tr:visible').size() === 0) {
-							var col_count = $target.find('tr').first().find('td').size();
-							var no_results = $('<div class="filterTable_no_results" style="color:red; width:100%;">No se encuentran Datos.</div>')
+							var col_count = $target.find('tr')[0].cells.length;
+							var no_results = $('<tr class="filterTable_no_results"><td colspan="'+col_count+'"  style="color:red;text-align:center;">No se encuentran Datos.</td></tr>');
 							$target.find('tbody').append(no_results);
 						}
 					}
@@ -27,13 +27,6 @@
 	$('[data-action="filter"]').filterTable();
 })(jQuery);
 
-jQuery(document).ready(function ($) {        
-  $('#scrollbar').perfectScrollbar();
-  $('#scrollbar2').perfectScrollbar();
-  $('#scrollbar3').perfectScrollbar();
-  $('#scrollbar4').perfectScrollbar();
-});
-
 $(function(){
     // attach table filter plugin to inputs
 	$('[data-action="filter"]').filterTable();
@@ -43,9 +36,16 @@ $(function(){
 				$panel = $this.parents('.panel');
 		
 		$panel.find('.panel-body').slideToggle();
-		if($this.css('display') != 'none') {
+		if($this.css('display') != 'block') {
 			$panel.find('.panel-body').show();
 		}
 	});
 	$('[data-toggle="tooltip"]').tooltip();
-})
+});
+
+jQuery(document).ready(function ($) {        
+  $('#scrollbar').perfectScrollbar();
+  $('#scrollbar2').perfectScrollbar();
+  $('#scrollbar3').perfectScrollbar();
+  $('#scrollbar4').perfectScrollbar();
+});

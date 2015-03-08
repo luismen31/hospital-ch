@@ -6,10 +6,21 @@
 
 @section ('content')
 	@include('slider')
+
+	<div class="title-cont titulo">
+	    <div class="fondo-title"></div>
+	    <h2 class="text-left">Directorio m&eacute;dico</h2>
+    </div>
+
 	<div class="row">
-		<h2 class="text-center">Directorio m&eacute;dico</h2>
+		<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+			<div class="row" style="margin-bottom:20px">
+				<div class="col-xs-12">
+					<input type="text" name="search" value="" class="form-control input-lg" id="buscar-medico" placeholder="Buscar M&eacute;dico">
+				</div>
+			</div>
 			<div class="overthrow" style="overflow:auto">
-				<table class="table table-bordered table-hover">					
+				<table class="table table-bordered table-hover" id="table">					
 					<thead>
 						<tr class="info">
 							<th width="33%">Secci&oacute;n</th>
@@ -156,6 +167,21 @@
 					</tr>
 				</tbody>
 			</table>
+
 		</div>
 	</div>
+@stop
+
+@section('script')
+	{{ HTML::script('assets/js/jquery.searchable-ie.js') }}
+	<script type="text/javascript">
+		$(function(){
+			$('.table').searchable({
+				searchField: '#buscar-medico',    
+				onSearchActive : function( elem, term ) {
+			        elem.show();
+			    }
+			});  
+		});
+	</script>
 @stop

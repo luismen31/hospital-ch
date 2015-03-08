@@ -47,7 +47,14 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 */
 
 App::error(function(Exception $exception, $code)
-{
+{	
+	if (!Config::get('app.debug')) {
+        $error = trans('errors.' . $code);        
+        $error = (is_array($error))? $error : trans('errors.500');        
+        $data = array('code' => $code, 'title' => $error['title'], 'message' => $error['message']);
+
+        return Response::view('errors.default', $data, $data['code']);
+    }
 	Log::error($exception);
 });
 
