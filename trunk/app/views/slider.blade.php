@@ -1,43 +1,39 @@
 	<!-- Slider -->
-	<div class="carousel slide" id="carousel" data-ride="carousel">				
-		<div class="carousel-inner" style="max-height:440px">
-			<div class="item active">
-				<img alt="" src="img/logobanner.jpg" />
-				<div class="carousel-caption">
-					<h2 class="txt-black"><strong>Experiencia</strong></h2>
-					<p class="txt-black"><strong>25 Años Contigo</strong></p>
-					<a class="btn btn-primary" href="{{URL::to('historia')}}">Conozca M&aacute;s</a>
-				</div>
+	<ul class="slider">
+		<li>
+			<img src="{{URL::to('img/logobanner.jpg')}}" alt="">
+			<a class="btn btn-primary btn-sm sl-pc" href="{{URL::to('historia')}}"> Conozca <span class="fa fa-plus"></span></a>
+			<div class="caption-slide txt-caption">
+				<p>
+					<strong>Experiencia</strong> - 25 Años Contigo 
+				</p>
 			</div>
-			<div class="item">
-				<img alt="" src="img/enfermeria_portada.jpg" />
-				<div class="carousel-caption">
-					<h2 class="txt-white"><strong>Enfermeras</strong></h2>
-					<p class="txt-white"><strong>Siempre pensando en tu bienestar</strong></p>
-					<a class="btn btn-primary" href="{{URL::to('enfermeria')}}">Conozca M&aacute;s</a>
-				</div>
+		</li>
+		<li>
+			<img src="{{URL::to('img/enfermeria_portada.jpg')}}" alt="">
+			<a class="btn btn-primary btn-sm sl-pc" href="{{URL::to('enfermeria')}}">Conozca <span class="fa fa-plus"></span></a>
+			<div class="caption-slide txt-caption">
+				<p>
+					<strong>Enfermeras</strong> - Siempre pensando en tu bienestar 
+				</p>
 			</div>
-			<div class="item">
-				<img alt="" src="img/quirofanobanner.jpg" />
-				<div class="carousel-caption">
-					<h2 class="txt-white"><strong>Quir&oacute;fano</strong></h2>
-					<p class="txt-white"><strong>Su salud est&aacute; en nuestras manos</strong></p>
-					<a class="btn btn-primary" href="{{URL::to('quirofano')}}">Conozca M&aacute;s</a>
-				</div>
+		</li>
+		<li>
+			<img src="{{URL::to('img/quirofanobanner.jpg')}}" alt="">
+			<a class="btn btn-primary btn-sm sl-pc" href="{{URL::to('quirofano')}}">Conozca <span class="fa  fa-plus"></span></a>
+			<div class="caption-slide txt-caption">
+				<p>
+					<strong>Quir&oacute;fano</strong> - Su salud est&aacute; en nuestras manos
+				</p>
 			</div>
-			<div class="item">
-				<img alt="" src="img/UCI.jpg" />
-				<div class="carousel-caption">
-					<h2 class="txt-white"><strong>Sala de recuperación</strong></h2>
-					<p class="txt-white"><strong>Modernas Instalaciones</strong></p>
-					<a class="btn btn-primary" href="{{URL::to('hospitalizacion')}}">Conozca M&aacute;s</a>
-				</div>
+		</li>
+		<li>
+			<img src="{{URL::to('img/UCI.jpg')}}" alt="">
+			<a class="btn btn-primary btn-sm sl-pc" href="{{URL::to('hospitalizacion')}}">Conozca <span class="fa  fa-plus"></span></a>
+			<div class="caption-slide txt-caption">
+				<p>
+					<strong>Sala de recuperación</strong> - Modernas Instalaciones
+				</p>
 			</div>
-		</div> 
-		<a class="left carousel-control" href="#carousel" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
-		</a> 
-		<a class="right carousel-control" href="#carousel" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
-		</a>
-	</div>
+		</li>						
+	</ul>	

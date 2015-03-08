@@ -12,12 +12,14 @@
 		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 		<meta http-equiv="pragma" content="no-cache" />
     <title>@yield('title', 'Hospital Chiriqu&iacute;')</title>
-    <link rel="shortcut icon" href='public/img/hospital.ico' type="image/x-icon">    
+    <link rel="shortcut icon" href="{{ URL::to('img/hospital.ico') }}" type="image/x-icon">    
     {{-- Bootstrap --}}
     {{ HTML::style('assets/css/bootstrap.css', array('media' => 'screen')) }}
     {{ HTML::style('assets/css/estilos.css', array('media' => 'screen')) }}
     {{ HTML::style('assets/css/font-awesome.min.css', array('media' => 'screen')) }}
     {{ HTML::style('assets/css/perfect-scrollbar.min.css', array('media' => 'screen')) }}
+    {{ HTML::style('assets/css/owl_carousel/owl.carousel.css') }}
+    @yield('css')
     {{-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --}}
     <!--[if lt IE 9]>
         {{ HTML::script('assets/js/html5shiv.js') }}
@@ -28,135 +30,167 @@
   </head>
   <body>    
       <div id="wrap">
-        <div class="navbar navbar-default navbar-static-top" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="{{URL::to('/')}}">Hospital Chiriqu&iacute; S.A.</a>
+        <div class="header">
+          <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    <a href="{{URL::to('/')}}" class="pull-left">
+                      <img src="{{URL::to('img/hospital25-2.jpg')}}" class="img-responsive img-rounded img-head">
+                    </a>
+                    <div class="central">
+                      <span class="fa fa-phone fa-1x"></span> Tel: (+507) 774-0128
+                    </div>
+                    <div id="navigate">
+                      <div class="navbar navbar-default navbar-stat ic-top" role="navigation">
+                        <div class="container-fluid  menu-content">
+                          <div class="navbar-header">                            
+                            <a href="{{URL::to('/')}}" class="btn-home"><span class="fa fa-home fa-2x"></span></a>
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                              <span class="sr-only">Navegacion</span>                            
+                              <span class="fa fa-bars fa-2x" style="color: #2A7DCF;"></span>
+                              <!--span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span-->
+                            </button>
+                          </div>
+                          <div class="navbar-collapse collapse overthrow">
+                            <ul class="nav navbar-nav navbar-right" style="margin-right:0px;">              
+                              <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Con&oacute;cenos <b class="caret caret-icon"></b></a>
+                                <ul class="dropdown-menu">
+                                <li><a href="{{ URL::to('historia')}}">Historia</a></li>
+                                <li><a href="{{URL::to('junta')}}">Junta Directiva</a></li>
+                                <li><a href="{{URL::to('fundadores')}}">Nuestros Fundadores</a></li>
+                                <li><a href="{{URL::to('mision')}}">Misi&oacute;n y Visi&oacute;n</a></li>
+                                </ul>
+                              </li>
+                              
+                              <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nuestros Doctores <b class="caret caret-icon"></b></a>
+                                <ul class="dropdown-menu">
+                                <li><a href="{{URL::to('directorio')}}">Directorio y Especialidades</a></li>
+                                 <!--    <li><a href="#">Doctor en Línea</a></li>  -->
+                                <!--  <li><a href="#">Nuestro doctor del Mes</a></li>-->
+                                </ul>
+                              </li>
+                              
+                              <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Atenci&oacute;n Especializada <b class="caret caret-icon"></b></a>
+                                <ul class="dropdown-menu">
+                                <li><a href="{{URL::to('enfermeria')}}">Nuestras Enfermeras</a></li>           
+                                <!--   <li class="divider"></li> -->
+                                <!--   <li class="nav-header">Maternidad</li>  -->
+                                <!--    <li><a href="#">Obstetricia</a></li> -->
+                                <!--     <li><a href="#">Labor y Parto</a></li> -->
+                                <li><a href="{{URL::to('neonatologia')}}">Neonatolog&iacute;a</a></li>
+                                <!--     <li><a href="#">Nutrici&oacute;n y Embarazo</a></li>   -->
+                                <!--    <li><a href="#">Tamizaje</a></li> -->
+                                </ul>
+                              </li>
+                            
+                               
+                         <!--   ESTA SECCION FUE REMOVIDA EL 20 DE MAYO POR VANESSA         
+                              <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tecnolog&iacute;a de Punta <b class="caret caret-icon"></b></a>
+                                <ul class="dropdown-menu">
+                                <li class="divider"></li>
+                                <li class="nav-header">Equipos</li>
+                                <li><a href="#">Desintrometr&iacute;a Ósea</a></li>
+                                <li><a href="#">Hemodin&acute;mica</a></li>
+                                <li><a href="#">Hemodi&aacute;lisis </a></li>
+                                <li><a href="#">Video Endoscop&iacute;a</a></li>
+                                <li><a href="#">Cámara Hiperb&aacute;rica</a></li>
+                                <li><a href="#">Mamograf&iacute;a </a></li>
+                                <li><a href="#">Equipo Cardiovascular</a></li>
+                                <li><a href="#">Transductor Lineal Phillip</a></li>
+                                <li><a href="#">Equipo de Ultrasonido Phillip HD7XE</a></li>                
+                                </ul>
+                              </li>  -->
+                                
+                              <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hospitalizaci&oacute;n <b class="caret caret-icon"></b></a>
+                                <ul class="dropdown-menu">
+                                <li><a href="{{URL::to('hospitalizacion')}}">Habitaciones</a></li>
+                                <li><a href="{{URL::to('admision')}}">Admisi&oacute;n</a></li>
+                                <li><a href="{{URL::to('seguros')}}">Seguros Nacionales e Internacionales</a></li>
+                                <li><a href="{{URL::to('registrobb')}}">Registro de Nacimiento</a></li>
+                                <!--   <li><a href="#">Turismo M&eacute;dico</a></li>  -->
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Servicios Hospitalarios</li>
+                                <li><a href="{{URL::to('hemodialisis')}}">Hemodi&aacute;lisis</a></li> 
+                                <li><a href="{{URL::to('cuidados')}}">Cuidados Intensivos</a></li> 
+                                <li><a href="{{URL::to('quirofano')}}">Quir&oacute;fano</a></li>
+                                <li><a href="{{URL::to('laboratorio')}}">Laboratorio </a></li>
+                                <li><a href="{{URL::to('rayosx')}}">Radiolog&iacute;a</a></li> 
+                                <li><a href="{{URL::to('urgencias')}}">Urgencias</a></li>
+                                <li><a href="{{URL::to('capilla')}}">Capilla</a></li>
+                                <li><a href="{{URL::to('farmacia')}}">Farmacia</a></li> 
+                                </ul>
+                              </li>
+                              
+                              <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Media Press <b class="caret caret-icon"></b></a>
+                                <ul class="dropdown-menu">
+                                <!--  <li><a href="#">Comunicado de Prensa</a></li> -->
+                                <li><a href="{{URL::to('compromiso')}}">Eventos</a></li>
+                                <li><a href="{{URL::to('cintarosada')}}">Campa&ntilde;as de Salud</a></li>
+                                </ul>
+                              </li>
+                              
+                              <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contacto <b class="caret caret-icon"></b></a>
+                                <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{URL::to('sugerencia')}}">Buz&oacute;n de consultas y sugerencias</a></li>
+                                <li><a href="{{URL::to('system_resume')}}">Hoja de Vida / Cliente Frecuente</a></li>                    
+                              @if(Auth::check())
+                                <li><a href="{{URL::to('logout')}}">Cerrar Sesi&oacute;n <span class="fa fa-power-off"></span> </a></li> 
+                              @endif
+                                </ul>
+                              </li>
+                            </ul>       
+                          </div><!-- Fin de Navbar -->
+                      </div> 
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
             </div>
-            <div class="navbar-collapse collapse overthrow">
-              <ul class="nav navbar-nav navbar-right">              
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Con&oacute;cenos <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                  <li><a href="{{ URL::to('historia')}}">Historia</a></li>
-                  <li><a href="{{URL::to('junta')}}">Junta Directiva</a></li>
-                  <li><a href="{{URL::to('fundadores')}}">Nuestros Fundadores</a></li>
-                  <li><a href="{{URL::to('mision')}}">Misi&oacute;n y Visi&oacute;n</a></li>
-                  </ul>
-                </li>
-                
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nuestros Doctores <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                  <li><a href="{{URL::to('directorio')}}">Directorio y Especialidades</a></li>
-                   <!--    <li><a href="#">Doctor en Línea</a></li>  -->
-                  <!--  <li><a href="#">Nuestro doctor del Mes</a></li>-->
-                  </ul>
-                </li>
-                
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Atenci&oacute;n Especializada <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                  <li><a href="{{URL::to('enfermeria')}}">Nuestras Enfermeras</a></li>           
-                  <!--   <li class="divider"></li> -->
-                  <!--   <li class="nav-header">Maternidad</li>  -->
-                  <!--    <li><a href="#">Obstetricia</a></li> -->
-                  <!--     <li><a href="#">Labor y Parto</a></li> -->
-                  <li><a href="{{URL::to('neonatologia')}}">Neonatolog&iacute;a</a></li>
-                  <!--     <li><a href="#">Nutrici&oacute;n y Embarazo</a></li>   -->
-                  <!--    <li><a href="#">Tamizaje</a></li> -->
-                  </ul>
-                </li>
-              
-                 
-           <!--   ESTA SECCION FUE REMOVIDA EL 20 DE MAYO POR VANESSA         
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tecnolog&iacute;a de Punta <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                  <li class="divider"></li>
-                  <li class="nav-header">Equipos</li>
-                  <li><a href="#">Desintrometr&iacute;a Ósea</a></li>
-                  <li><a href="#">Hemodin&acute;mica</a></li>
-                  <li><a href="#">Hemodi&aacute;lisis </a></li>
-                  <li><a href="#">Video Endoscop&iacute;a</a></li>
-                  <li><a href="#">Cámara Hiperb&aacute;rica</a></li>
-                  <li><a href="#">Mamograf&iacute;a </a></li>
-                  <li><a href="#">Equipo Cardiovascular</a></li>
-                  <li><a href="#">Transductor Lineal Phillip</a></li>
-                  <li><a href="#">Equipo de Ultrasonido Phillip HD7XE</a></li>                
-                  </ul>
-                </li>  -->
-                  
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hospitalizaci&oacute;n <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                  <li><a href="{{URL::to('hospitalizacion')}}">Habitaciones</a></li>
-                  <li><a href="{{URL::to('admision')}}">Admisi&oacute;n</a></li>
-                  <li><a href="{{URL::to('seguros')}}">Seguros Nacionales e Internacionales</a></li>
-                  <li><a href="{{URL::to('registrobb')}}">Registro de Nacimiento</a></li>
-                  <!--   <li><a href="#">Turismo M&eacute;dico</a></li>  -->
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Servicios Hospitalarios</li>
-                  <li><a href="{{URL::to('hemodialisis')}}">Hemodi&aacute;lisis</a></li> 
-                  <li><a href="{{URL::to('cuidados')}}">Cuidados Intensivos</a></li> 
-                  <li><a href="{{URL::to('quirofano')}}">Quir&oacute;fano</a></li>
-                  <li><a href="{{URL::to('laboratorio')}}">Laboratorio </a></li>
-                  <li><a href="{{URL::to('rayosx')}}">Radiolog&iacute;a</a></li> 
-                  <li><a href="{{URL::to('urgencias')}}">Urgencias</a></li>
-                  <li><a href="{{URL::to('capilla')}}">Capilla</a></li>
-                  <li><a href="{{URL::to('farmacia')}}">Farmacia</a></li> 
-                  </ul>
-                </li>
-                
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Media Press <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                  <!--  <li><a href="#">Comunicado de Prensa</a></li> -->
-                  <li><a href="{{URL::to('compromiso')}}">Eventos</a></li>
-                  <li><a href="{{URL::to('cintarosada')}}">Campa&ntilde;as de Salud</a></li>
-                  </ul>
-                </li>
-                
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contacto <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                  <li><a href="{{URL::to('sugerencia')}}">Buz&oacute;n de consultas y sugerencias</a></li>
-                  <li><a href="{{URL::to('system_resume')}}">Hoja de Vida / Cliente Frecuente</a></li>                    
-                @if(Auth::check())
-                  <li><a href="{{URL::to('logout')}}">Cerrar Sesi&oacute;n</a></li> 
-                @endif
-                  </ul>
-                </li>
-              </ul>       
-            </div><!-- Fin de Navbar -->
-        </div> 
-      </div>
+          </div>
+     
+
+
+        
       {{-- Begin page content --}}          
-      <div class="container">    
-        @yield('content')  
+      <div id="main" class="clearf">
+        <div class="container-fluid contenido">
+          @yield('content')  
+        </div>    
       </div>
     </div>
 
-    <footer id="footer">        
+    <div id="footer">        
       <div class="container">
-        <p class="pull-right"><a href="#"><span class="glyphicon glyphicon-chevron-up"></span></a></p>
-        <p>&copy; 2014 Hospital Chiriqu&iacute; SA. &middot; <a href="#">Privacidad</a> &middot; <a href="#">T&eacute;rminos</a> </p>
+        <p class="pull-right"><a href="#" id="top" class="btn btn-primary"><span class="glyphicon glyphicon-chevron-up"></span></a></p>
+        <p>2015 Hospital Chiriqu&iacute; &copy; S.A. | <a href="#">Privacidad</a> | <a href="#">T&eacute;rminos</a> </p>
       </div>
-    </footer>
+    </div>
     {{-- jQuery (necesario para Bootstrap's JavaScript) --}}
     {{-- Scripts para la usabilidad --}}
     {{ HTML::script('assets/js/perfect-scrollbar.min.js') }} 
     {{ HTML::script('assets/js/bootstrap.min.js') }}
+    <!-- Include js plugin -->
+    {{ HTML::script('assets/js/owl.carousel.min.js') }}
+    {{ HTML::script('assets/js/pace.min.js') }}
     {{ HTML::script('assets/js/overthrow/overthrow-detect.js') }}
     {{ HTML::script('assets/js/filtro.js') }}
     {{ HTML::script('assets/js/overthrow/overthrow-init.js') }}
     {{ HTML::script('assets/js/overthrow/overthrow-polyfill.js') }}
-    {{ HTML::script('assets/js/overthrow/overthrow-toss.js') }}    
+    {{ HTML::script('assets/js/overthrow/overthrow-toss.js') }}   
+    {{ HTML::script('assets/js/responsiveslides.min.js')}}
+    {{ HTML::script('assets/js/jquery.fancybox.js')}}
+    @yield('script')     
+    {{ HTML::script('assets/js/scripts.js') }}
   </body>
  </html>

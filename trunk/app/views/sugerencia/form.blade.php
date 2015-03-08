@@ -7,7 +7,7 @@
 @section ('content')
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
-				<h2 style="text-align:center;font-weight:bold;">Buzón de Consultas y Sugerencias</h2>
+				<h2 style="text-align:center;font-weight:bold;" class="subtitulo">Buzón de Consultas y Sugerencias</h2>
 				<hr>
 				@if($errors->has())
                 	<div class="alert alert-danger alert-dismissible" id="alerta" role="alert">
@@ -27,13 +27,14 @@
 					<strong>Fax: 777-8073</strong><br>
 					<strong>Ave.3ra. Y Calle Central, David, Chiriqu&iacute;, Rep. De Panam&aacute;</strong><br><br>
 				</center>
-				<div class="row">	
-					<div class="col-md-12">
-						<center>
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.7000405828703!2d-82.4307485731997!3d8.431089151188548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd79db70dee0e96a6!2sHospital+Chiriqui!5e0!3m2!1ses-419!2s!4v1397282404906" frameborder="0" style="width:100%;max-width:550px;height:400px;border:2px solid #666;margin-bottom:20px;"></iframe>
-						</center>
-					</div>
-				</div>
+			</div>
+		</div>
+		<div class="mapa">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.7000405828703!2d-82.4307485731997!3d8.431089151188548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd79db70dee0e96a6!2sHospital+Chiriqui!5e0!3m2!1ses-419!2s!4v1397282404906" frameborder="0" s tyle="width:100%;height:400px;margin-bottom:20px;"></iframe>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
 				<p class="text-center">Utilice tab para avanzar los campos. Todos los campos son importantes.!</p> 
 				{{ Form::open(array('route' => 'sugerencia.store', 'method' => 'POST', 'class' => 'form-horizontal', 'id' => 'form_sugerencia'), array('role' => 'form')) }}		
 					<div class="form-group">

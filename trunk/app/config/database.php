@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'hospitalch',
-			'username'  => 'root',
-			'password'  => 'sql',
+			'database'  => 'hospitalch',//jsaldana_hospitalch
+			'username'  => 'root',//jsaldana_admin
+			'password'  => 'sql',//saldana83
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

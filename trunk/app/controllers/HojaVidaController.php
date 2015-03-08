@@ -134,39 +134,44 @@ class HojaVidaController extends BaseController {
 	public function edit($id)
 	{
 		$data['colaborador'] = Colaborador::find($id);
-		$data['form'] = array('route' => array('colaborador.update', $id), 'method' => 'PATCH');
-		$data['colaborador']->pass = Crypt::decrypt($data['colaborador']->pass_encriptado);
-		$estudios = EstudioColaborador::where('id_colaborador', $id)->get();
-		$x = 1;
-		foreach ($estudios as $estudio) {
-			$data['estudio_'.$x.''] = $estudio->estudio;
-			$x++;
-		}
-		for($y=$x;$y<5;$y++){
-			$data['estudio_'.$y.''] = '';	
-		}
-		$experiencias = ExperienciaColaborador::where('id_colaborador', $id)->get();
-		$x = 1;
-		foreach ($experiencias as $experiencia) {
-			$data['experiencia_'.$x.''] = $experiencia->experiencia;
-			$x++;
-		}
-		for($y=$x;$y<5;$y++){
-			$data['experiencia_'.$y.''] = '';	
-		}
-		$idiomas = IdiomaColaborador::where('id_colaborador', $id)->get();
-		$x = 1;
-		foreach ($idiomas as $idioma) {
-			$data['idioma_'.$x.''] = $idioma->id_idioma;
-			$data['nivel_'.$x.''] = $idioma->id_nivel;
-			$x++;
-		}
-		for($y=$x;$y<4;$y++){
-			$data['idioma_'.$y.''] = 0;	
-			$data['nivel_'.$y.''] = 0;
-		}
+		if((!empty(Auth::user()->id) and Auth::user()->user == $data['colaborador']->cedula) or Auth::user()->id_rol == 1 or Auth::user()->id_rol == 2 or Auth::user()->id_rol == 4){
 
-		return View::make('colaborador/list-edit-form')->with('data', $data);
+			$data['form'] = array('route' => array('colaborador.update', $id), 'method' => 'PATCH');
+			$data['colaborador']->pass = Crypt::decrypt($data['colaborador']->pass_encriptado);
+			$estudios = EstudioColaborador::where('id_colaborador', $id)->get();
+			$x = 1;
+			foreach ($estudios as $estudio) {
+				$data['estudio_'.$x.''] = $estudio->estudio;
+				$x++;
+			}
+			for($y=$x;$y<5;$y++){
+				$data['estudio_'.$y.''] = '';	
+			}
+			$experiencias = ExperienciaColaborador::where('id_colaborador', $id)->get();
+			$x = 1;
+			foreach ($experiencias as $experiencia) {
+				$data['experiencia_'.$x.''] = $experiencia->experiencia;
+				$x++;
+			}
+			for($y=$x;$y<5;$y++){
+				$data['experiencia_'.$y.''] = '';	
+			}
+			$idiomas = IdiomaColaborador::where('id_colaborador', $id)->get();
+			$x = 1;
+			foreach ($idiomas as $idioma) {
+				$data['idioma_'.$x.''] = $idioma->id_idioma;
+				$data['nivel_'.$x.''] = $idioma->id_nivel;
+				$x++;
+			}
+			for($y=$x;$y<4;$y++){
+				$data['idioma_'.$y.''] = 0;	
+				$data['nivel_'.$y.''] = 0;
+			}
+			
+			return View::make('colaborador/list-edit-form')->with('data', $data);					
+		}else{
+			App::abort(403);
+		}
 	}
 
 

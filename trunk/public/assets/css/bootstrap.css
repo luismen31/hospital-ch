@@ -338,7 +338,8 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eee;
+  borde r-top: 1px solid #eee;
+  border-top:1px solid #E7E7E7; 
 }
 .sr-only {
   position: absolute;
@@ -3050,10 +3051,10 @@ input[type="button"].btn-block {
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  color: #262626;
+  color: #333;
   text-decoration: none;
   /*background-color: #f5f5f5;*/
-  background-color:#D0E8F3;
+  background-color:#dfdfdf;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
@@ -3123,7 +3124,7 @@ input[type="button"].btn-block {
   bottom: 100%;
   margin-bottom: 1px;
 }
-@media (min-width: 885px) {
+@media (min-width: 1127px) {
   .navbar-right .dropdown-menu {
     right: 0;
     left: auto;
@@ -3650,25 +3651,24 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
-@media (min-width: 885px) {
+@media (min-width: 1127px) {
   .navbar {
     border-radius: 4px;
   }
 }
-@media (min-width: 885px) {
+@media (min-width: 1127px) {
   .navbar-header {
     float: left;
   }
 }
-
-/*@media (min-width:885px){
+@media (min-width:1127px){
 	.navbar-collapse .collapse{
 		display:none !important;
 		height:none !important;
 		padding-bottom:0px !important;
 		overflow:hidden !important;
 	}
-}*/
+}
 
 .navbar-collapse {
   max-height: 340px;
@@ -3682,7 +3682,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-collapse.in {
   overflow-y: auto;
 }
-@media (min-width: 885px) {
+@media (min-width: 1127px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
@@ -3712,7 +3712,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-left: -15px;
 }
 /*Cambiado por mejora al nav*/
-@media (min-width: 885px) {
+@media (min-width: 1127px) {
   .container > .navbar-header,
   .container-fluid > .navbar-header,
   .container > .navbar-collapse,
@@ -3772,14 +3772,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-toggle {
   position: relative;
   float: right;
-  padding: 9px 10px;
+  /*padding: 9px 10px;*/
+  padding:19px 9px 0px 9px;
   margin-top: 8px;
   margin-right: 15px;
   margin-bottom: 8px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
-  border-radius: 4px;
 }
 .navbar-toggle:focus {
   outline: none;
@@ -3787,14 +3787,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-toggle .icon-bar {
   display: block;
   width: 22px;
-  height: 2px;
-  border-radius: 1px;
+  height: 3px;
 }
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
 /*Original 768px Cambiado por muchos enlaces*/
-@media (min-width: 885px) {
+@media (min-width: 1127px) {
   .navbar-toggle {
     display: none;
   }
@@ -3807,7 +3806,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding-bottom: 10px;
   line-height: 20px;
 }
-@media (max-width: 864px) {
+@media (max-width: 1127px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
     float: none;
@@ -3829,10 +3828,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     background-image: none;
   }
 }
-@media (min-width: 885px) {
+@media (min-width: 1127px) {
   .navbar-nav {
     float: left;
     margin: 0;
+    padding-top: 15px;
   }
   .navbar-nav > li {
     float: left;
@@ -3846,7 +3846,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 /*Modificado para que adaptara mejor y flotaran los li a la izq.*/
-@media (min-width: 885px) {
+@media (min-width: 1127px) {
   .navbar-left {
     float: left !important;
   }
@@ -3921,9 +3921,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-nav > li > .dropdown-menu {
-  margin-top: 0;
+  margin-top: -2px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  border-top:2px solid #2A7DCF;
 }
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
   border-bottom-right-radius: 0;
@@ -3960,6 +3961,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-color: #e7e7e7;*/
   background-color:#4994D4;
   border:#357ebd;
+  height: 80px;
 }
 .navbar-default .navbar-brand {
   /*color: #777;*/
@@ -3971,17 +3973,19 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
 }
 .navbar-default .navbar-text {
-  color: #777;
+  color: #333;
 }
 .navbar-default .navbar-nav > li > a {
-  /*color: #777;*/
-  color:#eeeeee;
+  color: #333;
+  /*color:#eeeeee;*/
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  /*color: #333;*/
-  color:#ddddddd;
-  background-color: #357ebd;
+  color: #2A7DCF;
+  /*color:#ddddddd;*/
+  background-color: #fff;
+  height: 55px;
+  border-bottom:2px solid #2A7DCF; /*#240086 #357ebd*/
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
@@ -3997,37 +4001,47 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-toggle {
   /*border-color: #ddd;*/
-  /*border-color:#357ebd;*/
+  /*border-color:none;*/
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
   /*background-color: #ddd;*/
-  background-color:#357ebd;
+  background-color:transparent;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #fff;
+  background-color: #2A7DCF;
+  font-size: 4px;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
   /*border-color: #e7e7e7;*/
-  border-color:#357ebd;
+  border-color:#fff;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  color: #ffffff;
-  background-color: #357ebd;/*este es un agregado*/
+  color: #000;
+  background-color: #e8e8e8;/*este es un agregado*/
 }
+
+@media(max-width: 1127px){
+  .navbar-default{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+  }
+}
+
 /*Colores de fondo y letras cuando se adapta*/
-@media (max-width: 864px) {
+@media (max-width: 1127px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     /*color: #777;*/
-	color:#ffffff;
+	  color:#333;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
     /*color: #333;*/
-	color:#eeeeee;
+	  color:#000;
     background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,

@@ -33,6 +33,6 @@
             777-8044 <br />
           gerencia@hospitalchiriqui.com			</p>
 		</div>
-		<div class="col-md-5" align="center"> <img src="img/congreso2014/congreso3.jpg" width="80%" class="img-rounded"></div>
+		<div class="col-md-5" align="center"> <img src="img/congreso2014/congreso2014.jpg" width="80%" class="img-rounded"></div>
 	</div>
 @stop
