@@ -16,7 +16,7 @@
 						})
 						if($target.find('tbody tr:visible').size() === 0) {
 							var col_count = $target.find('tr')[0].cells.length;
-							var no_results = $('<tr class="filterTable_no_results"><td colspan="'+col_count+'"  style="color:red;text-align:center;">No se encuentran Datos.</td></tr>');
+							var no_results = $('<tr class="filterTable_no_results default"><td colspan="'+col_count+'"  style="color:red;text-align:center;">No se encuentran Datos.</td></tr>');
 							$target.find('tbody').append(no_results);
 						}
 					}
@@ -50,7 +50,7 @@ jQuery(document).ready(function ($) {
   $('#scrollbar4').perfectScrollbar();
 });
 
-$('tr.default').click(function(e){
+$('tr.default').click(function(){
 	var host = window.location.host; 
 	$.post('http://'+host+'/hospital-ch/public/getMedico',
 		{ medico : $(this).data('id')},
@@ -62,6 +62,13 @@ $('tr.default').click(function(e){
 			$('#telefono').html(data.telefono);
 			$('#observaciones').html(data.observacion);
 			//mostrar modal
-			$('#showMedico').modal('show');
+			$('#showMedico').modal('show');			
 		}, 'json');
+});
+
+$(function(){
+	$('.tooltipMedico').tooltip({
+		placement: 'top',
+		title: 'Ver Más'
+	});
 });

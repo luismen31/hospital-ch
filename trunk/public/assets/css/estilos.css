@@ -586,6 +586,9 @@ div.image-height{
 	padding: 10px;
 	border-radius: 0px;
 }
+.italic{
+	font-style: italic;
+}
 
 /*color de fondo para secciones de tabla*/
 /*encabezados*/
@@ -604,12 +607,7 @@ div.image-height{
   background-color: #529EE8;
   color: #efefef;
 }
-/*.table-hover > tbody > tr > td.primary:hover,
-.table-hover > tbody > tr > th.primary:hover,
-.table-hover > tbody > tr.primary:hover > td,
-.table-hover > tbody > tr.primary:hover > th {
-  background-color: #488ED3;
-}*/
+
 /*cuerpo*/
 .table > thead > tr > td.default,
 .table > tbody > tr > td.default,
@@ -632,10 +630,9 @@ div.image-height{
   background-color: #ededed;
   cursor: pointer;
 }
-.italic{
-	font-style: italic;
+.primary>th{
+	font-size: 17px;
 }
-
 /*css para modal*/
 .style-modal{
 	border-radius: 0px;
