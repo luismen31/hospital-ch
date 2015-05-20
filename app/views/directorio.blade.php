@@ -18,56 +18,64 @@
 
 	<div class="row">
 		<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
-			<div class="row" style="margin-bottom:20px">
+			
+			<div class="row well" style="margin-bottom:20px">
 				<div class="col-xs-12">
-					<input type="text" name="search" value="" class="form-control input-lg" id="buscar-medico" placeholder="Buscar M&eacute;dico">
+					<p class="text-muted h5"><i>Seleccione el médico para ver más información</i></p>
+				</div>
+				<div class="col-xs-12">
+					<input type="text" name="search" value="" class="form-control input-lg" id="buscar-medico" data-action="filter" data-filters="#table" placeholder="Buscar M&eacute;dico">
 				</div>
 			</div>
-			<div class="overthrow" style="overflow:auto">
-				<table class="table table-striped table-hover" id="table">					
-					<thead>
-						<tr class="primary">
-							<th width="33%">Secci&oacute;n</th>
-							<th width="33%">Especialidad</th>
-							<th width="33%">Extensión</th>
-							<th width="33%">Teléfono</th>
-						</tr>
-						<tr class="default">
-							<th colspan="4">
-								Central Telef&oacute;nica Hospital Chiriqu&iacute; - 774-0128
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						{{--*/$sw=0;$var=0;/*--}}
-						@foreach(Medico::where('id','>','0')->orderBy('id_ubicacion','desc')->get() as $medico)
-							@if($sw == 0 || $var <> $medico->id_ubicacion)
-								{{--*/$var = $medico->id_ubicacion;/*--}}
-								{{--*/$sw=1;/*--}}
-								<tr class="primary h4">
-									@if(empty($medico->id_ubicacion))
-										<td colspan="4"><strong>Otras</strong></td>
-									@else
-										<td colspan="4"><strong>{{ Ubicacion::where('id', $medico->id_ubicacion)->first()->ubicacion }}</strong></td>
-									@endif									
+			
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="overthrow" style="overflow:auto">
+						<table class="table table-striped table-hover" id="table">					
+							<thead>
+								<tr class="primary">
+									<th width="24%">Secci&oacute;n</th>
+									<th width="24%">Especialidad</th>
+									<th width="24%">Extensión</th>
+									<th width="24%">Teléfono</th>
 								</tr>
-							@endif
-							<tr class="default" align="center" data-id="{{$medico->id}}">
-								<td>{{ $medico->primer_nombre.' '.$medico->apellido_paterno }}</td>
-								@if(empty($medico->id_especialidades_medicas))
-									<td>NO DEFINIDA</td>
-								@else
-									<td>{{ EspecialidadMedica::where('id_especialidades_medicas', $medico->id_especialidades_medicas)->first()->descripcion }}</td>
-								@endif
-								
-								<td>{{ $medico->extension }}</td>
-								<td>{{ $medico->telefono }}</td>
-							</tr>
-						@endforeach
-					</tbody>
-				</table>				
+								<tr class="default">
+									<th colspan="4">
+										<p class="text-muted h5" style="font-weight:bold;">Central Telef&oacute;nica Hospital Chiriqu&iacute; - 774-0128</p>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								{{--*/$sw=0;$var=0;/*--}}
+								@foreach(Medico::where('id','>','0')->orderBy('id_ubicacion','desc')->get() as $medico)
+									@if($sw == 0 || $var <> $medico->id_ubicacion)
+										{{--*/$var = $medico->id_ubicacion;/*--}}
+										{{--*/$sw=1;/*--}}
+										<tr class="primary h4">
+											@if(empty($medico->id_ubicacion))
+												<td colspan="4"><strong>Otras</strong></td>
+											@else
+												<td colspan="4"><strong>{{ Ubicacion::where('id', $medico->id_ubicacion)->first()->ubicacion }}</strong></td>
+											@endif									
+										</tr>
+									@endif
+									<tr class="default tooltipMedico" align="center" data-id="{{$medico->id}}">
+										<td>{{ $medico->primer_nombre.' '.$medico->apellido_paterno }}</td>
+										@if(empty($medico->id_especialidades_medicas))
+											<td>NO DEFINIDA</td>
+										@else
+											<td>{{ EspecialidadMedica::where('id_especialidades_medicas', $medico->id_especialidades_medicas)->first()->descripcion }}</td>
+										@endif
+										
+										<td>{{ $medico->extension }}</td>
+										<td>{{ $medico->telefono }}</td>
+									</tr>
+								@endforeach
+							</tbody>
+						</table>				
+					</div>
+				</div>
 			</div>
-
 			<div class="modal fade" id="showMedico" tabindex="-1" role="dialog" aria-labelledby="labelMedico" aria-hidden="true">
 			  <div class="modal-dialog">
 			    <div class="modal-content style-modal">
@@ -103,7 +111,7 @@
 			  </div>
 			</div>
 
-			<table class="table table-bordered table-hover" style="margin-top:10px">
+			<table class="table table-striped table-hover" style="margin-top:10px">
 				<thead>	
 					<tr class="primary">
 						<th width="50%">Secciones Hospital</th>
@@ -204,18 +212,4 @@
 
 		</div>
 	</div>
-@stop
-
-@section('script')
-	{{ HTML::script('assets/js/jquery.searchable-ie.js') }}
-	<script type="text/javascript">
-		$(function(){
-			$('.table').searchable({
-				searchField: '#buscar-medico',    
-				onSearchActive : function( elem, term ) {
-			        elem.show();
-			    }
-			}); 
-		});		
-	</script>
 @stop
