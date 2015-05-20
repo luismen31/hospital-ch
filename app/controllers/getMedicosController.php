@@ -6,10 +6,9 @@
 				$id = Input::get('medico');
 
 				$data = Medico::find($id);
-				$data->fullname = $data->fullname;
-
+				
 				if(!empty($data->id_especialidades_medicas)){
-					$data->especialidad = ucwords(strtolower(EspecialidadMedica::where('id_especialidades_medicas', $data->id_especialidades_medicas)->first()->descripcion));
+					$data->especialidad = ucfirst(strtolower(EspecialidadMedica::where('id_especialidades_medicas', $data->id_especialidades_medicas)->first()->descripcion));
 				}else{
 					$data->especialidad = "No tiene especialidad";
 				}
@@ -23,8 +22,17 @@
 				}else{
 					$data->observacion = "Sin información";
 				}
+				
+				$datos = array(
+					'fullname' => 	$data->primer_nombre.' '.$data->apellido_paterno,
+					'especialidad' => $data->especialidad,
+					'ubicacion' => $data->ubicacion,
+					'extension' => $data->extension,
+					'telefono' => $data->telefono,
+					'observacion' => $data->observacion			
+				);
 
-				return Response::json($data);
+				return Response::json($datos);
 			}
 			App::abort(403);
 		}
