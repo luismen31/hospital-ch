@@ -9,6 +9,10 @@ class Medico extends Eloquent {
 	*/
 	protected $table = 'medicos';
 
+	public function getFullNameAttribute()
+    {
+        return $this->primer_nombre.' '.$this->apellido_paterno;
+    }
 }
 
 ?>

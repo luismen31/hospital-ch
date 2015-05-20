@@ -47,6 +47,8 @@ Route::get('/entrega_medalla', function(){ return View::make('medalla'); });
 Route::get('/fiestas_patrias', function(){ return View::make('fiestas_patrias'); });
 Route::get('/relevo', function(){ return View::make('relevo'); });
 
+//Modal de medicos
+Route::post('getMedico', 'getMedicosController@postDatos');
 //Vistas Dinamicas
 Route::resource('sugerencia', 'SugerenciaController');
 Route::get('/system_resume',function(){ 

@@ -49,3 +49,19 @@ jQuery(document).ready(function ($) {
   $('#scrollbar3').perfectScrollbar();
   $('#scrollbar4').perfectScrollbar();
 });
+
+var host = window.location.host; 
+$('tr.default').click(function(e){
+	$.post('http://'+host+'/hospital-ch/public/getMedico',
+		{ medico : $(this).data('id')},
+		function(data){
+			$('.modal-title').html(data.fullname);
+			$('#especialidad').html(data.especialidad);
+			$('#ubicacion').html(data.ubicacion);
+			$('#extension').html(data.extension);
+			$('#telefono').html(data.telefono);
+			$('#observaciones').html(data.observacion);
+			//mostrar modal
+			$('#showMedico').modal('show');
+		}, 'json');
+});
