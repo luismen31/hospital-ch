@@ -50,8 +50,8 @@ jQuery(document).ready(function ($) {
   $('#scrollbar4').perfectScrollbar();
 });
 
-var host = window.location.host; 
 $('tr.default').click(function(e){
+	var host = window.location.host; 
 	$.post('http://'+host+'/hospital-ch/public/getMedico',
 		{ medico : $(this).data('id')},
 		function(data){
