@@ -19,7 +19,7 @@
 			</div>
 		</li>
 		<li>
-			<img src="{{URL::to('img/quirofanobanner.jpg')}}" alt="">
+			<img src="{{URL::to('img/salon_cirujia_banner.jpg')}}" alt="" st yle="width:1280px;">
 			<a class="btn btn-primary btn-sm sl-pc" href="{{URL::to('quirofano')}}">Conozca <span class="fa  fa-plus"></span></a>
 			<div class="caption-slide txt-caption">
 				<p>
