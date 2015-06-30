@@ -76,7 +76,7 @@
 					<div class="form-group">
 						{{ Form::label('codigo', 'Código:', array('class' => 'col-sm-4 control-label')) }}
 						<div class="col-sm-6">
-							{{ Form::text('codigo', null, array('placeholder' => 'Código', 'class' => 'form-control')) }}
+							{{ Form::text('codigo', null, array('placeholder' => 'Código', 'class' => 'form-control', 'required' => 'required')) }}
 						</div>		
 					</div>
 					@if($errors->has())
