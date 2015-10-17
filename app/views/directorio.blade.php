@@ -47,15 +47,16 @@
 							</thead>
 							<tbody>
 								{{--*/$sw=0;$var=0;/*--}}
-								@foreach(DB::connection('plagetri')->select('SELECT * FROM medicos WHERE id > 0 ORDER BY id_ubicacion desc') as $medico)
+								@foreach(Medico::on('plagetri')->where('id', '>', 0)->orderBy('id_ubicacion', 'DESC')->get() as $medico)
 									@if($sw == 0 || $var <> $medico->id_ubicacion)
 										{{--*/$var = $medico->id_ubicacion;/*--}}
 										{{--*/$sw=1;/*--}}
+
 										<tr class="primary h4">
 											@if(empty($medico->id_ubicacion))
 												<td colspan="4"><strong>Otras</strong></td>
-											@else
-												<td colspan="4"><strong>{{ Ubicacion::where('id', $medico->id_ubicacion)->first()->ubicacion }}</strong></td>
+											@else								
+												<td colspan="4"><strong>{{ Ubicacion::on('plagetri')->where('id', $medico->id_ubicacion)->first()->ubicacion }}</strong></td>
 											@endif									
 										</tr>
 									@endif
@@ -64,7 +65,7 @@
 										@if(empty($medico->id_especialidades_medicas))
 											<td>NO DEFINIDA</td>
 										@else
-											<td>{{ EspecialidadMedica::where('id_especialidades_medicas', $medico->id_especialidades_medicas)->first()->descripcion }}</td>
+											<td>{{ EspecialidadMedica::on('plagetri')->where('id_especialidades_medicas', $medico->id_especialidades_medicas)->first()->descripcion }}</td>
 										@endif
 										
 										<td>{{ $medico->extension }}</td>

@@ -5,15 +5,15 @@
 			if(Request::ajax()){
 				$id = Input::get('medico');
 
-				$data = DB::connection('plagetri')->select('SELECT * FROM medicos WHERE id = :id', ['id' => $id]);
+				$data = Medico::on('plagetri')->where('id', $id)->get();
 				
 				if(!empty($data[0]->id_especialidades_medicas)){
-					$data[0]->especialidad = ucfirst(strtolower(EspecialidadMedica::where('id_especialidades_medicas', $data[0]->id_especialidades_medicas)->first()->descripcion));
+					$data[0]->especialidad = ucfirst(strtolower(EspecialidadMedica::on('plagetri')->where('id_especialidades_medicas', $data[0]->id_especialidades_medicas)->first()->descripcion));
 				}else{
 					$data[0]->especialidad = "No tiene especialidad";
 				}
 				if(!empty($data[0]->id_ubicacion)){
-					$data[0]->ubicacion = Ubicacion::where('id', $data[0]->id_ubicacion)->first()->ubicacion;
+					$data[0]->ubicacion = Ubicacion::on('plagetri')->where('id', $data[0]->id_ubicacion)->first()->ubicacion;
 				}else{
 					$data[0]->ubicacion = "Otra";
 				}
