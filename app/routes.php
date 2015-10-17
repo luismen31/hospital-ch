@@ -46,6 +46,9 @@ Route::get('/congreso', function(){ return View::make('congreso'); });
 Route::get('/entrega_medalla', function(){ return View::make('medalla'); });
 Route::get('/fiestas_patrias', function(){ return View::make('fiestas_patrias'); });
 Route::get('/relevo', function(){ return View::make('relevo'); });
+Route::get('/congreso2015', function(){ return View::make('congreso2015'); });
+Route::get('/canastilla', function(){ return View::make('canastilla'); });
+Route::get('/contrato_energia_solar', function(){ return View::make('contrato'); });
 
 //Modal de medicos
 Route::post('getMedico', 'getMedicosController@postDatos');

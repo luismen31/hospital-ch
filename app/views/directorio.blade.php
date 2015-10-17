@@ -47,7 +47,7 @@
 							</thead>
 							<tbody>
 								{{--*/$sw=0;$var=0;/*--}}
-								@foreach(Medico::where('id','>','0')->orderBy('id_ubicacion','desc')->get() as $medico)
+								@foreach(DB::connection('plagetri')->select('SELECT * FROM medicos WHERE id > 0 ORDER BY id_ubicacion desc') as $medico)
 									@if($sw == 0 || $var <> $medico->id_ubicacion)
 										{{--*/$var = $medico->id_ubicacion;/*--}}
 										{{--*/$sw=1;/*--}}
