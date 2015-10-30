@@ -26,6 +26,7 @@
                 <thead>
 	                <tr class="info">
 	                    <th>#</th>
+                      <th>Cédula</th>
 	                    <th>Nombre Completo</th>
 	                    <th>Fecha Nacimiento</th>
 	                    <th>Celular</th>
@@ -40,6 +41,7 @@
                 @foreach (Cliente::all() as $cliente)
                   <tr>
                       <td>{{ $x++ }}.</td>
+                      <td>{{ $cliente->cedula }}</td>
                       <td>{{ $cliente->primer_nombre.' '.$cliente->segundo_nombre.' '.$cliente->primer_apellido.' '.$cliente->segundo_apellido }}</td>
                       <td>{{ $cliente->fecha_nacimiento }}</td>
                       <td>{{ $cliente->celular }}</td>
