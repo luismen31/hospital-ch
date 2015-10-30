@@ -49,7 +49,8 @@ class ClienteController extends BaseController {
 		$cliente->id_tipo_sangre = $data['id_tipo_sanguineo'];
 		$cliente->celular = $data['celular'];
 		$cliente->telefono_residencia = $data['telefono_residencia'];
-		$cliente->telefono_oficina = $data['telefono_oficina'];
+		$cliente->oficina = $data['oficina'];
+		$cliente->id_tarjeta = $data['id_tarjeta'];
 		$cliente->email = $data['email'];
 		$cliente->direccion = $data['direccion'];
 		$cliente->save();
@@ -109,7 +110,8 @@ class ClienteController extends BaseController {
 		$cliente->id_tipo_sangre = $data['id_tipo_sanguineo'];
 		$cliente->celular = $data['celular'];
 		$cliente->telefono_residencia = $data['telefono_residencia'];
-		$cliente->telefono_oficina = $data['telefono_oficina'];
+		$cliente->oficina = $data['oficina'];
+		$cliente->id_tarjeta = $data['id_tarjeta'];
 		$cliente->email = $data['email'];
 		$cliente->direccion = $data['direccion'];
 		$cliente->save();

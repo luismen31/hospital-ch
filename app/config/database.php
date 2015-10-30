@@ -63,6 +63,17 @@ return array(
 			'prefix'    => '',
 		),
 
+		'plagetri' => array(
+			'driver'    => 'mysql',
+			'host'      => 'localhost',
+			'database'  => 'plagetri21',
+			'username'  => 'root',
+			'password'  => 'sql',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+		),
+
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',

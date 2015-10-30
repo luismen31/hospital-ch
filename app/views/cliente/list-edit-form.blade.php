@@ -26,8 +26,9 @@
                 <thead>
 	                <tr class="info">
 	                    <th>#</th>
+                      <th>Cédula</th>
 	                    <th>Nombre Completo</th>
-	                    <th>Fecha Nacimiento</th>
+	                    <th>ID Tarjeta</th>
 	                    <th>Celular</th>
 	                    <th>Telefono Residencia</th>
 	                    <th>Telefono Oficina</th>
@@ -40,11 +41,12 @@
                 @foreach (Cliente::all() as $cliente)
                   <tr>
                       <td>{{ $x++ }}.</td>
+                      <td>{{ $cliente->cedula }}</td>
                       <td>{{ $cliente->primer_nombre.' '.$cliente->segundo_nombre.' '.$cliente->primer_apellido.' '.$cliente->segundo_apellido }}</td>
-                      <td>{{ $cliente->fecha_nacimiento }}</td>
+                      <td>{{ $cliente->id_tarjeta }}</td>
                       <td>{{ $cliente->celular }}</td>
                       <td>{{ $cliente->telefono_residencia }}</td>
-                      <td>{{ $cliente->telefono_oficina }}</td>
+                      <td>{{ $cliente->oficina }}</td>
                       <td>{{ $cliente->email }}</td>
                       <td align="center">
                           <a href="{{ route('cliente.edit', $cliente->id) }}" class="btn btn-primary btn-sm" style="margin:3px 0px;" data-toggle="tooltip" title="Editar"><span class="glyphicon glyphicon-pencil"></span></a>                         
@@ -64,6 +66,10 @@
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('cedula', 'N&uacute;mero de C&eacute;dula') }}
       {{ Form::text('cedula', null, array('placeholder' => 'N&uacute;mero de C&eacute;dula', 'class' => 'form-control', 'required' => 'required')) }}
+    </div>
+    <div class="form-group col-sm-4 col-md-4 col-lg-4">
+      {{ Form::label('id_tarjeta', 'ID Tarjeta') }}
+      {{ Form::text('id_tarjeta', null, array('placeholder' => 'ID Tarjeta', 'class' => 'form-control')) }}        
     </div>
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('seguro_social', 'Seguro Social') }}
@@ -112,8 +118,8 @@
       {{ Form::text('telefono_residencia', $data['cliente']->telefono_residencia, array('placeholder' => 'Telefono Residencia', 'class' => 'form-control')) }}        
     </div>
 	<div class="form-group col-sm-4 col-md-4 col-lg-4">
-      {{ Form::label('telefono_oficina', 'Telefono Oficina:') }}
-      {{ Form::text('telefono_oficina', $data['cliente']->telefono_oficina, array('placeholder' => 'Telefono Oficina', 'class' => 'form-control')) }}        
+      {{ Form::label('oficina', 'Telefono Oficina:') }}
+      {{ Form::text('oficina', $data['cliente']->oficina, array('placeholder' => 'Telefono Oficina', 'class' => 'form-control')) }}        
     </div>
     <div class="form-group col-sm-4 col-md-4 col-lg-4">
       {{ Form::label('email', 'E-Mail:') }}
