@@ -32,24 +32,24 @@
     </div>
     <!-- slide 2 -->    
     <div class="thumbnail">
-    	<div class="img-height">
-      	<img class="lazyOwl" data-src="{{ URL::to('img/congreso2015/congreso_original.jpg') }}">
-      </div>
-      <div class="caption">
-          <h4>XXVII Congreso Médico - Hospital Chiriquí</h4>
-          <p>Actualización en avances de la Ciencia Médica, 17 y 18 de Julio</p>
-          <p><a href="{{URL::to('congreso')}}" class="btn btn-primary btn-sm" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
-      </div>
-    </div>
-    <!-- slide 3 -->    
-    <div class="thumbnail">
       <div class="img-height">
         <img class="lazyOwl" data-src="{{ URL::to('img/medalla-small.jpg') }}">
       </div>
       <div class="caption">
           <h4>Entrega de Medallas de Reconocimiento al Benemérito Cuerpo de Bomberos de Chiriquí</h4>
-          <p style="font-size:13px;">Director Ejecutivo hizo entrega de las Medallas de Reconocimiento otorga el Hospital Chiriquí al Benemérito Cuerpo de Bomberos de Panamá</p>
+          <p style="font-size:13px;">Director Ejecutivo hizo entrega de las Medallas de Reconocimiento al Benemérito Cuerpo de Bomberos de Panamá</p>
           <p><a href="{{URL::to('entrega_medalla')}}" class="btn btn-primary btn-sm" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+      </div>
+    </div>
+    <!-- slide 3 -->    
+    <div class="thumbnail">
+      <div class="img-height">
+        <img class="lazyOwl" data-src="{{ URL::to('img/congreso2015/congreso_original.jpg') }}">
+      </div>
+      <div class="caption">
+          <h4>XXVII Congreso Médico - Hospital Chiriquí</h4>
+          <p>Actualización en avances de la Ciencia Médica, 17 y 18 de Julio</p>
+          <p><a href="{{URL::to('congreso')}}" class="btn btn-primary btn-sm" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
       </div>
     </div>
     <!-- slide 4 -->    
@@ -152,17 +152,17 @@
       <h2 class="subtitulo">Festividades Patrias</h2>
       
       <p class="text-justify">
-        Hospital Chiriqu&iacute;, se siente orgulloso de conmemorar el mes de noviembre, realizando un rincon t&iacute;pico en homenaje a nuestro Pa&iacute;s.
+         El Hospital Chiriquí, se siente orgulloso de conmemorar el mes de la Patria.
          <a href="{{URL::to('fiestas_patrias')}}" class="btn btn-link btn-sm">Ver M&aacute;s <span class="glyphicon glyphicon-chevron-right"></span></a> 
       </p>
      
     </div>
     <div class="col-sm-4 col-md-4 col-lg-4 col-sm-pull-6" align="center">
       <br>
-      <a href="{{URL::to('img/rincon_tipico/foto 6.jpg')}}"  title="Fiestas Patrias" class="fancybox" rel="ligthbox">
+      <a href="{{URL::to('img/noviembre2015/noviembre-2.jpg')}}"  title="Fiestas Patrias" class="fancybox" rel="ligthbox">
         <div class="zoom">
           <div class="image-height">
-              <img src="{{ URL::to('img/rincon_tipico/foto 6.jpg') }}" class="img-rounded" width="80%">
+              <img src="{{ URL::to('img/noviembre2015/noviembre-2.jpg') }}" class="img-rounded" width="80%">
           </div>
           <div class="zoom-caption">                  
                 <i class="fa fa-search-plus fa-4x"></i>            

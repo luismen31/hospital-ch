@@ -34147,3 +34147,198 @@ Stack trace:
 #10 C:\wamp\www\hospital-ch\bootstrap\compiled.php(640): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
 #11 C:\wamp\www\hospital-ch\public\index.php(49): Illuminate\Foundation\Application->run()
 #12 {main} [] []
+[2015-11-28 02:32:15] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\wamp\www\hospital-ch\bootstrap\compiled.php:5289
+Stack trace:
+#0 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4663): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4651): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4643): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 C:\wamp\www\hospital-ch\bootstrap\compiled.php(698): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 C:\wamp\www\hospital-ch\bootstrap\compiled.php(679): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 C:\wamp\www\hospital-ch\bootstrap\compiled.php(1136): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7218): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#7 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7815): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7762): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\wamp\www\hospital-ch\bootstrap\compiled.php(10768): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\wamp\www\hospital-ch\bootstrap\compiled.php(640): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#11 C:\wamp\www\hospital-ch\public\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2015-11-28 02:32:17] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\wamp\www\hospital-ch\bootstrap\compiled.php:5289
+Stack trace:
+#0 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4663): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4651): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4643): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 C:\wamp\www\hospital-ch\bootstrap\compiled.php(698): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 C:\wamp\www\hospital-ch\bootstrap\compiled.php(679): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 C:\wamp\www\hospital-ch\bootstrap\compiled.php(1136): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7218): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#7 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7815): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7762): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\wamp\www\hospital-ch\bootstrap\compiled.php(10768): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\wamp\www\hospital-ch\bootstrap\compiled.php(640): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#11 C:\wamp\www\hospital-ch\public\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2015-11-28 02:32:54] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\wamp\www\hospital-ch\bootstrap\compiled.php:5289
+Stack trace:
+#0 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4663): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4651): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4643): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 C:\wamp\www\hospital-ch\bootstrap\compiled.php(698): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 C:\wamp\www\hospital-ch\bootstrap\compiled.php(679): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 C:\wamp\www\hospital-ch\bootstrap\compiled.php(1136): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7218): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#7 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7815): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7762): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\wamp\www\hospital-ch\bootstrap\compiled.php(10768): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\wamp\www\hospital-ch\bootstrap\compiled.php(640): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#11 C:\wamp\www\hospital-ch\public\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2015-11-28 02:32:57] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\wamp\www\hospital-ch\bootstrap\compiled.php:5289
+Stack trace:
+#0 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4663): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4651): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4643): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 C:\wamp\www\hospital-ch\bootstrap\compiled.php(698): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 C:\wamp\www\hospital-ch\bootstrap\compiled.php(679): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 C:\wamp\www\hospital-ch\bootstrap\compiled.php(1136): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7218): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#7 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7815): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7762): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\wamp\www\hospital-ch\bootstrap\compiled.php(10768): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\wamp\www\hospital-ch\bootstrap\compiled.php(640): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#11 C:\wamp\www\hospital-ch\public\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2015-11-28 02:34:01] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\wamp\www\hospital-ch\bootstrap\compiled.php:5289
+Stack trace:
+#0 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4663): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4651): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4643): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 C:\wamp\www\hospital-ch\bootstrap\compiled.php(698): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 C:\wamp\www\hospital-ch\bootstrap\compiled.php(679): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 C:\wamp\www\hospital-ch\bootstrap\compiled.php(1136): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7218): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#7 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7815): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7762): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\wamp\www\hospital-ch\bootstrap\compiled.php(10768): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\wamp\www\hospital-ch\bootstrap\compiled.php(640): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#11 C:\wamp\www\hospital-ch\public\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2015-11-28 02:40:08] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\wamp\www\hospital-ch\bootstrap\compiled.php:5289
+Stack trace:
+#0 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4663): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4651): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4643): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 C:\wamp\www\hospital-ch\bootstrap\compiled.php(698): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 C:\wamp\www\hospital-ch\bootstrap\compiled.php(679): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 C:\wamp\www\hospital-ch\bootstrap\compiled.php(1136): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7218): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#7 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7815): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7762): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\wamp\www\hospital-ch\bootstrap\compiled.php(10768): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\wamp\www\hospital-ch\bootstrap\compiled.php(640): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#11 C:\wamp\www\hospital-ch\public\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2015-11-28 03:22:45] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\wamp\www\hospital-ch\bootstrap\compiled.php:5289
+Stack trace:
+#0 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4663): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4651): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4643): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 C:\wamp\www\hospital-ch\bootstrap\compiled.php(698): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 C:\wamp\www\hospital-ch\bootstrap\compiled.php(679): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 C:\wamp\www\hospital-ch\bootstrap\compiled.php(1136): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7218): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#7 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7815): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7762): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\wamp\www\hospital-ch\bootstrap\compiled.php(10768): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\wamp\www\hospital-ch\bootstrap\compiled.php(640): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#11 C:\wamp\www\hospital-ch\public\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2015-11-28 03:22:53] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\wamp\www\hospital-ch\bootstrap\compiled.php:5289
+Stack trace:
+#0 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4663): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4651): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4643): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 C:\wamp\www\hospital-ch\bootstrap\compiled.php(698): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 C:\wamp\www\hospital-ch\bootstrap\compiled.php(679): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 C:\wamp\www\hospital-ch\bootstrap\compiled.php(1136): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7218): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#7 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7815): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7762): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\wamp\www\hospital-ch\bootstrap\compiled.php(10768): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\wamp\www\hospital-ch\bootstrap\compiled.php(640): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#11 C:\wamp\www\hospital-ch\public\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2015-11-28 03:23:15] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\wamp\www\hospital-ch\bootstrap\compiled.php:5289
+Stack trace:
+#0 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4663): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4651): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4643): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 C:\wamp\www\hospital-ch\bootstrap\compiled.php(698): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 C:\wamp\www\hospital-ch\bootstrap\compiled.php(679): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 C:\wamp\www\hospital-ch\bootstrap\compiled.php(1136): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7218): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#7 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7815): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7762): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\wamp\www\hospital-ch\bootstrap\compiled.php(10768): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\wamp\www\hospital-ch\bootstrap\compiled.php(640): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#11 C:\wamp\www\hospital-ch\public\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2015-11-28 03:24:09] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\wamp\www\hospital-ch\bootstrap\compiled.php:5289
+Stack trace:
+#0 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4663): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4651): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4643): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 C:\wamp\www\hospital-ch\bootstrap\compiled.php(698): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 C:\wamp\www\hospital-ch\bootstrap\compiled.php(679): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 C:\wamp\www\hospital-ch\bootstrap\compiled.php(1136): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7218): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#7 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7815): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7762): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\wamp\www\hospital-ch\bootstrap\compiled.php(10768): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\wamp\www\hospital-ch\bootstrap\compiled.php(640): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#11 C:\wamp\www\hospital-ch\public\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2015-11-28 03:24:14] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\wamp\www\hospital-ch\bootstrap\compiled.php:5289
+Stack trace:
+#0 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4663): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4651): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4643): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 C:\wamp\www\hospital-ch\bootstrap\compiled.php(698): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 C:\wamp\www\hospital-ch\bootstrap\compiled.php(679): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 C:\wamp\www\hospital-ch\bootstrap\compiled.php(1136): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7218): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#7 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7815): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7762): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\wamp\www\hospital-ch\bootstrap\compiled.php(10768): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\wamp\www\hospital-ch\bootstrap\compiled.php(640): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#11 C:\wamp\www\hospital-ch\public\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2015-11-28 03:24:19] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\wamp\www\hospital-ch\bootstrap\compiled.php:5289
+Stack trace:
+#0 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4663): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4651): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4643): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 C:\wamp\www\hospital-ch\bootstrap\compiled.php(698): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 C:\wamp\www\hospital-ch\bootstrap\compiled.php(679): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 C:\wamp\www\hospital-ch\bootstrap\compiled.php(1136): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7218): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#7 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7815): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7762): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\wamp\www\hospital-ch\bootstrap\compiled.php(10768): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\wamp\www\hospital-ch\bootstrap\compiled.php(640): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#11 C:\wamp\www\hospital-ch\public\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2015-11-28 03:36:39] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\wamp\www\hospital-ch\bootstrap\compiled.php:5289
+Stack trace:
+#0 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4663): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4651): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\wamp\www\hospital-ch\bootstrap\compiled.php(4643): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 C:\wamp\www\hospital-ch\bootstrap\compiled.php(698): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 C:\wamp\www\hospital-ch\bootstrap\compiled.php(679): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 C:\wamp\www\hospital-ch\bootstrap\compiled.php(1136): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7218): Illuminate\Http\FrameGuard->handle(Object(Illuminate\Http\Request), 1, true)
+#7 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7815): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\wamp\www\hospital-ch\bootstrap\compiled.php(7762): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\wamp\www\hospital-ch\bootstrap\compiled.php(10768): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\wamp\www\hospital-ch\bootstrap\compiled.php(640): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#11 C:\wamp\www\hospital-ch\public\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
