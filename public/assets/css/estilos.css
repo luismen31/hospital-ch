@@ -222,7 +222,14 @@ div.caption-slide{
 	font-size: 14px;
 	z-index: 1001;
 }
-
+/** BOTON LOGIN **/
+.navbar-nav > li.sign > a {
+   color: #357ebd;
+   font-weight: bold;   
+}
+.navbar-nav > li.sign > a > i {   
+   font-size: 18px;  
+}
 .img-head{
 	width: 75%;
 }
@@ -661,4 +668,8 @@ div.image-height{
 }
 .fondo-body{
 	background: #ededed;
+}
+h4.title-info{
+	padding-bottom: 5px;
+	border-bottom: 1px solid #bce8f1;
 }

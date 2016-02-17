@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="es-ES">
+<html lang="es">
   <head>
-    <meta charset="UTF-8" >
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="cache-control" content="max-age=0" />
@@ -19,6 +19,7 @@
     {{ HTML::style('assets/css/font-awesome.min.css', array('media' => 'screen')) }}
     {{ HTML::style('assets/css/perfect-scrollbar.min.css', array('media' => 'screen')) }}
     {{ HTML::style('assets/css/owl_carousel/owl.carousel.css') }}
+    {{ HTML::style('assets/css/bootstrap-datetimepicker.min.css') }}    
     @yield('css')
     {{-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --}}
     <!--[if lt IE 9]>
@@ -38,7 +39,7 @@
                       <img src="{{URL::to('img/hospital25-2.jpg')}}" class="img-responsive img-rounded img-head">
                     </a>
                     <div class="central">
-                      <span class="fa fa-phone fa-1x"></span> Tel: (+507) 774-0128
+                      <span class="fa fa-phone fa-1x"></span> Tel: <a href="tel:+507 774-0128">(+507) 774-0128</a>
                     </div>
                     <div id="navigate">
                       <div class="navbar navbar-default navbar-stat ic-top" role="navigation">
@@ -58,33 +59,33 @@
                               <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Con&oacute;cenos <b class="caret caret-icon"></b></a>
                                 <ul class="dropdown-menu">
-                                <li><a href="{{ URL::to('historia')}}">Historia</a></li>
-                                <li><a href="{{URL::to('junta')}}">Junta Directiva</a></li>
-                                <li><a href="{{URL::to('fundadores')}}">Nuestros Fundadores</a></li>
-                                <li><a href="{{URL::to('mision')}}">Misi&oacute;n y Visi&oacute;n</a></li>
+                                  <li><a href="{{ URL::to('historia')}}">Historia</a></li>
+                                  <li><a href="{{URL::to('junta')}}">Junta Directiva</a></li>
+                                  <li><a href="{{URL::to('fundadores')}}">Nuestros Fundadores</a></li>
+                                  <li><a href="{{URL::to('mision')}}">Misi&oacute;n y Visi&oacute;n</a></li>
                                 </ul>
                               </li>
                               
                               <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nuestros Doctores <b class="caret caret-icon"></b></a>
                                 <ul class="dropdown-menu">
-                                <li><a href="{{URL::to('directorio')}}">Directorio y Especialidades</a></li>
-                                 <!--    <li><a href="#">Doctor en Línea</a></li>  -->
-                                <!--  <li><a href="#">Nuestro doctor del Mes</a></li>-->
+                                  <li><a href="{{URL::to('directorio')}}">Directorio y Especialidades</a></li>
+                                   <!--    <li><a href="#">Doctor en Línea</a></li>  -->
+                                  <!--  <li><a href="#">Nuestro doctor del Mes</a></li>-->
                                 </ul>
                               </li>
                               
                               <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Atenci&oacute;n Especializada <b class="caret caret-icon"></b></a>
                                 <ul class="dropdown-menu">
-                                <li><a href="{{URL::to('enfermeria')}}">Nuestras Enfermeras</a></li>           
-                                <!--   <li class="divider"></li> -->
-                                <!--   <li class="nav-header">Maternidad</li>  -->
-                                <!--    <li><a href="#">Obstetricia</a></li> -->
-                                <!--     <li><a href="#">Labor y Parto</a></li> -->
-                                <li><a href="{{URL::to('neonatologia')}}">Neonatolog&iacute;a</a></li>
-                                <!--     <li><a href="#">Nutrici&oacute;n y Embarazo</a></li>   -->
-                                <!--    <li><a href="#">Tamizaje</a></li> -->
+                                  <li><a href="{{URL::to('enfermeria')}}">Nuestras Enfermeras</a></li>           
+                                  <!--   <li class="divider"></li> -->
+                                  <!--   <li class="nav-header">Maternidad</li>  -->
+                                  <!--    <li><a href="#">Obstetricia</a></li> -->
+                                  <!--     <li><a href="#">Labor y Parto</a></li> -->
+                                  <li><a href="{{URL::to('neonatologia')}}">Neonatolog&iacute;a</a></li>
+                                  <!--     <li><a href="#">Nutrici&oacute;n y Embarazo</a></li>   -->
+                                  <!--    <li><a href="#">Tamizaje</a></li> -->
                                 </ul>
                               </li>
                             
@@ -110,21 +111,21 @@
                               <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hospitalizaci&oacute;n <b class="caret caret-icon"></b></a>
                                 <ul class="dropdown-menu">
-                                <li><a href="{{URL::to('hospitalizacion')}}">Habitaciones</a></li>
-                                <li><a href="{{URL::to('admision')}}">Admisi&oacute;n</a></li>
-                                <li><a href="{{URL::to('seguros')}}">Seguros Nacionales e Internacionales</a></li>
-                                <li><a href="{{URL::to('registrobb')}}">Registro de Nacimiento</a></li>
-                                <!--   <li><a href="#">Turismo M&eacute;dico</a></li>  -->
-                                <li class="divider"></li>
-                                <li class="dropdown-header">Servicios Hospitalarios</li>
-                                <li><a href="{{URL::to('hemodialisis')}}">Hemodi&aacute;lisis</a></li> 
-                                <li><a href="{{URL::to('cuidados')}}">Cuidados Intensivos</a></li> 
-                                <li><a href="{{URL::to('quirofano')}}">Quir&oacute;fano</a></li>
-                                <li><a href="{{URL::to('laboratorio')}}">Laboratorio </a></li>
-                                <li><a href="{{URL::to('rayosx')}}">Radiolog&iacute;a</a></li> 
-                                <li><a href="{{URL::to('urgencias')}}">Urgencias</a></li>
-                                <li><a href="{{URL::to('capilla')}}">Capilla</a></li>
-                                <li><a href="{{URL::to('farmacia')}}">Farmacia</a></li> 
+                                  <li><a href="{{URL::to('hospitalizacion')}}">Habitaciones</a></li>
+                                  <li><a href="{{URL::to('admision')}}">Admisi&oacute;n</a></li>
+                                  <li><a href="{{URL::to('seguros')}}">Seguros Nacionales e Internacionales</a></li>
+                                  <li><a href="{{URL::to('registrobb')}}">Registro de Nacimiento</a></li>
+                                  <!--   <li><a href="#">Turismo M&eacute;dico</a></li>  -->
+                                  <li class="divider"></li>
+                                  <li class="dropdown-header">Servicios Hospitalarios</li>
+                                  <li><a href="{{URL::to('hemodialisis')}}">Hemodi&aacute;lisis</a></li> 
+                                  <li><a href="{{URL::to('cuidados')}}">Cuidados Intensivos</a></li> 
+                                  <li><a href="{{URL::to('quirofano')}}">Quir&oacute;fano</a></li>
+                                  <li><a href="{{URL::to('laboratorio')}}">Laboratorio </a></li>
+                                  <li><a href="{{URL::to('rayosx')}}">Radiolog&iacute;a</a></li> 
+                                  <li><a href="{{URL::to('urgencias')}}">Urgencias</a></li>
+                                  <li><a href="{{URL::to('capilla')}}">Capilla</a></li>
+                                  <li><a href="{{URL::to('farmacia')}}">Farmacia</a></li> 
                                 </ul>
                               </li>
                               
@@ -132,21 +133,23 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Media Press <b class="caret caret-icon"></b></a>
                                 <ul class="dropdown-menu">
                                 <!--  <li><a href="#">Comunicado de Prensa</a></li> -->
-                                <li><a href="{{URL::to('compromiso')}}">Eventos</a></li>
-                                <li><a href="{{URL::to('cintarosada')}}">Campa&ntilde;as de Salud</a></li>
+                                  <li><a href="{{URL::to('compromiso')}}">Eventos</a></li>
+                                  <li><a href="{{URL::to('cintarosada')}}">Campa&ntilde;as de Salud</a></li>
                                 </ul>
                               </li>
                               
                               <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contacto <b class="caret caret-icon"></b></a>
                                 <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{URL::to('sugerencia')}}">Buz&oacute;n de consultas y sugerencias</a></li>
-                                <li><a href="{{URL::to('system_resume')}}">Hoja de Vida / Cliente Frecuente</a></li>                    
-                              @if(Auth::check())
-                                <li><a href="{{URL::to('logout')}}">Cerrar Sesi&oacute;n <span class="fa fa-power-off"></span> </a></li> 
-                              @endif
+                                  <li><a href="{{URL::to('sugerencia')}}">Buz&oacute;n de consultas y sugerencias</a></li>
+                                  <li><a href="{{URL::to('colaborador')}}">Regístrese (Hoja de Vida)</a></li>
                                 </ul>
                               </li>
+                              @if(!Auth::check())
+                                <li class="sign"><a href="{{URL::to('system_resume')}}"><i class="fa fa-sign-in"></i> INICIAR SESIÓN</a></li>       
+                              @else
+                                 <li class="sign"><a href="{{URL::to('logout')}}"><i class="fa fa-sign-out"></i> CERRAR SESIÓN </a></li> 
+                              @endif
                             </ul>       
                           </div><!-- Fin de Navbar -->
                       </div> 
@@ -173,14 +176,27 @@
     <div id="footer">        
       <div class="container">
         <p class="pull-right"><a href="#" id="top" class="btn btn-primary"><span class="glyphicon glyphicon-chevron-up"></span></a></p>
-        <p>2015 Hospital Chiriqu&iacute; &copy; S.A. | <a href="#">Privacidad</a> | <a href="#">T&eacute;rminos</a> </p>
+        <p>{{ date('Y') }} Hospital Chiriqu&iacute; &copy; S.A. | <a href="#">Privacidad</a> | <a href="#">T&eacute;rminos</a> </p>
       </div>
     </div>
     {{-- jQuery (necesario para Bootstrap's JavaScript) --}}
     {{-- Scripts para la usabilidad --}}
     {{ HTML::script('assets/js/perfect-scrollbar.min.js') }} 
     {{ HTML::script('assets/js/bootstrap.min.js') }}
+    {{ HTML::script('assets/js/moment.js') }}
+    {{ HTML::script('assets/js/moment-with-locales.js') }}
+    {{ HTML::script('assets/js/bootstrap-datetimepicker.min.js') }}
     <!-- Include js plugin -->
+    <script type="text/javascript">
+      var baseurl = '{{ url() }}';
+
+      $(function(){
+        $('.datepicker').datetimepicker({
+          format: 'YYYY/MM/DD',
+          locale: 'es'
+        });
+      });
+    </script>
     {{ HTML::script('assets/js/owl.carousel.min.js') }}
     {{ HTML::script('assets/js/pace.min.js') }}
     {{ HTML::script('assets/js/overthrow/overthrow-detect.js') }}

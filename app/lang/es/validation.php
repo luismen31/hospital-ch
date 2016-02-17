@@ -104,7 +104,11 @@ return array(
 
     'attributes' => array(
         'user' => 'usuario',
-        'password' => 'contraseña'
+        'password' => 'contraseña',
+        'id_provincia' => 'Provincia',
+        'id_distrito' => 'Distrito',
+        'id_corregimiento' => 'Corregimiento',
+        'email' => 'Correo Electrónico'
     ),
 
 );

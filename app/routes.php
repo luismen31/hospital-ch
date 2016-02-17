@@ -59,6 +59,10 @@ Route::get('/system_resume',function(){
 		if(Auth::user()->id_rol == 3){
 			$id = Colaborador::where('cedula', Auth::user()->user)->first()->id;
 			return Redirect::route('colaborador.edit', $id);	
+		}elseif(Auth::user()->id_rol == 6){ //Si es cliente de inscripcion
+			$id_cliente = ClienteUsuario::where('id_usuario', Auth::user()->id)->first()->id_cliente; 
+			$id = ClienteInscripcion::where('id', $id_cliente)->first()->id;
+			return Redirect::route('inscripcion.edit', $id);
 		}else{
 			return Redirect::to('/menu');	
 		}
@@ -69,6 +73,9 @@ Route::get('/system_resume',function(){
 Route::post('login', 'AuthController@postLogin');
 Route::get('/logout', 'AuthController@getLogout')->before('auth');
 Route::resource('colaborador', 'HojaVidaController');
+
+Route::controller('buscar', 'BuscarController');
+Route::resource('inscripcion', 'InscripcionController');
 
 Route::group(['before' => 'auth'], function(){
 	Route::get('/menu', function(){

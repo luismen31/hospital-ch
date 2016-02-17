@@ -1,14 +1,5 @@
 	<!-- Slider -->
-	<ul class="slider">
-		<li>
-			<img src="{{URL::to('img/logobanner.jpg')}}" alt="">
-			<a class="btn btn-primary btn-sm sl-pc" href="{{URL::to('historia')}}"> Conozca <span class="fa fa-plus"></span></a>
-			<div class="caption-slide txt-caption">
-				<p>
-					<strong>Experiencia</strong> - 25 Años Contigo 
-				</p>
-			</div>
-		</li>
+	<ul class="slider">		
 		<li>
 			<img src="{{URL::to('img/enfermeria_portada.jpg')}}" alt="">
 			<a class="btn btn-primary btn-sm sl-pc" href="{{URL::to('enfermeria')}}">Conozca <span class="fa fa-plus"></span></a>
@@ -19,7 +10,7 @@
 			</div>
 		</li>
 		<li>
-			<img src="{{URL::to('img/salon_cirujia_banner.jpg')}}" alt="" st yle="width:1280px;">
+			<img src="{{URL::to('img/salon_cirujia_banner.jpg')}}" alt="" s tyle="width:1280px;">
 			<a class="btn btn-primary btn-sm sl-pc" href="{{URL::to('quirofano')}}">Conozca <span class="fa  fa-plus"></span></a>
 			<div class="caption-slide txt-caption">
 				<p>

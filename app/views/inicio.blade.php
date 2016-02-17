@@ -44,11 +44,11 @@
     <!-- slide 3 -->    
     <div class="thumbnail">
       <div class="img-height">
-        <img class="lazyOwl" data-src="{{ URL::to('img/congreso2015/congreso_original.jpg') }}">
+        <img class="lazyOwl" data-src="{{ URL::to('img/afiche_congreso.jpeg') }}">
       </div>
       <div class="caption">
-          <h4>XXVII Congreso Médico - Hospital Chiriquí</h4>
-          <p>Actualización en avances de la Ciencia Médica, 17 y 18 de Julio</p>
+          <h4>XXVIII Congreso Médico - Hospital Chiriquí, S.A.</h4>
+          <p>"Defrente a los Nuevos Retos del Futuro", 30 de junio - 2 de julio</p>
           <p><a href="{{URL::to('congreso')}}" class="btn btn-primary btn-sm" title="Ver detalles">Ver detalles <span class="glyphicon glyphicon-chevron-right"></span></a></p>
       </div>
     </div>
@@ -79,16 +79,22 @@
 
   <div class="row" style="margin-top:20px;">
     <div class="col-sm-6 col-md-6 col-lg-6 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
-      <h2 class="subtitulo">Congreso Médico 2015</h2>
-      <p class="text-justify">Agradece el apoyo recibido  de los profesionales de la medicina, laboratorios, Empresas y proveedores para la realización del XXVII Congreso Médico <strong>“Actualizacion en Avances de la Ciencia Médica”</strong>;  donde se discutieron tópicos selectos en Hemato Oncología, Cirugía Pediatría, Ginecología-Obstetricia, Endocrinología, Economía de la Salud, Ortopedia;  el cual fue un factor determinante para el éxito  del mismo y de impacto en los programas de actualización y educación médica continua.
-        <a href="{{URL::to('congreso2015')}}" class="btn btn-link btn-sm">Ver M&aacute;s <span class="glyphicon glyphicon-chevron-right"></span></a> 
+      <h2 class="subtitulo">XXVIII Congreso Médico Hospital Chiriquí</h2>
+      <p class="text-justify">El Hospital Chiriquí les invita cordialmente al Congreso Médico en su versión XXVIII, "Defrente a los Nuevos Retos del Futuro", realizado desde el 30 de junio al 2 de julio de 2016.
+        <a href="{{URL::to('congreso')}}" class="btn btn-link btn-sm">Ver M&aacute;s <span class="glyphicon glyphicon-chevron-right"></span></a> 
+        <div class="alert alert-info">          
+            <h5><strong>Las inscripciones serán a partir del 15 de febrero.</strong></h5>
+            <h4>
+              <a href="{{ route('inscripcion.create') }}" class="alert-link"><i class="fa fa-arrow-right"></i> INSCRÍBETE AQUÍ</a>
+            </h4>        
+        </div>
       </p>
     </div>
     <div class="col-sm-4 col-md-4 col-lg-4" align="center">
-      <a href="{{URL::to('img/congreso_medico/7.jpg')}}"  title="Congreso Médico 2015" class="fancybox" rel="ligthbox">  
+      <a href="{{URL::to('img/afiche_congreso.jpeg')}}"  title="XXVIII Congreso Médico Hospital Chiriquí" class="fancybox" rel="ligthbox">  
         <div class="zoom">
           <div class="image-height">
-              <img src="{{URL::to('img/congreso_medico/7.jpg')}}" width="80%" class="img-rounded">      
+              <img src="{{URL::to('img/afiche_congreso.jpeg')}}" w idth="80%" class="img-rounded" style="width:60%;">      
           </div>
           <div class="zoom-caption">                  
                 <i class="fa fa-search-plus fa-4x"></i>            

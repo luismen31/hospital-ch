@@ -12,7 +12,7 @@
 					<section>
 						<ul id="top-bar" class="nav nav-tabs nav-justified">
 							<li class="active"><a href="#login-access">Iniciar</a></li>
-							<li><a href="{{URL::to('colaborador')}}">Regístrese</a></li>
+							<li><a href="{{URL::to('colaborador')}}">Regístrese (Hoja de Vida)</a></li>
 						</ul>
 						<div class="tab-content tabs-login col-lg-12 col-md-12 col-sm-12 cols-xs-12">
 							<div id="login-access" class="tab-pane fade active in">
@@ -26,10 +26,10 @@
 			                    @endif				
 									<div style="margin-bottom: 25px" class="input-group">
 					                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
-					                    {{ Form::text('user', null, array('class' => 'form-control input-lg', 'placeholder' => 'Cédula', 'required' => 'required')) }}                                       
+					                    {{ Form::text('user', null, array('class' => 'form-control input-lg', 'placeholder' => 'Cédula o Usuario', 'required' => 'required')) }}                                       
 					                </div>			                
 					                @if($errors->has())
-					                    <p style="color:#f00;text-align:center;"> {{ $errors->first('user') }}</p>                  
+					                    <p style="color:#f00;text-align:center;"> {{ $errors->first('user') }}</p>
 					                @endif 
 									
 									<div style="margin-bottom: 25px" class="input-group">

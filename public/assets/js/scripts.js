@@ -96,5 +96,42 @@ $(function() {
 	          $(this).find('.zoom-caption').fadeOut(205)    //.slideUp(250); 
 	      }
 	); 
+
+	//Funcion que carga al cambiar el id_provincia
+        $("#id_provincia").change(function(){
+            //Funcion GET como primer parametro recibe el url que queremos ejecutar.
+            $.get(""+baseurl+"/buscar/distrito", 
+            //Segundo parametro le mandamos una variable que enviaremos al controlador que es el id de la provincia seleccionada.
+            { provincia: $(this).val() }, 
+        	function(data){
+                //Declaramos variables con los atributos de los campos que vamos a modificar, en este caso los select.
+				var campo = $('#id_distrito');
+				var campo1 = $('#id_corregimiento');
+                //Vaciamos los select
+                campo.empty();
+				campo1.empty();
+                //Llenamos los select con la primerra opcion cada uno respectivamente.
+                campo.append("<option value='0'>Seleccione Distrito</option>");
+                campo1.append("<option value='0'>Seleccione Corregimiento</option>");
+				//Funcion each es un ciclo que recorre todo los elementos recibidos por el controlador.
+                $.each(data, function(index,element) {
+                    //Llenamos el select con los option a partir de los valores recibidos.
+					campo.append("<option value='"+ element.id_distrito +"'>" + element.distrito + "</option>");
+        		});
+        	});
+        });     
+        //Funcion que percibe cuando se cambia un distrito para poder cargar los corregimientos pertenecientes a ese distrito
+     	$("#id_distrito").change(function(){
+            $.get(""+baseurl+"/buscar/corregimiento", 
+            { distrito: $(this).val() }, 
+        	function(data){
+                var campo = $('#id_corregimiento');
+                campo.empty();
+                campo.append("<option value='0'>Seleccione Corregimiento</option>");				
+                $.each(data, function(index,element) {
+					campo.append("<option value='"+ element.id_corregimiento +"'>" + element.corregimiento + "</option>");
+        		});
+        	});
+        });  
 	
 });	

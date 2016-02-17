@@ -18,7 +18,7 @@
 		
 		@foreach(ModuloUsuario::where('id_rol', Auth::user()->id_rol)->get() as $modulos)
 			{{--*/ $modulo = Modulo::find($modulos->id_modulo); /*--}}			
-			<div class="{{$class}}" style="text-align:center;">
+			<div class="{{$class}}" style="text-align:center;margin-bottom:20px;">
 				<a href="{{ route(''.$modulo->ruta.'') }}" class="btn btn-primary" style="margin:3px 0px;" data-toggle="tooltip" title="{{{ $modulo->modulo }}}">
 					<div class="menu fondo-menu">
 						<i class="fa fa-{{{ $modulo->clase }}} fa-4x"></i>
