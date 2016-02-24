@@ -258,7 +258,7 @@
 				  
 				  <tr>
 				    <td class="dia2-yw4l hour gray">7:00 PM</td>
-				    <td class="dia2-dmjv" colspan="3">CENA DEL PRESIDENTE</td>
+				    <td class="dia2-dmjv gray" colspan="3">CENA DEL PRESIDENTE</td>
 				  </tr>
 				</table>
 			</div>
@@ -359,7 +359,7 @@
 				  </tr>
 				  <tr>
 				    <td class="dia3-yw4l hour gray">7:00 PM</td>
-				    <td class="dia3-yt8t" colspan="3">CENA DE ANIVERSARIO DE FUNDACION HOSPITAL CHIRIQUI</td>
+				    <td class="dia3-yt8t gray" colspan="3">CENA DE ANIVERSARIO DE FUNDACION HOSPITAL CHIRIQUI</td>
 				  </tr>
 				</table>
 			</div>
