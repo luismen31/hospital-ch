@@ -23,7 +23,7 @@
 		<div class="col-md-7">
 			<h2 class="subtitulo">XXVIII Congreso Médico Hospital Chiriquí</h2>
 
-			<p>El Hospital Chiriquí les invita cordialmente al Congreso Médico en su versión XXVIII, "Defrente a los Nuevos Retos del Futuro", realizado desde el 30 de junio al 2 de julio de 2016. </p>
+			<p>El Hospital Chiriquí les invita cordialmente al Congreso Médico en su versión XXVIII, "Defrente a los Nuevos Retos del Futuro", realizado desde el 30 de junio al 2 de julio de 2016. <a href="{{ route('programa') }}" class="btn btn-link" style="font-weight:bold;">Ver Programa <i class="fa fa-angle-double-right"></i></a></p>
 			<div>
 			  <p><strong>Los Temas a Tratar</strong></p>
 			  <ul>
@@ -35,7 +35,7 @@
 			    <li>Entre otros</li>
 			  </ul>
 			</div>
-			<h2 class="subtitulo">INFORMACION E INSCRIPCIONES</h2>
+			<h2 class="subtitulo">INFORMACIÓN E INSCRIPCIONES</h2>
 			<div class="alert alert-info">
 				<h5>
 					<strong>Las inscripciones serán a partir del 15 de febrero.</strong>

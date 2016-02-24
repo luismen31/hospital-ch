@@ -231,7 +231,7 @@ div.caption-slide{
    font-size: 18px;  
 }
 .img-head{
-	width: 75%;
+	width: 26%;
 }
 /*clase se anade al hacer scroll*/
 .top-fixed{
@@ -247,7 +247,7 @@ div.caption-slide{
 	-o-transition: height 1s ease-in-out;
 }
 .img-head-xs{
-	width: 40%;
+	width: 18%;
 }
 @media(max-width: 1113px){
 	.top-fixed{
@@ -276,11 +276,11 @@ a.btn-home{
 		display: block;
 		position: absolute;
 		top: 28px;
-		right: 50px;
+		right: 40px;
 
 	}
 	.img-head{
-		width: 65%;
+		width: 24%;
 	}
 	.header{
 		max-height: 100%;
@@ -325,12 +325,12 @@ a.btn-home{
 		right: 0px;*/
 		float:none;
 		position: relative;
-		top: 0px; 
-		right:0px; 
+	    top: 5px;
+	    right: 3px;
 		height: 100%;
 	}
 	.img-head{
-		width: 50%;
+		width: 23%;
 	}
 	.caret-icon{
 		position: absolute;
@@ -341,6 +341,13 @@ a.btn-home{
 		float: none;
 		clear: both;
 	}
+}
+/*boton de menu sandwich*/
+.navbar-toggle{
+	margin-top: 25px;
+    margin-right: 2px;
+    margin-bottom: 0px;
+    padding: 0px;
 }
 /*Css del menu*/
 .menu{
@@ -429,7 +436,7 @@ a.btn-home{
 .subtitulo{
 	color: #000;
 	font-family: 'PT serif', serif, Helvetica, sans-serif;
-	font-size: 28px;
+	font- size: 28px;
 	text-shadow: 1px 1px 2px #8F8F8F;
 }
 .title-cont{
@@ -673,3 +680,89 @@ h4.title-info{
 	padding-bottom: 5px;
 	border-bottom: 1px solid #bce8f1;
 }
+
+/* CONGRESO */
+.table.table-congreso > thead:first-child > tr:first-child > th{
+	border-top: 1px solid #3d3d3d;
+}
+.table-bordered.table-congreso > thead > tr > th, 
+.table-bordered.table-congreso > tbody > tr > th, 
+.table-bordered.table-congreso > tfoot > tr > th, 
+.table-bordered.table-congreso > thead > tr > td, 
+.table-bordered.table-congreso > tbody > tr > td, 
+.table-bordered.table-congreso > tfoot > tr > td{
+	border: 1px solid #3d3d3d;
+}
+.table-hour {
+    width: 120px;
+}
+.hour{
+	font-weight: bold;
+	text-align: center;
+}
+.table > thead > tr > td.gray,
+.table > tbody > tr > td.gray,
+.table > tfoot > tr > td.gray,
+.table > thead > tr > th.gray,
+.table > tbody > tr > th.gray,
+.table > tfoot > tr > th.gray,
+.table > thead > tr.gray > td,
+.table > tbody > tr.gray > td,
+.table > tfoot > tr.gray > td,
+.table > thead > tr.gray > th,
+.table > tbody > tr.gray > th,
+.table > tfoot > tr.gray > th {
+  background-color: #7d7d7d;
+  color: #efefef;
+}
+
+/*** CSS PARA TABLAS CONGRESO ***/
+.dia1, .dia2, .dia3  {border-collapse:collapse;border-spacing:0;}
+.dia1 td, .dia2 td, .dia3 td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.dia1 th, .dia2 th, .dia3 th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+/* css para tabla del dia 1 */
+.dia1 .dia1-nrbg{font-weight:bold;background-color:#aa55bf;color:#efefef;vertical-align:top}
+.dia1 .dia1-51l9{background-color:#b79415;color:#efefef;vertical-align:top}
+.dia1 .dia1-jg09{font-weight:bold;background-color:#7d7d7d;color:#efefef;vertical-align:top}
+.dia1 .dia1-mruk{font-weight:bold;background-color:#1fa67a;color:#efefef;vertical-align:top}
+.dia1 .dia1-6y8c{font-weight:bold;background-color:#529ee8;color:#efefef;vertical-align:top;text-align: center;}
+.dia1 .dia1-yw4l{vertical-align:top}
+.dia1 .dia1-9hbo{font-weight:bold;vertical-align:top}
+.dia1 .dia1-7o34{font-weight:bold;background-color:#c1213f;color:#efefef;vertical-align:top}
+.dia1 .dia1-xulv{background-color:#1fa67a;color:#efefef;vertical-align:top}
+.dia1 .dia1-wv4z{background-color:#aa55bf;color:#efefef;vertical-align:top}
+.dia1 .dia1-edxg{font-weight:bold;background-color:#b79415;color:#efefef;vertical-align:top}
+.dia1 .dia1-16g6{background-color:#7d7d7d;color:#efefef;vertical-align:top}
+
+/* css para tabla del dia 2 */
+.dia2 .dia2-nrbg{font-weight:bold;background-color:#aa55bf;color:#efefef;vertical-align:top}
+.dia2 .dia2-51l9{background-color:#b79415;color:#efefef;vertical-align:top}
+.dia2 .dia2-mruk{font-weight:bold;background-color:#1fa67a;color:#efefef;vertical-align:top}
+.dia2 .dia2-chad{background-color:#529ee8;color:#efefef;vertical-align:top}
+.dia2 .dia2-3wwl{background-color:#dd8d33;color:#efefef;vertical-align:top}
+.dia2 .dia2-uo8f{background-color:#329a9d;color:#efefef;vertical-align:top}
+.dia2 .dia2-4ocu{font-weight:bold;background-color:#529ee8;color:#efefef;text-align:center;vertical-align:top}
+.dia2 .dia2-yw4l{vertical-align:top}
+.dia2 .dia2-fim4{font-weight:bold;background-color:#dd8d33;color:#efefef;vertical-align:top}
+.dia2 .dia2-7o34{font-weight:bold;background-color:#c1213f;color:#efefef;vertical-align:top}
+.dia2 .dia2-xulv{background-color:#1fa67a;color:#efefef;vertical-align:top}
+.dia2 .dia2-9hbo{font-weight:bold;vertical-align:top}
+.dia2 .dia2-edxg{font-weight:bold;background-color:#b79415;color:#efefef;vertical-align:top}
+.dia2 .dia2-6y8c{font-weight:bold;background-color:#529ee8;color:#efefef;vertical-align:top}
+.dia2 .dia2-wv4z{background-color:#aa55bf;color:#efefef;vertical-align:top}
+.dia2 .dia2-oraa{font-weight:bold;background-color:#329a9d;color:#efefef;vertical-align:top}
+.dia2 .dia2-dmjv{font-weight:bold;background-color:#9b9b9b;color:#efefef;vertical-align:top}
+
+/* css para tabla del dia 3 */
+.dia3 .dia3-51l9{background-color:#b79415;color:#efefef;vertical-align:top}
+.dia3 .dia3-1x50{background-color:#aa55bf;vertical-align:top}
+.dia3 .dia3-mruk{font-weight:bold;background-color:#1fa67a;color:#efefef;vertical-align:top}
+.dia3 .dia3-3wwl{background-color:#dd8d33;color:#efefef;vertical-align:top}
+.dia3 .dia3-4ocu{font-weight:bold;background-color:#529ee8;color:#efefef;text-align:center;vertical-align:top}
+.dia3 .dia3-yw4l{vertical-align:top}
+.dia3 .dia3-fim4{font-weight:bold;background-color:#dd8d33;color:#efefef;vertical-align:top}
+.dia3 .dia3-7o34{font-weight:bold;background-color:#c1213f;color:#efefef;vertical-align:top}
+.dia3 .dia3-xulv{background-color:#1fa67a;color:#efefef;vertical-align:top}
+.dia3 .dia3-edxg{font-weight:bold;background-color:#b79415;color:#efefef;vertical-align:top}
+.dia3 .dia3-wv4z{background-color:#aa55bf;color:#efefef;vertical-align:top}
+.dia3 .dia3-yt8t{font-weight:bold;background-color:#656565;color:#efefef;vertical-align:top}

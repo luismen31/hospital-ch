@@ -36,7 +36,7 @@
                 <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-12">
                     <a href="{{URL::to('/')}}" class="pull-left">
-                      <img src="{{URL::to('img/hospital25-2.jpg')}}" class="img-responsive img-rounded img-head">
+                      <img src="{{URL::to('img/logo-HCH.png')}}" class="img-responsive img-rounded img-head">
                     </a>
                     <div class="central">
                       <span class="fa fa-phone fa-1x"></span> Tel: <a href="tel:+507 774-0128">(+507) 774-0128</a>

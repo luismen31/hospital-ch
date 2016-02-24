@@ -76,6 +76,9 @@ Route::resource('colaborador', 'HojaVidaController');
 
 Route::controller('buscar', 'BuscarController');
 Route::resource('inscripcion', 'InscripcionController');
+Route::get('congreso/programa', ['as' => 'programa', function(){
+	return View::make('inscripciones.programa');
+}]);
 
 Route::group(['before' => 'auth'], function(){
 	Route::get('/menu', function(){
