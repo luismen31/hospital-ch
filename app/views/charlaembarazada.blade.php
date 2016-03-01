@@ -10,7 +10,7 @@
 		<hr>
 		<div class="col-md-7">
 			<h2>Primeros Pasos Como Mam&aacute;</h2>
-			<div>
+			<div class="col-sm-12">
 			  <ul>
 			    <li>Trastornos Hipertensivo en el Embarazo.</li>                    
 			    <li>Importancia de la Estimulaci&oacute;n Intrauterina y la preparaci&oacute;n para el parto.</li>

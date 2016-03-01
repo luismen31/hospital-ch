@@ -20,26 +20,30 @@
 				<div class="col-md-6">
 					<p class="text-justify">
 						<p><strong>Contamos con los siguientes servicios:</strong></p>
-						<ul class="text-justify">
-						  <li>Controles generales de salud en ni&ntilde;os, adultos y ancianos.</li>
-						  <li>Atenci&oacute;n de urgencia por m&eacute;dicos especialistas.</li>
-						  <li>Atenci&oacute;n inmediata de pacientes en estado cr&iacute;tico y su manejo oportuno personalizado.</li>
-						  <li>Electrocardiograma</li>
-						  <li>Suturas, curaciones, colocaci&oacute;n de sondas urinarias.</li>
-						  <li>Monitoreo fetal, nebulizaciones e inyectables, entre otras.</li>
-						</ul>
+						<div class="container-fluid">
+							<ul class="text-justify">
+							  <li>Controles generales de salud en ni&ntilde;os, adultos y ancianos.</li>
+							  <li>Atenci&oacute;n de urgencia por m&eacute;dicos especialistas.</li>
+							  <li>Atenci&oacute;n inmediata de pacientes en estado cr&iacute;tico y su manejo oportuno personalizado.</li>
+							  <li>Electrocardiograma</li>
+							  <li>Suturas, curaciones, colocaci&oacute;n de sondas urinarias.</li>
+							  <li>Monitoreo fetal, nebulizaciones e inyectables, entre otras.</li>
+							</ul>
+						</div>
 						<p><strong>Nuestros equipos de Urgencias son:</strong></p>
-						<ul class="text-justify">
-						  <li>Nebulizadores, monitores cardiacos m&aacute;s desfibrilador y desfibrilador autom&aacute;tico port&aacute;til.</li>
-						  <li>Monitor fetal</li>
-						  <li>Ultrasonido port&aacute;til </li>
-						  <li>Bombas de infusi&oacute;n</li>
-						  <li>Succi&oacute;n</li>
-						  <li>Gluc&oacute;metro</li>
-						  <li>Ox&iacute;metro port&aacute;til</li>
-						  <li>Monitor de signos vitales</li>
-						  <li>Electrocardiograma</li>
-						</ul>					
+						<div class="container-fluid">
+							<ul class="text-justify">
+							  <li>Nebulizadores, monitores cardiacos m&aacute;s desfibrilador y desfibrilador autom&aacute;tico port&aacute;til.</li>
+							  <li>Monitor fetal</li>
+							  <li>Ultrasonido port&aacute;til </li>
+							  <li>Bombas de infusi&oacute;n</li>
+							  <li>Succi&oacute;n</li>
+							  <li>Gluc&oacute;metro</li>
+							  <li>Ox&iacute;metro port&aacute;til</li>
+							  <li>Monitor de signos vitales</li>
+							  <li>Electrocardiograma</li>
+							</ul>					
+						</div>
 						<strong>Nuestros M&eacute;dicos del Cuarto de Urgencias:</strong>
 						Medicina General<br /><br />
 						<ul class="list-unstyled text-justify">

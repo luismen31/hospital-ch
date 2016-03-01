@@ -26,14 +26,16 @@
 			<p>El Hospital Chiriquí les invita cordialmente al Congreso Médico en su versión XXVIII, "Defrente a los Nuevos Retos del Futuro", realizado desde el 30 de junio al 2 de julio de 2016. <a href="{{ route('programa') }}" class="btn btn-link" style="font-weight:bold;">Ver Programa <i class="fa fa-angle-double-right"></i></a></p>
 			<div>
 			  <p><strong>Los Temas a Tratar</strong></p>
-			  <ul>
-			    <li>Calidad de atención</li>
-			    <li>Cardiología Interencionista</li>
-			    <li>Cirugía Cardiaca</li>
-			    <li>Gastroenterología</li>
-			    <li>Infecciones Emergentes y Nosocomiales</li>
-			    <li>Entre otros</li>
-			  </ul>
+			  <div class="col-sm-12">
+				  <ul>
+				    <li>Calidad de atención</li>
+				    <li>Cardiología Interencionista</li>
+				    <li>Cirugía Cardiaca</li>
+				    <li>Gastroenterología</li>
+				    <li>Infecciones Emergentes y Nosocomiales</li>
+				    <li>Entre otros</li>
+				  </ul>
+			  </div>
 			</div>
 			<h2 class="subtitulo">INFORMACIÓN E INSCRIPCIONES</h2>
 			<div class="alert alert-info">

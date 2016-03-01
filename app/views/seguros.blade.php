@@ -17,28 +17,32 @@
 			<div class="col-md-6">
 				<h2 class="subtitulo">Seguros Nacionales</h2>
 				<p class="text-justify">
-					<ul type="disc">
-						<li>Las compa&ntilde;&iacute;as nacionales con las cuales trabaja el Hospital Chiriqu&iacute; son las siguientes:
-							<ul>
-							  <li>PALIG</li>
-							  <li>BLUE CROSS AND BLUE SHIELD</li>
-							  <li>ASSA</li>
-							  <li>WORLDWIDE MEDICAL</li>
-							  <li>ANCON</li>
-							  <li>GENERALI</li>
-							  <li>MAPFRE</li>
-							  <li>OPTIMA</li>
-							  <li>SEGUROS CENTRALIZADOS</li>
-							  <li>SEGUROS FEDPA</li>
-							  <li>HSBC</li>
-							  <li>SURAMERICANA DE SEGUROS</li>
-							  <li>COMPA&Ntilde;&Iacute;A ISTME&Ntilde;A</li>
-							  <li>SAGICOR</li>
-							  <li>AXA ASSISTANCE</li>
-							  <li>SEGUROS VIVIR</li>
-							</ul>
-						</li>
-					</ul>
+					<div class="container-fluid">
+						<ul type="disc">
+							<li>Las compa&ntilde;&iacute;as nacionales con las cuales trabaja el Hospital Chiriqu&iacute; son las siguientes:
+								<div class="container-fluid">
+									<ul>
+									  <li>PALIG</li>
+									  <li>BLUE CROSS AND BLUE SHIELD</li>
+									  <li>ASSA</li>
+									  <li>WORLDWIDE MEDICAL</li>
+									  <li>ANCON</li>
+									  <li>GENERALI</li>
+									  <li>MAPFRE</li>
+									  <li>OPTIMA</li>
+									  <li>SEGUROS CENTRALIZADOS</li>
+									  <li>SEGUROS FEDPA</li>
+									  <li>HSBC</li>
+									  <li>SURAMERICANA DE SEGUROS</li>
+									  <li>COMPA&Ntilde;&Iacute;A ISTME&Ntilde;A</li>
+									  <li>SAGICOR</li>
+									  <li>AXA ASSISTANCE</li>
+									  <li>SEGUROS VIVIR</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</p>
 			</div>
 			<div class="col-md-6 mg-img-top" align="center">
@@ -49,16 +53,20 @@
 				<div class="col-md-7 col-md-push-5">
 					<h2  class="subtitulo">Seguros Internacionales</h2>
 					<p class="text-justify">
-						<ul>
-						  <li>Las compa&ntilde;&iacute;as internacionales con las cuales trabaja el Hospital Chiriqu&iacute; son las siguientes:
+						<div class="container-fluid">
 							<ul>
-							  <li>BLUE CROSS AND BLUE SHIELD.</li>
-							  <li>FOREIGN MEDICAL PROGRAM(VA).</li>
-							  <li>REDBRIDGE.</li>
-							  <li>AXA ASSISTANCE PANAMA</li>
+							  <li>Las compa&ntilde;&iacute;as internacionales con las cuales trabaja el Hospital Chiriqu&iacute; son las siguientes:
+							  	<div class="container-fluid">
+									<ul>
+									  <li>BLUE CROSS AND BLUE SHIELD.</li>
+									  <li>FOREIGN MEDICAL PROGRAM(VA).</li>
+									  <li>REDBRIDGE.</li>
+									  <li>AXA ASSISTANCE PANAMA</li>
+									</ul>
+								</div>
+							  </li>
 							</ul>
-						  </li>
-						</ul>
+						</div>
 					</p>
 				</div>
 				<div class="col-md-5 col-md-pull-7 mg-img-top" align="center">

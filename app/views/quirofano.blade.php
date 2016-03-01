@@ -26,12 +26,14 @@
 						Nuestro personal m&eacute;dico cuenta con una vasta experiencia en los diferentes marcos de la cirug&iacute;a asertiva y actualizada en:
 						Gastrectom&iacute;a, Mastectom&iacute;a radical, Prostatectom&iacute;a, Oftalmolog&iacute;a, Ortopedia y las &uacute;ltimas t&eacute;cnicas quir&uacute;rgicas.</p>
 						<p>Las instalaciones cuentan con una Unidad de Reanimaci&oacute;n con:</p>
-						<ul>
-						  <li>4 camas</li>
-						  <li>Monitor para el paciente post-anestesia</li>
-						  <li>Servicios complementarios</li>
-						  <li>Personal m&eacute;dico calificado</li>
-						</ul>
+						<div class="container-fluid">
+							<ul>
+							  <li>4 camas</li>
+							  <li>Monitor para el paciente post-anestesia</li>
+							  <li>Servicios complementarios</li>
+							  <li>Personal m&eacute;dico calificado</li>
+							</ul>
+						</div>
 					</p>
 			    </div>
 			    <div class="col-sm-6 col-md-6 col-lg-6" align="center">
@@ -52,12 +54,14 @@
 		  <div class="row">
 		    <div class="col-sm-6 col-md-6 col-lg-6 col-sm-push-6">
 		        <p class="text-justify">Hospital Chiriquí en su afán de brindar servicios de salud con tecnología de punta, incorpora a su estructura una Sala de 	Hemodinámia debidamente equipada con un Angiógrafo para realizar procedimientos:
-					<ul>
-						<li>Vasculares “periféricos”</li>
-						<li>Neurovasculares</li>
-						<li>Cardiovasculares “cateterismos cardiacos”</li>
-						<li>Y procedimientos no vasculares</li>
-					</ul>
+		        	<div class="container-fluid">
+						<ul>
+							<li>Vasculares “periféricos”</li>
+							<li>Neurovasculares</li>
+							<li>Cardiovasculares “cateterismos cardiacos”</li>
+							<li>Y procedimientos no vasculares</li>
+						</ul>
+					</div>
 
 					El compromiso de este centro hospitalario está orientado a contribuir con el desarrollo socioeconómico de la región occidental del país, a la vanguardia en tecnología de servicios médicos.
 				</p>

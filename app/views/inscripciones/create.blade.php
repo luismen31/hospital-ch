@@ -12,11 +12,14 @@
 		<div class="alert alert-danger">
 			<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true"><i class="fa fa-times"></i></span><span class="sr-only">Cerrar</span></button>
 			<strong>Por favor proceda a corregir los siguientes errores</strong>
-			<ul>
-				@foreach($errors->all() as $error)
-					<li>{{ $error }}</li>
-				@endforeach
-			</ul>			
+			
+			<div class="container-fluid">
+				<ul>
+					@foreach($errors->all() as $error)
+						<li>{{ $error }}</li>
+					@endforeach
+				</ul>			
+			</div>
 		</div>
 	@endif
 	
@@ -32,12 +35,14 @@
 			<i class="fa fa-info-circle"></i> <strong>INFORMACIÓN</strong>
 		</h4>
 		<strong>Información para pagos de Banca en Línea:</strong>
-		<ul>
-			<li>Banco General</li>
-			<li>Cuenta Corriente</li>
-			<li>03-30-01-025021-7</li>
-			<li>Hospital Chiriquí, S.A.</li> 
-		</ul>
+		<div class="container-fluid">
+			<ul>
+				<li>Banco General</li>
+				<li>Cuenta Corriente</li>
+				<li>03-30-01-025021-7</li>
+				<li>Hospital Chiriquí, S.A.</li> 
+			</ul>
+		</div>	
 		<p>Enviar confirmación del pago de la transacción al correo: </p> <a href="mailto:relacionespublicas@hospitalchiriqui.com" class="alert-link">relacionespublicas@hospitalchiriqui.com</a>
 	</div>
 	<h3><i class="fa fa-info-circle"></i> Información General</h3>
