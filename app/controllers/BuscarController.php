@@ -56,7 +56,7 @@ class BuscarController extends \BaseController {
             $data[] = [
                 'num' => $n++,
                 'ced' => $cliente->cedula,
-                'cli' => $cliente->primer_nombre.' '.$cliente->apellido_paterno,
+                'cli' => $cliente->nombre,
                 'tipo' => TipoParticipante::where('id', $cliente->id_tipo_participante)->first()->tipo_participante,
                 'cod' => $codigo,
                 'din' => $monto,

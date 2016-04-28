@@ -48,8 +48,7 @@ class InscripcionController extends \BaseController {
 	{
 		$rules = [
 			'cedula' => 'required',
-			'primer_nombre' => 'required',
-			'apellido_paterno' => 'required',
+			'nombre' => 'required',			
 			'usuario' => 'required',
 			'password' => 'required|min:6',
 			'id_provincia' => 'not_in:0',
@@ -68,10 +67,7 @@ class InscripcionController extends \BaseController {
 
 		$cliente = new ClienteInscripcion;
 		$cliente->cedula = $datos['cedula'];
-		$cliente->primer_nombre = $datos['primer_nombre'];
-		$cliente->segundo_nombre = $datos['segundo_nombre'];
-		$cliente->apellido_paterno = $datos['apellido_paterno'];
-		$cliente->apellido_materno = $datos['apellido_materno'];
+		$cliente->nombre = $datos['nombre'];
 		$cliente->sexo = $datos['sexo'];
 		$cliente->id_tipo_participante = $datos['tipo_participante'];
 		$cliente->telefono = $datos['telefono'];
@@ -105,7 +101,7 @@ class InscripcionController extends \BaseController {
 		);
 		
 		$toEmail = $cliente->email;
-		$toName = $cliente->primer_nombre.' '.$cliente->apellido_paterno;
+		$toName = $cliente->nombre;
 		//Enviamos el mail con los datos correspondientes.
 		Mail::send('emails.registro-inscripcion', $datos_email, function($message) use ($toEmail, $toName)
 		{
@@ -164,11 +160,11 @@ class InscripcionController extends \BaseController {
 
 			//variable que viajara a la vista de email
 			$datos_email = array(
-				'nombre_cliente' => $cliente->primer_nombre.' '.$cliente->apellido_paterno,
+				'nombre_cliente' => $cliente->nombre
 			);
 			
 			$toEmail = $cliente->email;
-			$toName = $cliente->primer_nombre.' '.$cliente->apellido_paterno;
+			$toName = $cliente->nombre;
 			//Enviamos el mail con los datos correspondientes.
 			Mail::send('emails.inscripcion-mail', $datos_email, function($message) use ($toEmail, $toName)
 			{
@@ -178,7 +174,7 @@ class InscripcionController extends \BaseController {
 			});
 			
 			//Enviamos mensaje de exito al admin y retornamos a la funcion index.
-			Session::flash('success', 'El cliente '.$cliente->primer_nombre.' '.$cliente->apellido_paterno.' ha sido inscrito correctamente.');
+			Session::flash('success', 'El cliente '.$cliente->nombre.' ha sido inscrito correctamente.');
 			return Redirect::route('inscripcion.index');
 		}
 
@@ -204,7 +200,7 @@ class InscripcionController extends \BaseController {
 
 		//variable que viajara a la vista de email
 		$datos_email = array(
-			'nombre_cliente' => $cliente->primer_nombre.' '.$cliente->apellido_paterno,
+			'nombre_cliente' => $cliente->nombre,
 			'cedula' => $cliente->cedula,
 			'monto' => $datos['monto'],
 			'codigo' => $datos['codigo_slip'],
@@ -212,7 +208,7 @@ class InscripcionController extends \BaseController {
 		);
 		
 		$toEmail = $cliente->email;
-		$toName = $cliente->primer_nombre.' '.$cliente->apellido_paterno;
+		$toName = $cliente->nombre;
 		//Enviamos el mail con los datos correspondientes.
 		Mail::send('emails.confirmacion-pago', $datos_email, function($message) use ($toEmail, $toName)
 		{

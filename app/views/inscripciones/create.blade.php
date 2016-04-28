@@ -45,6 +45,92 @@
 		</div>	
 		<p>Enviar confirmación del pago de la transacción al correo: </p> <a href="mailto:relacionespublicas@hospitalchiriqui.com" class="alert-link">relacionespublicas@hospitalchiriqui.com</a>
 	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="modal-costo" tabindex="-1" role="dialog" aria-labelledby="labelMedico" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content style-modal">
+	      <div class="modal-header fondo-head">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
+	        <h3 class="modal-title" style="font-weight:bold;">Costo de Congreso</h3>
+	      </div>
+	      <div class="modal-body fondo-body">
+	      	<div class="table-responsive">
+	        	<table class="table table-bordered table-hover" style="font-size:12px;background:#fff;">
+	        		<thead>
+	        			<tr class="info">
+	        				<th>DESCRIPCIÓN</th>
+	        				<th>MARZO-ABRIL 2016</th>
+	        				<th>MAYO-JUNIO 2016</th>
+	        				<th>EN SITIO (HCH)</th>
+	        			</tr>
+	        		</thead>
+	        		<tbody>
+	        			<tr class="active">
+	        				<td></td>
+	        				<td>(PAGINA VIA WEB)</td>
+	        				<td>(PAGINA VIA WEB)</td>
+	        				<td></td>
+	        			</tr>
+	        			<tr class="success">
+	        				<td><strong>MEDICOS SOCIOS</strong></td>
+	        				<td><strong>CORTESIA</strong></td>
+	        				<td><strong>CORTESIA</strong></td>
+	        				<td><strong>CORTESIA</strong></td>
+	        			</tr>
+	        			<tr class="success">
+	        				<td>NO SOCIOS</td>
+	        				<td>65.00</td>
+	        				<td>75.00</td>
+	        				<td>85.00</td>
+	        			</tr>
+	        			<tr class="success">
+	        				<td>MEDICO RESIDENTE</td>
+	        				<td>25.00</td>
+	        				<td>35.00</td>
+	        				<td>45.00</td>
+	        			</tr>
+	        			<tr>
+	        				<th colspan="4"><center>CORTESIA LOS PRIMEROS 40  CUPOS  (MEDICOS RESIDENTES)</center></th>
+	        			</tr>
+	        			<tr class="warning">
+	        				<td>ENFERMERA (O)</td>
+	        				<td>25.00</td>
+	        				<td>35.00</td>
+	        				<td>45.00</td>
+	        			</tr>
+	        			<tr class="warning">
+	        				<td>TECNICO</td>
+	        				<td>25.00</td>
+	        				<td>35.00</td>
+	        				<td>45.00</td>
+	        			</tr>
+	        			<tr class="warning">
+	        				<td>ORTOPEDIA</td>
+	        				<td>25.00</td>
+	        				<td>35.00</td>
+	        				<td>45.00</td>
+	        			</tr>
+	        			<tr class="warning">
+	        				<td>AUXILIARES</td>
+	        				<td>25.00</td>
+	        				<td>35.00</td>
+	        				<td>45.00</td>
+	        			</tr>
+	        			<tr class="warning">
+	        				<td>ESTUDIANTES DE MEDICINA</td>
+	        				<td>25.00</td>
+	        				<td>35.00</td>
+	        				<td>45.00</td>
+	        			</tr>
+	        		</tbody>
+	        	</table>
+	      	</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 	<h3><i class="fa fa-info-circle"></i> Información General</h3>
 	{{ Form::open(['route' => 'inscripcion.store', 'method' => 'POST'])}}		
 		<div class="row">
@@ -53,27 +139,15 @@
 				{{ Form::text('cedula', null, ['class' => 'form-control', 'placeholder' => 'Cédula o RUC']) }}
 			</div>
 			<div class="form-group col-sm-4">
-				{{ Form::label('primer_nombre', 'Primer Nombre:', ['class' => 'control-label']) }}
-				{{ Form::text('primer_nombre', null, ['class' => 'form-control', 'placeholder' => 'Primer Nombre']) }}
-			</div>
-			<div class="form-group col-sm-4">
-				{{ Form::label('segundo_nombre', 'Segundo Nombre:', ['class' => 'control-label']) }}
-				{{ Form::text('segundo_nombre', null, ['class' => 'form-control', 'placeholder' => 'Segundo Nombre']) }}
-			</div>
-			<div class="form-group col-sm-4">
-				{{ Form::label('apellido_paterno', 'Apellido Paterno:', ['class' => 'control-label']) }}
-				{{ Form::text('apellido_paterno', null, ['class' => 'form-control', 'placeholder' => 'Apellido Paterno']) }}
-			</div>
-			<div class="form-group col-sm-4">
-				{{ Form::label('apellido_materno', 'Apellido Materno:', ['class' => 'control-label']) }}
-				{{ Form::text('apellido_materno', null, ['class' => 'form-control', 'placeholder' => 'Apellido Materno']) }}
+				{{ Form::label('nombre', 'Nombre o Nombre de Empresa:', ['class' => 'control-label']) }}
+				{{ Form::text('nombre', null, ['class' => 'form-control', 'placeholder' => 'Nombre o Nombre de Empresa']) }}
 			</div>
 			<div class="form-group col-sm-4">
 				{{ Form::label('sexo', 'Sexo:', ['class' => 'control-label']) }}
 				{{ Form::select('sexo', ['0' => 'Femenino', '1' => 'Masculino'], null, ['class' => 'form-control']) }}
 			</div>
 			<div class="form-group col-sm-4">				
-				{{ Form::label('tipo_participante', 'Tipo de Participante:', ['class' => 'control-label']) }}
+				{{ Form::label('tipo_participante', 'Tipo de Participante: ', ['class' => 'control-label']) }}<a href="#" data-toggle="modal" data-target="#modal-costo" class="btn btn-link pull-right"><strong>Costos</strong> <i class="fa fa-external-link"></i></a>
 				{{ Form::select('tipo_participante', array('0' => 'Seleccione el Participante') + TipoParticipante::lists('tipo_participante', 'id'), null, ['class' => 'form-control']) }}
 			</div>			
 			<div class="container-fluid">

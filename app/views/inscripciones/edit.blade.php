@@ -16,11 +16,13 @@
 		<div class="alert alert-danger">
 			<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true"><i class="fa fa-times"></i></span><span class="sr-only">Cerrar</span></button>
 			<strong>Por favor proceda a corregir los siguientes errores</strong>
-			<ul>
-				@foreach($errors->all() as $error)
-					<li>{{ $error }}</li>
-				@endforeach
-			</ul>
+			<div class="container-fluid">
+				<ul>
+					@foreach($errors->all() as $error)
+						<li>{{ $error }}</li>
+					@endforeach
+				</ul>
+			</div>
 		</div>
 	@endif
 
@@ -49,8 +51,8 @@
 			<p>{{ $cliente->cedula }} </p>
 		</div>
 		<div class="form-group col-sm-3">
-			<label>Nombre:</label>
-			<p>{{ $cliente->primer_nombre.' '.$cliente->apellido_paterno }} </p>
+			<label>Nombre o Nombre de Empresa:</label>
+			<p>{{ $cliente->nombre }} </p>
 		</div>
 		<div class="form-group col-sm-3">
 			<label>Teléfono:</label>

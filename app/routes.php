@@ -14,6 +14,11 @@
 Route::get('/', function(){
 	return View::make('inicio');
 });
+
+//API PARA OBTENER MEDICOS
+Route::get('api/getMedicos', ['uses' => 'ApiHospitalController@getAllMedics']);
+
+Route::get('api/medico/{id}', ['uses' => 'ApiHospitalController@getMedico']);
 //Contacto
 Route::get('/historia', function(){ return View::make('historia'); });
 Route::get('/junta', function(){ return View::make('junta'); });
@@ -49,6 +54,7 @@ Route::get('/relevo', function(){ return View::make('relevo'); });
 Route::get('/congreso2015', function(){ return View::make('congreso2015'); });
 Route::get('/canastilla', function(){ return View::make('canastilla'); });
 Route::get('/contrato_energia_solar', function(){ return View::make('contrato'); });
+Route::get('padrino-empresario', array('as' => 'padrino', function(){ return View::make('padrino-empresario'); }));
 
 //Modal de medicos
 Route::post('getMedico', 'getMedicosController@postDatos');
